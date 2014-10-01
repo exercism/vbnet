@@ -4,7 +4,13 @@
   "repository": "https://github.com/exercism/xvbnet",
   "active": false,
   "problems": [
-    "accumulate"
+    "bob",
+    "anagram",
+    "binary",
+    "allergies",
+    "atbash-cipher",
+    "accumulate",
+    "crypto-square"
 
   ],
   "deprecated": [
