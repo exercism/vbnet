@@ -3,7 +3,7 @@ Imports NUnit.Framework
 <TestFixture>
 Public Class AllergiesTest
     <Test>
-    Public Sub No_allergies_means_not_allergic()
+    Public Sub NoAllergiesMeansNotAllergic()
         Dim allergies = New Allergies(0)
         Assert.That(allergies.AllergicTo("peanuts"), [Is].[False])
         Assert.That(allergies.AllergicTo("cats"), [Is].[False])
@@ -12,14 +12,14 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_eggs()
+    Public Sub AllergicToEggs()
         Dim allergies = New Allergies(1)
         Assert.That(allergies.AllergicTo("eggs"), [Is].[True])
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_eggs_in_addition_to_other_stuff()
+    Public Sub AllergicToEggsInAdditionToOtherStuff()
         Dim allergies = New Allergies(5)
         Assert.That(allergies.AllergicTo("eggs"), [Is].[True])
         Assert.That(allergies.AllergicTo("shellfish"), [Is].[True])
@@ -28,14 +28,14 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub No_allergies_at_all()
+    Public Sub NoAllergiesAtAll()
         Dim allergies = New Allergies(0)
         Assert.That(allergies.List(), [Is].Empty)
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_just_eggs()
+    Public Sub AllergicToJustEggs()
         Dim allergies = New Allergies(1)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String) From {
             "eggs"
@@ -44,7 +44,7 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_just_peanuts()
+    Public Sub AllergicToJustPeanuts()
         Dim allergies = New Allergies(2)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String) From {
             "peanuts"
@@ -53,7 +53,7 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_eggs_and_peanuts()
+    Public Sub AllergicToEggsAndPeanuts()
         Dim allergies = New Allergies(3)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String) From {
             "eggs",
@@ -63,7 +63,7 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_lots_of_stuff()
+    Public Sub AllergicToLotsOfStuff()
         Dim allergies = New Allergies(248)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String)() From { _
             "strawberries", _
@@ -76,7 +76,7 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Allergic_to_everything()
+    Public Sub AllergicToEverything()
         Dim allergies = New Allergies(255)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String)() From { _
             "eggs", _
@@ -92,7 +92,7 @@ Public Class AllergiesTest
 
     <Ignore>
     <Test>
-    Public Sub Ignore_non_allergen_score_parts()
+    Public Sub IgnoreNonAllergenScoreParts()
         Dim allergies = New Allergies(509)
         Assert.That(allergies.List(), [Is].EqualTo(New List(Of String)() From { _
             "eggs", _

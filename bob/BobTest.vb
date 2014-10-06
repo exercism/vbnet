@@ -10,7 +10,7 @@ Public Class BobTest
     End Sub
 
     <Test>
-    Public Sub Stating_something()
+    Public Sub StatingSomething()
         Assert.That(teenager.Hey("Tom-ay-to, tom-aaaah-to."), [Is].EqualTo("Whatever."))
     End Sub
 
@@ -22,73 +22,73 @@ Public Class BobTest
 
     <Ignore>
     <Test>
-    Public Sub Asking_a_question()
+    Public Sub AskingAQuestion()
         Assert.That(teenager.Hey("Does this cryogenic chamber make me look fat?"), [Is].EqualTo("Sure."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Asking_a_numeric_question()
+    Public Sub AskingANumericQuestion()
         Assert.That(teenager.Hey("You are, what, like 15?"), [Is].EqualTo("Sure."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Talking_forcefully()
+    Public Sub TalkingForcefully()
         Assert.That(teenager.Hey("Let's go make out behind the gym!"), [Is].EqualTo("Whatever."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Using_acronyms_in_regular_search()
+    Public Sub UsingAcronymsInRegularSearch()
         Assert.That(teenager.Hey("It's OK if you don't want to go to the DMV."), [Is].EqualTo("Whatever."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Forceful_questions()
+    Public Sub ForcefulQuestions()
         Assert.That(teenager.Hey("WHAT THE HELL WERE YOU THINKING?"), [Is].EqualTo("Whoa, chill out!"))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Shouting_numbers()
+    Public Sub ShoutingNumbers()
         Assert.That(teenager.Hey("1, 2, 3 GO!"), [Is].EqualTo("Whoa, chill out!"))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Only_numbers()
+    Public Sub OnlyNumbers()
         Assert.That(teenager.Hey("1, 2, 3"), [Is].EqualTo("Whatever."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Question_with_only_numbers()
+    Public Sub QuestionWithOnlyNumbers()
         Assert.That(teenager.Hey("4?"), [Is].EqualTo("Sure."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Shouting_with_special_characters()
+    Public Sub ShoutingWithSpecialCharacters()
         Assert.That(teenager.Hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"), [Is].EqualTo("Whoa, chill out!"))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Shouting_with_no_exclamation_mark()
+    Public Sub ShoutingWithNoExclamationMark()
         Assert.That(teenager.Hey("I HATE YOU"), [Is].EqualTo("Whoa, chill out!"))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Statement_containing_question_mark()
+    Public Sub StatementContainingQuestionMark()
         Assert.That(teenager.Hey("Ending with ? means a question."), [Is].EqualTo("Whatever."))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Prattling_on()
+    Public Sub PrattlingOn()
         Assert.That(teenager.Hey("Wait! Hang on. Are you going to be OK?"), [Is].EqualTo("Sure."))
     End Sub
 
@@ -100,13 +100,13 @@ Public Class BobTest
 
     <Ignore>
     <Test>
-    Public Sub Prolonged_silence()
+    Public Sub ProlongedSilence()
         Assert.That(teenager.Hey("    "), [Is].EqualTo("Fine. Be that way!"))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Multiple_line_question()
+    Public Sub MultipleLineQuestion()
         Assert.That(teenager.Hey("Does this cryogenic chamber make me look fat?" & vbLf & "no"), [Is].EqualTo("Whatever."))
     End Sub
 End Class

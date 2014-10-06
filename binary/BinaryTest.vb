@@ -10,7 +10,7 @@ Public Class BinaryTest
     <TestCase("1001", Result:=9, Ignore:=True)>
     <TestCase("11010", Result:=26, Ignore:=True)>
     <TestCase("10001101000", Result:=1128, Ignore:=True)>
-    Public Function Binary_converts_to_decimal(binary As String) As Integer
+    Public Function BinaryConvertsToDecimal(binary As String) As Integer
         Return New Binary(binary).ToDecimal()
     End Function
 
@@ -20,13 +20,13 @@ Public Class BinaryTest
     <TestCase("9", Ignore:=True)>
     <TestCase("134678", Ignore:=True)>
     <TestCase("abc10z", Ignore:=True)>
-    Public Sub Invalid_binary_is_decimal_0(invalidValue As String)
+    Public Sub InvalidBinaryIsDecimal0(invalidValue As String)
         Assert.That(New Binary(invalidValue).ToDecimal(), [Is].EqualTo(0))
     End Sub
 
     <Ignore>
     <Test>
-    Public Sub Binary_can_convert_formatted_strings()
+    Public Sub BinaryCanConvertFormattedStrings()
         Assert.That(New Binary("011").ToDecimal(), [Is].EqualTo(3))
     End Sub
 End Class
