@@ -2,6 +2,7 @@
   "slug": "vbnet",
   "language": "VB.NET",
   "repository": "https://github.com/exercism/xvbnet",
+  "checklist_issue": 3,
   "active": false,
   "problems": [
     "bob",
