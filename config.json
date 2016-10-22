@@ -4,16 +4,6 @@
   "repository": "https://github.com/exercism/xvbnet",
   "checklist_issue": 3,
   "active": false,
-  "problems": [
-    "bob",
-    "anagram",
-    "binary",
-    "allergies",
-    "atbash-cipher",
-    "accumulate",
-    "crypto-square"
-
-  ],
   "deprecated": [
 
   ],
@@ -22,5 +12,42 @@
   ],
   "foregone": [
 
+  ],
+  "exercises": [
+    {
+      "difficulty": 1,
+      "slug": "bob",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "anagram",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "binary",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "allergies",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "atbash-cipher",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "accumulate",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "crypto-square",
+      "topics": []
+    }
   ]
 }
