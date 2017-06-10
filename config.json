@@ -17,37 +17,51 @@
     {
       "difficulty": 1,
       "slug": "bob",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "anagram",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "binary",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "allergies",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "atbash-cipher",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "accumulate",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "crypto-square",
-      "topics": []
+      "topics": [
+
+      ]
     }
   ]
 }
