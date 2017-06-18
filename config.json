@@ -1,7 +1,7 @@
 {
   "slug": "vbnet",
   "language": "VB.NET",
-  "repository": "https://github.com/exercism/xvbnet",
+  "repository": "https://github.com/exercism/vbnet",
   "checklist_issue": 3,
   "active": false,
   "deprecated": [
