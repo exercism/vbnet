@@ -1,80 +1,64 @@
 {
   "language": "VB.NET",
-  "checklist_issue": 3,
   "active": false,
-  "foregone": [
-
-  ],
+  "blurb": "",
+  "checklist_issue": 3,
   "exercises": [
     {
-      "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "slug": "bob",
+      "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
       "slug": "anagram",
+      "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "b5363091-1350-428f-b709-550f9352d562",
       "slug": "binary",
+      "uuid": "b5363091-1350-428f-b709-550f9352d562",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "0488d664-0386-4471-b569-01f847ec6054",
       "slug": "allergies",
+      "uuid": "0488d664-0386-4471-b569-01f847ec6054",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
       "slug": "atbash-cipher",
+      "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
       "slug": "accumulate",
+      "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     },
     {
-      "uuid": "5f6ed6d3-fd66-406a-9a92-544745a5e4ee",
       "slug": "crypto-square",
+      "uuid": "5f6ed6d3-fd66-406a-9a92-544745a5e4ee",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
-      ]
+      "topics": []
     }
   ]
 }
