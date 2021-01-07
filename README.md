@@ -1,4 +1,4 @@
-# xVB.NET
+# VB.NET
 
 Exercism problems in VB.NET
 
