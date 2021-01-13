@@ -5,6 +5,17 @@
   "checklist_issue": 3,
   "exercises": [
     {
+      "slug": "hello-world",
+      "uuid": "6c88f46b-5acb-4fae-a6ec-b48ae3f8168f",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
       "slug": "bob",
       "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "core": false,
