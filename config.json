@@ -1,9 +1,20 @@
 {
   "language": "VB.NET",
   "active": false,
-  "blurb": "",
+  "blurb": "VB.NET is an object-oriented programming language implemented on the .NET Framework.",
   "checklist_issue": 3,
   "exercises": [
+    {
+      "slug": "two-fer",
+      "uuid": "57f02d0e-7b75-473b-892d-26a7d980c4ce",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "strings"
+      ]
+    },
     {
       "slug": "bob",
       "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
