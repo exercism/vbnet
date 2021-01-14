@@ -27,6 +27,16 @@
       ]
     },
     {
+      "slug": "reverse-string",
+      "uuid": "af6ae113-35b5-45a2-bf24-27381adf5c6f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
       "slug": "bob",
       "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "core": false,
