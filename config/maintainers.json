@@ -13,13 +13,13 @@
     },
     {
       "github_username": "ch020",
+      "alumnus": false,
       "show_on_website": true,
-      "alumnus": null,
       "name": "Matthew Chapman",
-      "bio": null,
       "link_text": null,
       "link_url": null,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/16351951?s=400&v=4"
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16351951?s=400\u0026v=4",
+      "bio": null
     }
   ]
 }
