@@ -2,6 +2,7 @@
   "language": "VB.NET",
   "active": false,
   "blurb": "VB.NET is an object-oriented programming language implemented on the .NET Framework.",
+  "version": 3,
   "checklist_issue": 3,
   "exercises": [
     {
