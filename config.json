@@ -18,6 +18,7 @@
   "exercises": [
     {
       "slug": "hello-world",
+      "name": "Hello World",
       "uuid": "a3da97d9-8e55-47a2-ba80-7446ee8ddaa9",
       "difficulty": 1,
       "topics": [
@@ -26,6 +27,7 @@
     },
     {
       "slug": "two-fer",
+      "name": "Two Fer",
       "uuid": "22176233-7668-4faf-8ecc-f24a4c766307",
       "difficulty": 1,
       "topics": [
@@ -35,6 +37,7 @@
     },
     {
       "slug": "reverse-string",
+      "name": "Reverse String",
       "uuid": "af6ae113-35b5-45a2-bf24-27381adf5c6f",
       "difficulty": 1,
       "topics": [
@@ -43,30 +46,35 @@
     },
     {
       "slug": "accumulate",
+      "name": "Accumulate",
       "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
       "difficulty": 1,
       "topics": []
     },
     {
       "slug": "allergies",
+      "name": "Allergies",
       "uuid": "0488d664-0386-4471-b569-01f847ec6054",
       "difficulty": 1,
       "topics": []
     },
     {
       "slug": "anagram",
+      "name": "Anagram",
       "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
       "difficulty": 1,
       "topics": []
     },
     {
       "slug": "atbash-cipher",
+      "name": "Atbash Cipher",
       "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
       "difficulty": 1,
       "topics": []
     },
     {
       "slug": "binary",
+      "name": "Binary",
       "uuid": "b5363091-1350-428f-b709-550f9352d562",
       "difficulty": 1,
       "topics": [
@@ -75,12 +83,14 @@
     },
     {
       "slug": "bob",
+      "name": "Bob",
       "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "difficulty": 1,
       "topics": []
     },
     {
       "slug": "crypto-square",
+      "name": "Crypto Square",
       "uuid": "5f6ed6d3-fd66-406a-9a92-544745a5e4ee",
       "difficulty": 1,
       "topics": []
