@@ -1,5 +1,6 @@
 {
   "language": "VB.NET",
+  "slug": "vbnet",
   "active": false,
   "status": {
     "concept_exercises": false,
