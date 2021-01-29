@@ -49,8 +49,16 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
+      "slug": "accumulate",
+      "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "allergies",
+      "uuid": "0488d664-0386-4471-b569-01f847ec6054",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
@@ -59,6 +67,14 @@
     {
       "slug": "anagram",
       "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "atbash-cipher",
+      "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
@@ -75,24 +91,8 @@
       ]
     },
     {
-      "slug": "allergies",
-      "uuid": "0488d664-0386-4471-b569-01f847ec6054",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": []
-    },
-    {
-      "slug": "atbash-cipher",
-      "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": []
-    },
-    {
-      "slug": "accumulate",
-      "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
+      "slug": "bob",
+      "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
