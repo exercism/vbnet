@@ -1,6 +1,8 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": [
+    "ch020"
+  ],
   "files": {
     "solution": [],
     "test": [],
