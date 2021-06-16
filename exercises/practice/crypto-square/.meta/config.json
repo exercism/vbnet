@@ -1,6 +1,6 @@
 {
   "blurb": "Implement the classic method for composing secret messages called a square code.",
-  "authors": [],
+  "authors": ["brent113"],
   "contributors": [],
   "files": {
     "solution": [],

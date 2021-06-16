@@ -1,6 +1,6 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": ["brent113"],
   "contributors": [],
   "files": {
     "solution": [],
