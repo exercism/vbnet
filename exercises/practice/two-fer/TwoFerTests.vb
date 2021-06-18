@@ -1,4 +1,4 @@
-﻿Imports Xunit
+Imports Xunit
 Public Class TwoFerTests
     <Fact>
     Public Sub No_name_given()
