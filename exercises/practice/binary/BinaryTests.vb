@@ -1,6 +1,6 @@
-Imports NUnit.Framework
+Imports XUnit
 
-<TestFixture>
+
 Public Class BinaryTest
     ' change Ignore to false to run test case or just remove 'Ignore = true'
     <TestCase("1", Result:=1)>
@@ -24,8 +24,7 @@ Public Class BinaryTest
         Assert.That(New Binary(invalidValue).ToDecimal(), [Is].EqualTo(0))
     End Sub
 
-    <Ignore>
-    <Test>
+<Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub BinaryCanConvertFormattedStrings()
         Assert.That(New Binary("011").ToDecimal(), [Is].EqualTo(3))
     End Sub
