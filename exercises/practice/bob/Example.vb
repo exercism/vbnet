@@ -1,30 +1,31 @@
+Imports System.Linq
+
 Public Class Bob
-	Public Function Hey(statement As String) As String
+    Private Function IsShouted(s As String) As Boolean
+        Return s.Any(AddressOf Char.IsUpper) AndAlso Not s.Any(AddressOf Char.IsLower)
+    End Function
 
-		If IsSilence(statement) Then
-			Return "Fine. Be that way!"
-		End If
-		If IsYelling(statement) Then
-			Return "Whoa, chill out!"
-		End If
-		If IsQuestion(statement) Then
-			Return "Sure."
-		Else
-			Return "Whatever."
-		End If
+    Private Function IsQuestion(s As String) As Boolean
+        Return s.TrimEnd().EndsWith("?")
+    End Function
 
-	End Function
+    Private Function IsSilence(s As String) As Boolean
+        Return String.IsNullOrWhiteSpace(s)
+    End Function
 
-	Private Function IsSilence(statement As String) As Boolean
-		Return statement.Trim() = ""
-	End Function
-
-	Private Function IsYelling(statement As String) As Boolean
-		Return statement.ToUpper() = statement AndAlso System.Text.RegularExpressions.Regex.IsMatch(statement, "[a-zA-Z]+")
-	End Function
-
-	Private Function IsQuestion(statement As String) As Boolean
-		Return statement.EndsWith("?")
-	End Function
-
+    Public Function Hey(statement As String) As String
+        If IsShouted(statement) AndAlso IsQuestion(statement) Then
+            Return "Calm down, I know what I'm doing!"
+        End If
+        If IsShouted(statement) Then
+            Return "Whoa, chill out!"
+        End If
+        If IsQuestion(statement) Then
+            Return "Sure."
+        End If
+        If IsSilence(statement) Then
+            Return "Fine. Be that way!"
+        End If
+        Return "Whatever."
+    End Function
 End Class

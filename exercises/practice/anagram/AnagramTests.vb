@@ -1,86 +1,78 @@
-Imports NUnit.Framework
+Imports XUnit
 
-<TestFixture>
+
 Public Class AnagramTest
-    <Test>
+    <Fact>
     Public Sub NoMatches()
         Dim detector = New Anagram("diaper")
         Dim words = New String() {"hello", "world", "zombies", "pants"}
         Dim results = New String() {}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub DetectSimpleAnagram()
         Dim detector = New Anagram("ant")
         Dim words = New String() {"tan", "stand", "at"}
         Dim results = New String() {"tan"}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub DetectMultipleAnagrams()
         Dim detector = New Anagram("master")
         Dim words = New String() {"stream", "pigeon", "maters"}
         Dim results = New String() {"maters", "stream"}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub DoesNotConfuseDifferentDuplicates()
         Dim detector = New Anagram("galea")
         Dim words = New String() {"eagle"}
         Dim results = New String() {}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub IdenticalWordIsNotAnagram()
         Dim detector = New Anagram("corn")
         Dim words = New String() {"corn", "dark", "Corn", "rank", "CORN", "cron",
             "park"}
         Dim results = New String() {"cron"}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector = New Anagram("mass")
         Dim words = New String() {"last"}
         Dim results = New String(-1) {}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub EliminateAnagramSubsets()
         Dim detector = New Anagram("good")
         Dim words = New String() {"dog", "goody"}
         Dim results = New String(-1) {}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub DetectAnagrams()
         Dim detector = New Anagram("allergy")
         Dim words = New String() {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
         Dim results = New String() {"gallery", "largely", "regally"}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
-    <Ignore>
-    <Test>
+    <Fact(Skip := "Remove this Skip property to run this test")>
     Public Sub AnagramsAreCaseInsensitive()
         Dim detector = New Anagram("Orchestra")
         Dim words = New String() {"cashregister", "Carthorse", "radishes"}
         Dim results = New String() {"Carthorse"}
-        Assert.That(detector.Match(words), [Is].EqualTo(results))
+        Assert.Equal(detector.Match(words), results)
     End Sub
 
 End Class
