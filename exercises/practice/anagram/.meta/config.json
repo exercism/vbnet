@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["Anagram.vb"],
-    "test": ["AnagramTest.vb"],
+    "test": ["AnagramTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "Inspired by the Extreme Startup game",

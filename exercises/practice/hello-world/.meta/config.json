@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["HelloWorld.vb"],
-    "test": ["HelloWorldTest.vb"],
+    "test": ["HelloWorldTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "This is an exercise to introduce users to using Exercism",

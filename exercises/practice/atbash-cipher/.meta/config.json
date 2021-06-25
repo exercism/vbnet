@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["AtbashCipher.vb"],
-    "test": ["AtbashCipherTest.vb"],
+    "test": ["AtbashCipherTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "Wikipedia",

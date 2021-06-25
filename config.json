@@ -21,7 +21,7 @@
       "%{pascal_slug}.vb"
     ],
     "test": [
-      "%{pascal_slug}Test.vb"
+      "%{pascal_slug}Tests.vb"
     ],
     "example": [
       ".meta/Example.vb"

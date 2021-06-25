@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["CryptoSquare.vb"],
-    "test": ["CryptoSquareTest.vb"],
+    "test": ["CryptoSquareTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "J Dalbey's Programming Practice problems",

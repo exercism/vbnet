@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["Allergies.vb"],
-    "test": ["AllergiesTest.vb"],
+    "test": ["AllergiesTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "Jumpstart Lab Warm-up",

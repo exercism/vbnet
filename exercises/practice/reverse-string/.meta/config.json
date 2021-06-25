@@ -3,7 +3,7 @@
   "authors": [],
   "files": {
     "solution": ["ReverseString.vb"],
-    "test": ["ReverseStringTest.vb"],
+    "test": ["ReverseStringTests.vb"],
     "example": [".meta/Example.vb"]
   },
   "source": "Introductory challenge to reverse an input string",
