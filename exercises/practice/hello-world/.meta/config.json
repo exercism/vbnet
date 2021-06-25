@@ -1,8 +1,7 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [
-    "ch020"
-  ],
+  "authors": ["ch020"],
+  "contributors": ["axtens"],
   "files": {
     "solution": [],
     "test": [],

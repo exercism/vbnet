@@ -1,7 +1,7 @@
 {
   "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
   "authors": ["brent113"],
-  "contributors": [],
+  "contributors": ["axtens"],
   "files": {
     "solution": [],
     "test": [],
