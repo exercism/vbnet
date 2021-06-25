@@ -21,10 +21,10 @@
       "%{pascal_slug}.vb"
     ],
     "test": [
-      "%{pascal_slug}Test.vb"
+      "%{pascal_slug}Tests.vb"
     ],
     "example": [
-      "Example.vb"
+      ".meta/Example.vb"
     ],
     "exemplar": [
       ".meta/Exemplar.vb"
