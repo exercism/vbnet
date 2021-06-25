@@ -1,6 +1,7 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": ["ch020"],
+  "contributors": ["axtens"],
   "files": {
     "solution": ["HelloWorld.vb"],
     "test": ["HelloWorldTests.vb"],

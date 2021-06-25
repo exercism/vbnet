@@ -1,6 +1,7 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": ["ch020"],
+  "contributors": ["axtens"],
   "files": {
     "solution": ["ReverseString.vb"],
     "test": ["ReverseStringTests.vb"],

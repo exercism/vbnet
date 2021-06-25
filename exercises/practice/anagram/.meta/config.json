@@ -1,6 +1,7 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": ["brent113"],
+  "contributors": ["axtens"],
   "files": {
     "solution": ["Anagram.vb"],
     "test": ["AnagramTests.vb"],
