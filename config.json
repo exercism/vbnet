@@ -135,6 +135,66 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
-  "tags": []
+  "key_features": [
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "content": "",
+      "icon": ""
+    }
+  ],
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "paradigm/procedural",
+    "typing/static",
+    "typing/dynamic",
+    "typing/strong",
+    "typing/weak",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "platform/ios",
+    "platform/android",
+    "runtime/clr",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/financial_systems",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/mobile",
+    "used_for/robotics",
+    "used_for/scientific_calculations",
+    "used_for/scripts",
+    "used_for/web_development"
+  ]
 }
