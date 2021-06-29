@@ -48,8 +48,14 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "22176233-7668-4faf-8ecc-f24a4c766307",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "optional-parameters",
+          "string-interpolation"
+        ],
+        "prerequisites": [
+          "optional-parameters",
+          "string-interpolation"
+        ],
         "difficulty": 1,
         "topics": [
           "optional_values",
@@ -71,10 +77,24 @@
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "lambdas",
+          "foreach",
+          "yield"
+        ],
+        "prerequisites": [
+          "lambdas",
+          "generic-types",
+          "foreach",
+          "enumerables",
+          "extension-methods"
+        ],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "extension_methods",
+          "sequences",
+          "transforming"
+        ]
       },
       {
         "slug": "allergies",
@@ -83,7 +103,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "bitwise_operations",
+          "filtering"
+        ]
       },
       {
         "slug": "anagram",
@@ -92,7 +115,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "filtering",
+          "strings"
+        ]
       },
       {
         "slug": "atbash-cipher",
@@ -101,7 +127,11 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "algorithms",
+          "strings",
+          "transforming"
+        ]
       },
       {
         "slug": "binary",
@@ -121,7 +151,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "conditionals",
+          "strings"
+        ]
       },
       {
         "slug": "crypto-square",
@@ -130,11 +163,50 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "algorithms",
+          "strings",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "9b1ce07f-05fb-4d01-b4cd-cf7a8799db2f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "integers"
+        ]
       }
     ]
   },
   "concepts": [],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/strong",
+    "typing/dynamic",
+    "typing/weak",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "platform/ios",
+    "platform/android",
+    "platform/web",
+    "runtime/clr",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/mobile",
+    "used_for/web_development"
+  ]
 }
