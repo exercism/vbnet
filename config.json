@@ -103,7 +103,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics":  [
+        "topics": [
           "bitwise_operations",
           "filtering"
         ]
@@ -167,6 +167,18 @@
           "algorithms",
           "strings",
           "transforming"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "9b1ce07f-05fb-4d01-b4cd-cf7a8799db2f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "integers"
         ]
       }
     ]
