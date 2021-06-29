@@ -191,6 +191,8 @@
     "paradigm/object_oriented",
     "typing/static",
     "typing/strong",
+    "typing/dynamic",
+    "typing/weak",
     "execution_mode/compiled",
     "platform/windows",
     "platform/mac",
