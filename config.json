@@ -48,8 +48,14 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "22176233-7668-4faf-8ecc-f24a4c766307",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "optional-parameters",
+          "string-interpolation"
+        ],
+        "prerequisites": [
+          "optional-parameters",
+          "string-interpolation"
+        ],
         "difficulty": 1,
         "topics": [
           "optional_values",
@@ -71,10 +77,24 @@
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
-        "practices": [],
-        "prerequisites": [],
+        "practices": [
+          "lambdas",
+          "foreach",
+          "yield"
+        ],
+        "prerequisites": [
+          "lambdas",
+          "generic-types",
+          "foreach",
+          "enumerables",
+          "extension-methods"
+        ],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "extension_methods",
+          "sequences",
+          "transforming"
+        ]
       },
       {
         "slug": "allergies",
@@ -83,7 +103,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics":  [
+          "bitwise_operations",
+          "filtering"
+        ]
       },
       {
         "slug": "anagram",
@@ -92,7 +115,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "filtering",
+          "strings"
+        ]
       },
       {
         "slug": "atbash-cipher",
@@ -101,7 +127,11 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "algorithms",
+          "strings",
+          "transforming"
+        ]
       },
       {
         "slug": "binary",
@@ -121,7 +151,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "conditionals",
+          "strings"
+        ]
       },
       {
         "slug": "crypto-square",
@@ -130,71 +163,15 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
-        "topics": []
+        "topics": [
+          "algorithms",
+          "strings",
+          "transforming"
+        ]
       }
     ]
   },
   "concepts": [],
-  "key_features": [
-    {
-      "icon": "features-oop",
-      "title": "Modern",
-      "content": "VB.NET is a modern, fast-evolving language."
-    },
-    {
-      "icon": "features-strongly-typed",
-      "title": "Cross-platform",
-      "content": "VB.NET runs on almost any platform and chipset."
-    },
-    {
-      "icon": "features-functional",
-      "title": "Multi-paradigm",
-      "content": "VB.NET is primarily an object-oriented language, but also has lots of functional features."
-    },
-    {
-      "icon": "features-lazy",
-      "title": "General purpose",
-      "content": "VB.NET is used for a wide variety of workloads, like websites, console applications, and even games."
-    },
-    {
-      "icon": "features-declarative",
-      "title": "Tooling",
-      "content": "VB.NET has excellent tooling, with linting and advanced refactoring options built-in."
-    },
-    {
-      "icon": "features-generic",
-      "title": "Documentation",
-      "content": "Documentation is excellent and exhaustive, making it easy to get started with VB.NET."
-    }
-  ],
-  "tags": [
-    "paradigm/declarative",
-    "paradigm/functional",
-    "paradigm/imperative",
-    "paradigm/object_oriented",
-    "paradigm/procedural",
-    "typing/static",
-    "typing/dynamic",
-    "typing/strong",
-    "typing/weak",
-    "execution_mode/compiled",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "platform/ios",
-    "platform/android",
-    "runtime/clr",
-    "used_for/artificial_intelligence",
-    "used_for/backends",
-    "used_for/cross_platform_development",
-    "used_for/financial_systems",
-    "used_for/frontends",
-    "used_for/games",
-    "used_for/guis",
-    "used_for/mobile",
-    "used_for/robotics",
-    "used_for/scientific_calculations",
-    "used_for/scripts",
-    "used_for/web_development"
-  ]
+  "key_features": [],
+  "tags": []
 }
