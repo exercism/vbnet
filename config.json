@@ -180,6 +180,21 @@
           "conditionals",
           "integers"
         ]
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "751e4fea-1ee7-4c66-ba2b-802f3ab5f7d6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "algorithms",
+          "conditionals",
+          "integers",
+          "loops",
+          "math"
+        ]
       }
     ]
   },
