@@ -21,10 +21,10 @@ Public Class Clock
     End Function
 
     Public Overrides Function ToString() As String
-        Return String.Format("{0:D2}:{1:D2}", Minutes / 60, Minutes Mod 60)
+        Return String.Format("{0:D2}:{1:D2}", Minutes \ 60, Minutes Mod 60)
     End Function
 
-    Public Overrides Function Equals(ByVal obj As Object?) As Boolean
+    Public Overrides Function Equals(ByVal obj As Object) As Boolean
         If obj Is Nothing Then Return False
         Return Equals(ToString(), CType(obj, Clock).ToString())
     End Function
