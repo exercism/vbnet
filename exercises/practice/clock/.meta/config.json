@@ -6,13 +6,13 @@
   "contributors": [],
   "files": {
     "solution": [
-      "Clock.cs"
+      "Clock.vb"
     ],
     "test": [
-      "ClockTests.cs"
+      "ClockTests.vb"
     ],
     "example": [
-      ".meta/Example.cs"
+      ".meta/Example.vb"
     ]
   },
   "source": "Pairing session with Erin Drummond",
