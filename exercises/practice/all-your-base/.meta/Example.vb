@@ -18,7 +18,7 @@ Public Module AllYourBase
 
         Do
             outputList.Insert(0, inputValue Mod outputBase)
-            inputValue /= outputBase
+            inputValue \= outputBase
         Loop While inputValue > 0
 
         Return outputList.ToArray()
