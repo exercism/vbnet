@@ -222,36 +222,6 @@
           "classes",
           "equality"
         ]
-      },
-      {
-        "slug": "all-your-base",
-        "name": "All Your Base",
-        "uuid": "016ea49c-036b-44f7-909b-4c38aa62d636",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "integers",
-          "math",
-          "transforming"
-        ]
-      },
-      {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "494268ff-654d-4376-a163-837c4ca3195f",
-        "practices": [
-          "arrays"
-        ],
-        "prerequisites": [
-          "arrays",
-          "integers",
-          "strings"
-        ],
-        "difficulty": 1,
-        "topics": [
-          "arrays"
-        ]
       }
     ]
   },
