@@ -194,7 +194,8 @@
           "integers",
           "loops",
           "math"
-          },
+          ]
+        },
           {        
           "slug": "clock",
         "name": "Clock",
