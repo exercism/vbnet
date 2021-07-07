@@ -238,6 +238,26 @@
           "classes",
           "equality"
         ]
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "39e7d0e6-d926-4d69-99d8-7f3084cab476",
+        "practices": [
+          "if-statements",
+          "for-loops",
+          "linq"
+        ],
+        "prerequisites": [
+          "if-statements",
+          "for-loops",
+          "strings"
+        ],
+        "difficulty": 2,
+        "topics": [
+          "filtering",
+          "strings"
+        ]
       }
     ]
   },
