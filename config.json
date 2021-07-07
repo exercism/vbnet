@@ -258,6 +258,18 @@
           "filtering",
           "strings"
         ]
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "d620068b-b36f-464a-ba78-82e1f8532c53",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "parsing",
+          "transforming"
+        ]
       }
     ]
   },
