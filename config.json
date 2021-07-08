@@ -270,6 +270,18 @@
           "parsing",
           "transforming"
         ]
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "2ca6be4d-3a3f-4b3c-9059-420c684394df",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "integers",
+          "math"
+        ]
       }
     ]
   },
