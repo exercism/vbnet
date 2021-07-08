@@ -272,6 +272,23 @@
         ]
       },
       {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "ace0e76d-d272-4349-badb-80720447b78a",
+        "practices": [
+          "lists",
+          "ordering"
+        ],
+        "prerequisites": [
+          "lists",
+          "ordering",
+          "constructors",
+          "numbers"
+        ],
+        "difficulty": 1,
+        "topics": [
+          "lists"
+]},{
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "cf73cd5a-a63a-442d-8af6-fe379e4e1b2f",
