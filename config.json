@@ -270,6 +270,18 @@
           "parsing",
           "transforming"
         ]
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "cf73cd5a-a63a-442d-8af6-fe379e4e1b2f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "parsing",
+          "strings"
+        ]
       }
     ]
   },
