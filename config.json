@@ -270,6 +270,25 @@
           "parsing",
           "transforming"
         ]
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "ace0e76d-d272-4349-badb-80720447b78a",
+        "practices": [
+          "lists",
+          "ordering"
+        ],
+        "prerequisites": [
+          "lists",
+          "ordering",
+          "constructors",
+          "numbers"
+        ],
+        "difficulty": 1,
+        "topics": [
+          "lists"
+        ]
       }
     ]
   },
