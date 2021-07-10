@@ -288,27 +288,6 @@
         "difficulty": 1,
         "topics": [
           "lists"
-]},{
-        "slug": "matching-brackets",
-        "name": "Matching Brackets",
-        "uuid": "cf73cd5a-a63a-442d-8af6-fe379e4e1b2f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5,
-        "topics": [
-          "parsing",
-          "strings"
-          ]
-      },{
-        "slug": "perfect-numbers",
-        "name": "Perfect Numbers",
-        "uuid": "2ca6be4d-3a3f-4b3c-9059-420c684394df",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "integers",
-          "math"
         ]
       }
     ]
