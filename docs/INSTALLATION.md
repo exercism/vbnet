@@ -17,7 +17,7 @@ If the output is a version greater than or equal to `3.0.100`, the .NET Core SDK
 If you want a more full-featured editing experience, you probably want to to use an IDE. These are the most popular IDE's that support building .NET Core projects:
 
 - [Visual Studio 2019](https://www.visualstudio.com/downloads/) (version 16.0.0 and higher)
-- [Visual Studio Code](https://code.visualstudio.com/download) with the [VB.NET extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- [Visual Studio Code](https://code.visualstudio.com/download) with a grammar and snippets [VB.NET extension](https://marketplace.visualstudio.com/items?itemName=gordonwalkedby.vbnet)
 - [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) (still in beta)
 - [Project Rider](https://www.jetbrains.com/rider/download/)
 
