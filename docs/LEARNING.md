@@ -2,19 +2,18 @@
 
 ## Websites
 
-* The [official VB.NET documentation](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/) has great content on a wide variety of subjects, including [tutorials](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/tutorials/index) and a [tour of the language](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/tour-of-visual-basic/index).
-* [Learn VB.NET](http://www.learncs.org/) is an interactive, in-browser tutorial that introduces you to the core concepts of programming in VB.NET.
+* The [official VB.NET documentation](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/) has great content on a wide variety of subjects, including key [concepts](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/), [sample applications](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic) and [walkthroughs](hhttps://docs.microsoft.com/en-us/dotnet/visual-basic/walkthroughs).
 
 ## Videos
 
-* [VB.NET 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN) The concepts and syntax of the VB.NET programming language with live coding demos.
-* [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) Ins and outs of "What is .NET" and how to publish your very first application.
-* [Programming in VB.NET Jump Start](https://channel9.msdn.com/Series/Programming-in-C-Jump-Start) is a nice step-by-step introduction to programming in VB.NET.
-* [VB.NET Fundamentals for Absolute Beginners](https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169?l=Lvld4EQIC_2706218949) is a great way to get to know VB.NET.
-* [PluralSight](https://www.pluralsight.com/) has several [great](https://www.pluralsight.com/courses/visual-basic-6-from-scratch) [introduction](https://www.pluralsight.com/courses/c-sharp-fundamentals-with-visual-studio-2015) [courses](http://www.pluralsight.com/courses/visual-basic-best-practices-improving-basics). The downside: PluralSight is a paid service, but you can request a [free trial](https://www.pluralsight.com/pricing).
+* [Visual Basic Fundamentals for Absolute Beginners](https://www.youtube.com/watch?v=6utWyl8agDY)
+* [Learn Visual Basic in 30 Minutes (2017)](https://www.youtube.com/watch?v=gcFHyVYdeFU)
+* There are [VB.NET courses](https://www.pluralsight.com/search?q=vb.net&categories=all) on PluralSight. The downside: PluralSight is a paid service, but you can request a [free trial](https://www.pluralsight.com/pricing).
 
 ## Books
 
-* [VB.NET 6.0 in a Nutshell](https://www.amazon.com/C-6-0-Nutshell-Definitive-Reference/dp/1491927062/)
-* [VB.NET 5.0 Unleashed](https://www.amazon.com/C-5-0-Unleashed-Bart-Smet/dp/0672336901/)
-* [VB.NET in Depth](https://www.amazon.com/dp/161729134X/)
+* [Learn Visual Basic 2019 Edition: A Step-By-Step Programming Tutorial](https://www.abebooks.com/servlet/BookDetailsPL?bi=30946734112&searchurl=isbn%3D1951077105%26sortby%3D17&cm_sp=snippet-_-srp1-_-title2)
+* [Visual Basic 2019 Handbook: A Concise Guide to VB2019 Programming](https://www.abebooks.com/servlet/BookDetailsPL?bi=30903890407&cm_sp=Searchmod-_-NullResults-_-BDP)
+* [BEGINNING VISUAL BASIC](https://www.kidwaresoftware.com/Beginning-Visual-Basic-A-Computer-Programming-Tutorial-by-Philip-Conrod-and-Lou-Tylee/)
+* [Visual Basic and Databases](https://www.kidwaresoftware.com/visual-basic-and-databases-by-philip-conrod-and-lou-tylee/)
+* [Learn Visual Basic .Net Programming: A Practical Approach](https://www.abebooks.com/9781080576890/Learn-Visual-Basic-.Net-Programming-1080576894/plp)
