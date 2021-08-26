@@ -2,7 +2,7 @@
 
 ## Websites
 
-* The [official VB.NET documentation](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/) has great content on a wide variety of subjects, including key [concepts](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/), [sample applications](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic) and [walkthroughs](hhttps://docs.microsoft.com/en-us/dotnet/visual-basic/walkthroughs).
+* The [official VB.NET documentation](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/) has great content on a wide variety of subjects, including key [concepts](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/), [sample applications](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic) and [walkthroughs](https://docs.microsoft.com/en-us/dotnet/visual-basic/walkthroughs).
 
 ## Videos
 
