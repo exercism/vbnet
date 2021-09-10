@@ -1,3 +1,30 @@
 {
-  "docs": []
+  "docs": [    {
+    "uuid": "b9916f8c-dce9-4711-8491-c2bce5f688e8",
+    "slug": "installation",
+    "path": "docs/INSTALLATION.md",
+    "title": "Installing VBNET locally",
+    "blurb": "Learn how to install VBNET locally to solve Exercism's exercises on your own machine"
+  },
+  {
+    "uuid": "98c32d1d-7b14-465c-afb2-65fc7ddc043f",
+    "slug": "learning",
+    "path": "docs/LEARNING.md",
+    "title": "How to learn VBNET",
+    "blurb": "An overview of how to get started from scratch with VBNET"
+  },
+  {
+    "uuid": "dd73332a-5842-4cc0-9fdb-a87294a542b0",
+    "slug": "tests",
+    "path": "docs/TESTS.md",
+    "title": "Testing on the VBNET track",
+    "blurb": "Learn how to test your VBNET exercises on Exercism"
+  },
+  {
+    "uuid": "1089ba7d-accc-4c10-a25c-56f769a14195",
+    "slug": "resources",
+    "path": "docs/RESOURCES.md",
+    "title": "Useful VBNET resources",
+    "blurb": "A collection of useful resources to help you master VBNET"
+  }]
 }
