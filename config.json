@@ -89,7 +89,7 @@
           "enumerables",
           "extension-methods"
         ],
-        "difficulty": 1,
+        "difficulty": 5,
         "topics": [
           "extension_methods",
           "sequences",
