@@ -194,9 +194,9 @@
           "integers",
           "loops",
           "math"
-          ]
-        },
-        {        
+        ]
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "016ea49c-036b-44f7-909b-4c38aa62d636",
@@ -288,6 +288,35 @@
         "topics": [
           "lists"
         ]
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "1d00115a-9ba0-439a-8994-cccc2378d0d1",
+        "practices": [
+          "stacks"
+        ],
+        "prerequisites": [
+          "stacks",
+          "strings",
+          "chars",
+          "booleans"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "4e6633c9-4fd7-4a32-90c0-0498d06ddcbf",
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [
+          "enums",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 3
       }
     ]
   },
