@@ -83,6 +83,73 @@ Public Class AnagramTest
         CompareLists(expected, actual)
     End Sub
 
+    <Fact>
+    Public Sub AnagramsAreWhiteSpaceAgnostic()
+        Dim detector As New Anagram("Hello Exercism")
+        Dim words As String() = New String() {"Hello Exercism", "Heroes Cell Mix", "foo"}
+        Dim expected As String() = New String() {"Heroes Cell Mix"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+    <Fact>
+    Public Sub DuplicateAnagramsAreReturned()
+        Dim detector As New Anagram("Software")
+        Dim words As String() = New String() {"sweat for", "waste for", "sweat for", "Sweat For"}
+        Dim expected As String() = New String() {"sweat for", "waste for", "sweat for", "Sweat For"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+    <Fact>
+    Public Sub AnagramsAreReturnedTheSameWayTheyCameIn()
+        Dim detector As New Anagram("allergy")
+        Dim words As String() = New String() {"GaLlErY", "ballerina", "re gally", "clergy", "   largely  ", "  leading  ", "   "}
+        Dim expected As String() = New String() {"GaLlErY", "   largely  ", "re gally"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+    <Fact>
+    Public Sub NullInConstructorThrowsArgumentNullException()
+        Dim detector As Anagram
+        'Null throws
+        Dim action As Action =
+            Sub()
+                detector = New Anagram(Nothing)
+            End Sub
+        Assert.Throws(Of ArgumentNullException)(action)
+        'Empty and white-space don't
+        detector = New Anagram(String.Empty)
+        detector = New Anagram("     ")
+    End Sub
+
+    <Fact>
+    Public Sub NullCollectionIsIgnored()
+        Dim words As String()
+        Dim actual As IEnumerable(Of String)
+        Dim detector As New Anagram("Orchestra")
+        Dim expected As String() = New String() {}
+
+        words = Nothing
+        actual = detector.Match(words)
+        CompareLists(expected, actual)
+
+        words = New String() {}
+        actual = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+    <Fact>
+    Public Sub NullInCollectionIsIgnored()
+        Dim detector As New Anagram("Orchestra")
+        Dim words As String() = New String() {Nothing, "cashregister", Nothing, "Carthorse", "", "radishes", Nothing, "   "}
+        Dim expected As String() = New String() {"Carthorse"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+
     Private Shared Sub CompareLists(expected As IEnumerable(Of String), actual As IEnumerable(Of String))
         'Normalize both lists (same sort order) to ensure it does not fail the tests.
         If (expected IsNot Nothing) AndAlso (actual IsNot Nothing) Then
