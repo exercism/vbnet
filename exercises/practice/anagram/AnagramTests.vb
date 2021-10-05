@@ -10,7 +10,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub DetectSimpleAnagram()
         Dim detector As New Anagram("ant")
         Dim words As String() = New String() {"tan", "stand", "at"}
@@ -18,7 +18,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub DetectMultipleAnagrams()
         Dim detector As New Anagram("master")
         Dim words As String() = New String() {"stream", "pigeon", "maters"}
@@ -26,7 +26,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub DoesNotConfuseDifferentDuplicates()
         Dim detector As New Anagram("galea")
         Dim words As String() = New String() {"eagle"}
@@ -34,7 +34,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub IdenticalWordIsNotAnagram()
         Dim detector As New Anagram("corn")
         Dim words As String() = New String() {"corn", "dark", "Corn", "rank", "CORN", "cron", "park"}
@@ -42,7 +42,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector As New Anagram("mass")
         Dim words As String() = New String() {"last"}
@@ -50,7 +50,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub EliminateAnagramSubsets()
         Dim detector As New Anagram("good")
         Dim words As String() = New String() {"dog", "goody"}
@@ -58,7 +58,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub DetectAnagrams()
         Dim detector As New Anagram("allergy")
         Dim words As String() = New String() {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
@@ -66,7 +66,7 @@ Public Class AnagramTest
         Assert.Equal(results, detector.Match(words))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub AnagramsAreCaseInsensitive()
         Dim detector As New Anagram("Orchestra")
         Dim words As String() = New String() {"cashregister", "Carthorse", "radishes"}
