@@ -51,7 +51,7 @@ Public Class AnagramTest
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector As New Anagram("mass")
         Dim words As String() = New String() {"last"}
-        Dim expected As String() = New String(-1) {}
+        Dim expected As String() = New String() {}
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -60,7 +60,7 @@ Public Class AnagramTest
     Public Sub EliminateAnagramSubsets()
         Dim detector As New Anagram("good")
         Dim words As String() = New String() {"dog", "goody"}
-        Dim expected As String() = New String(-1) {}
+        Dim expected As String() = New String() {}
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
