@@ -84,10 +84,10 @@ Public Class AnagramTest
     End Sub
 
     Private Shared Sub CompareLists(expected As IEnumerable(Of String), actual As IEnumerable(Of String))
-        'Normalize both lists (same sort order and casing) to ensure such differences don't fail the tests.
+        'Normalize both lists (same sort order) to ensure it does not fail the tests.
         If (expected IsNot Nothing) AndAlso (actual IsNot Nothing) Then
-            expected = From e In expected Let e2 = e.ToLowerInvariant() Select e2 Order By e2
-            actual = From e In actual Let e2 = e.ToLowerInvariant() Select e2 Order By e2
+            expected = From e In expected Order By e
+            actual = From e In actual Order By e
         End If
         Assert.Equal(expected, actual)
     End Sub
