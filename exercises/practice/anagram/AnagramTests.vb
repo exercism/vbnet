@@ -6,72 +6,90 @@ Public Class AnagramTest
     Public Sub NoMatches()
         Dim detector As New Anagram("diaper")
         Dim words As String() = New String() {"hello", "world", "zombies", "pants"}
-        Dim results As String() = New String() {}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub DetectSimpleAnagram()
         Dim detector As New Anagram("ant")
         Dim words As String() = New String() {"tan", "stand", "at"}
-        Dim results As String() = New String() {"tan"}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {"tan"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub DetectMultipleAnagrams()
         Dim detector As New Anagram("master")
         Dim words As String() = New String() {"stream", "pigeon", "maters"}
-        Dim results As String() = New String() {"maters", "stream"}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {"maters", "stream"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub DoesNotConfuseDifferentDuplicates()
         Dim detector As New Anagram("galea")
         Dim words As String() = New String() {"eagle"}
-        Dim results As String() = New String() {}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub IdenticalWordIsNotAnagram()
         Dim detector As New Anagram("corn")
         Dim words As String() = New String() {"corn", "dark", "Corn", "rank", "CORN", "cron", "park"}
-        Dim results As String() = New String() {"cron"}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {"cron"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector As New Anagram("mass")
         Dim words As String() = New String() {"last"}
-        Dim results As String() = New String(-1) {}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String(-1) {}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub EliminateAnagramSubsets()
         Dim detector As New Anagram("good")
         Dim words As String() = New String() {"dog", "goody"}
-        Dim results As String() = New String(-1) {}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String(-1) {}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub DetectAnagrams()
         Dim detector As New Anagram("allergy")
         Dim words As String() = New String() {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
-        Dim results As String() = New String() {"gallery", "largely", "regally"}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {"gallery", "largely", "regally"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
     End Sub
 
     <Fact>
     Public Sub AnagramsAreCaseInsensitive()
         Dim detector As New Anagram("Orchestra")
         Dim words As String() = New String() {"cashregister", "Carthorse", "radishes"}
-        Dim results As String() = New String() {"Carthorse"}
-        Assert.Equal(results, detector.Match(words))
+        Dim expected As String() = New String() {"Carthorse"}
+        Dim actual As IEnumerable(Of String) = detector.Match(words)
+        CompareLists(expected, actual)
+    End Sub
+
+    Private Shared Sub CompareLists(expected As IEnumerable(Of String), actual As IEnumerable(Of String))
+        'Normalize both lists (same sort order and casing) to ensure such differences don't fail the tests.
+        If (expected IsNot Nothing) AndAlso (actual IsNot Nothing) Then
+            expected = From e In expected Let e2 = e.ToLowerInvariant() Select e2 Order By e2
+            actual = From e In actual Let e2 = e.ToLowerInvariant() Select e2 Order By e2
+        End If
+        Assert.Equal(expected, actual)
     End Sub
 
 End Class
