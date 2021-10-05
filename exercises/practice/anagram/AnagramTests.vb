@@ -149,6 +149,22 @@ Public Class AnagramTest
         CompareLists(expected, actual)
     End Sub
 
+    <Fact>
+    Public Sub OtherEnumerablesThanArrayWorkAsExpected()
+        Dim detector As New Anagram("master")
+        Dim words As IEnumerable(Of String) = MasterAnagrams
+        Dim expected As String() = New String() {"maters", "stream"}
+        Dim actual As IEnumerable(Of String)
+
+        actual = detector.Match(words)
+        CompareLists(expected, actual)
+
+        actual = detector.Match(words.ToList())
+        CompareLists(expected, actual)
+
+        actual = detector.Match(words.ToHashSet())
+        CompareLists(expected, actual)
+    End Sub
 
     Private Shared Sub CompareLists(expected As IEnumerable(Of String), actual As IEnumerable(Of String))
         'Normalize both lists (same sort order) to ensure it does not fail the tests.
@@ -158,5 +174,13 @@ Public Class AnagramTest
         End If
         Assert.Equal(expected, actual)
     End Sub
+
+    Private Shared ReadOnly Iterator Property MasterAnagrams As IEnumerable(Of String)
+        Get
+            Yield "stream"
+            Yield "pigeon"
+            Yield "maters"
+        End Get
+    End Property
 
 End Class
