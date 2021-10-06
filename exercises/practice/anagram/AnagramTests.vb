@@ -7,6 +7,7 @@ Public Class AnagramTest
         Dim detector As New Anagram("diaper")
         Dim words As String() = New String() {"hello", "world", "zombies", "pants"}
         Dim expected As String() = New String() {}
+        //Dim expected As String() = EmptyArray
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -33,7 +34,7 @@ Public Class AnagramTest
     Public Sub DoesNotConfuseDifferentDuplicates()
         Dim detector As New Anagram("galea")
         Dim words As String() = New String() {"eagle"}
-        Dim expected As String() = New String() {}
+        Dim expected As String() = EmptyArray
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -51,7 +52,7 @@ Public Class AnagramTest
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector As New Anagram("mass")
         Dim words As String() = New String() {"last"}
-        Dim expected As String() = New String() {}
+        Dim expected As String() = EmptyArray
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -60,7 +61,7 @@ Public Class AnagramTest
     Public Sub EliminateAnagramSubsets()
         Dim detector As New Anagram("good")
         Dim words As String() = New String() {"dog", "goody"}
-        Dim expected As String() = New String() {}
+        Dim expected As String() = EmptyArray
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -129,13 +130,13 @@ Public Class AnagramTest
         Dim words As String()
         Dim actual As IEnumerable(Of String)
         Dim detector As New Anagram("Orchestra")
-        Dim expected As String() = New String() {}
+        Dim expected As String() = EmptyArray
 
         words = Nothing
         actual = detector.Match(words)
         CompareLists(expected, actual)
 
-        words = New String() {}
+        words = EmptyArray
         actual = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
@@ -182,5 +183,7 @@ Public Class AnagramTest
             Yield "maters"
         End Get
     End Property
+
+    Private Shared ReadOnly EmptyArray As String() = Array.Empty(Of String)()
 
 End Class
