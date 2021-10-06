@@ -14,15 +14,15 @@ Public Class Anagram
     End Sub
 
     ''' <summary>
-    ''' Returns an array of string with all <paramref name="words"/> that are anagrams of <see cref="Word"/>. White-space before, within and
-    ''' after the word is ignored, and also the casing (upper-/lower-case) does not matter to determine whether a word is an anagram or not,
-    ''' but the word is always returned as it appeared in the input collection. If <paramref name="words"/> is <see langword="Nothing"/> or 
+    ''' Returns an array of string with all <paramref name="words"/> that are anagrams of the word given in the constructor. White-space before, 
+    ''' within and after the word is ignored, and also the casing (upper-/lower-case) does not matter to determine whether a word is an anagram 
+    ''' or not, but the word is always returned as it appeared in the input collection. If <paramref name="words"/> is <see langword="Nothing"/> or 
     ''' empty, an empty collection is returned (no exception thrown) and elements that are <see langword="Nothing"/> are ignored. The sort
     ''' order of the anagrams found is undefined. In case there are duplicate anagrams within <paramref name="words"/>, all occurrences are
     ''' returned.
     ''' </summary>
     ''' <param name="words">The words to check.</param>
-    ''' <returns>A collection containing the words from '<paramref name="words"/>' that are anagrams of '<see cref="Word"/>'.</returns>
+    ''' <returns>A collection containing the words from '<paramref name="words"/>' that are anagrams of the word passed to the constructor.</returns>
     Public Function Match(words As IEnumerable(Of String)) As IEnumerable(Of String)
         Throw New NotImplementedException("It's up to you to implement this code...")
     End Function
