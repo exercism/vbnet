@@ -1,1 +1,1 @@
-﻿'<Assembly: CLSCompliant(False)>
+﻿<Assembly: CLSCompliant(False)>
