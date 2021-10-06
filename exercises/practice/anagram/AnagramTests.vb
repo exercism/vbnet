@@ -6,8 +6,7 @@ Public Class AnagramTest
     Public Sub NoMatches()
         Dim detector As New Anagram("diaper")
         Dim words As String() = New String() {"hello", "world", "zombies", "pants"}
-        Dim expected As String() = New String() {}
-        //Dim expected As String() = EmptyArray
+        Dim expected As String() = EmptyArray
         Dim actual As IEnumerable(Of String) = detector.Match(words)
         CompareLists(expected, actual)
     End Sub
