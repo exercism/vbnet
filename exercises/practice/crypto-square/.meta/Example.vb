@@ -1,54 +1,41 @@
-Imports System.Text
+Imports System.Runtime.CompilerServices
 
-Public Class Crypto
-    Property NormalizePlaintext As String
-    Property Size As Integer
-
-	Public Sub New(value As String)
-        NormalizePlaintext = NormalizeText(value)
-		Size = GetSquareSize(NormalizePlaintext)
-	End Sub
-
-	Private Shared Function NormalizeText(text As String) As String
-		Return String.Concat(text.ToLower().Where(AddressOf Char.IsLetterOrDigit))
+Module Crypto
+	Public Function Ciphertext(plaintext As String) As String
+		If plaintext.Length = 0
+			Return ""
+		Else
+			Return String.Join(" ", plaintext.Normalized().Rows().Columns())
+		End If
+	End Function
+	
+	<Extension>
+	Private Function Normalized(str As String) As String
+		Return New String(str.Where(AddressOf Char.IsLetterOrDigit).Select(AddressOf Char.ToLower).ToArray())
+	End Function
+	
+	<Extension>
+	Private Function Size(str As String) As Integer
+		Return Math.Ceiling(Math.Sqrt(str.length))
+	End Function
+	
+	<Extension>
+	Private Function Rows(str As String) As List(Of String)
+		Dim size = str.Size()
+		Return str.Chunks(size).Select(Function(row) row.PadRight(size)).ToList()
 	End Function
 
-	Private Shared Function GetSquareSize(text As String) As Integer
-		Return CInt(Math.Truncate(Math.Ceiling(Math.Sqrt(text.Length))))
+	<Extension>
+	Private Function Columns(rows As List(Of String)) As List(Of String)
+		Return Enumerable.Range(0, rows(0).Length).
+			Select(Function(i) String.Concat(rows.Select(Function(row) row(i)))).
+			ToList()
 	End Function
 
-	Public Function PlaintextSegments() As String()
-		Return SegmentText(NormalizePlaintext, Size)
-	End Function
-
-	Private Shared Function SegmentText(text As String, size As Integer) As String()
-		Dim segments = New List(Of String)()
-		Dim idx = 0
-		While idx < text.Length
-			If idx + size < text.Length Then
-				segments.Add(text.Substring(idx, size))
-			Else
-				segments.Add(text.Substring(idx))
-			End If
-			idx += size
-		End While
-		Return segments.ToArray()
-	End Function
-
-	Public Function Ciphertext() As String
-		Dim ciphertext__1 = New StringBuilder(NormalizePlaintext.Length)
-
-		For i As Integer = 0 To Size - 1
-            For Each segment In PlaintextSegments()
-                If i < segment.Length Then
-                    ciphertext__1.Append(segment(i))
-                End If
-            Next
+	<Extension>
+	Private Iterator Function Chunks(str As String, size As Integer) As IEnumerable(Of String)
+		For i = 0 To str.Length - 1 Step size
+			Yield str.Substring(i, Math.Min(str.Length - i, size))
 		Next
-		Return ciphertext__1.ToString()
 	End Function
-
-	Public Function NormalizeCiphertext() As String
-		Return String.Join(" ", SegmentText(Ciphertext(), 5))
-	End Function
-End Class
+End Module
