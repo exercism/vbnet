@@ -1,10 +1,10 @@
 ''' <summary>
 ''' Class that analyzes which words are anagrams of the word specified in the constructor.
 ''' </summary>
-Public Class Anagram
+Public Class AnagramChecker
 
     ''' <summary>
-    ''' Constructs a new <see cref="Anagram"/> analyzer for the given <paramref name="word"/>. If <paramref name="word"/> is <see langword="Nothing"/>,
+    ''' Constructs a new <see cref="AnagramChecker"/> analyzer for the given <paramref name="word"/>. If <paramref name="word"/> is <see langword="Nothing"/>,
     ''' an <see cref="ArgumentNullException"/> is thrown. Empty strings and white-space are valid (but are going to result in empty anagram lists).
     ''' </summary>
     ''' <param name="word">The word against to check.</param>
