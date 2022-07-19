@@ -1,7 +1,5 @@
-Imports System.Collections.Generic
-
 Public Module MatchingBrackets
-    Private ReadOnly closersOpeners As Dictionary(Of Char, Char)  From {
+    Private ReadOnly closersOpeners As New Dictionary(Of Char, Char) From {
         {")"c, "("c},
         {"]"c, "["c},
         {"}"c, "{"c}
