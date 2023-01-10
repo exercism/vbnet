@@ -13,6 +13,9 @@
       ],
       "example": [
         ".meta/Example.vb"
+      ],
+      "invalidator": [
+        "ResistorColor.vbproj"
       ]
     }
   }

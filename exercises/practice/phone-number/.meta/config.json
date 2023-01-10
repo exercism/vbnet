@@ -14,6 +14,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "PhoneNumber.vbproj"
     ]
   },
   "source": "Event Manager by JumpstartLab",
