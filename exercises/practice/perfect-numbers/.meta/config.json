@@ -13,6 +13,9 @@
       ],
       "example": [
         ".meta/Example.vb"
+      ],
+      "invalidator": [
+        "PerfectNumbers.vbproj"
       ]
     },
     "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",
