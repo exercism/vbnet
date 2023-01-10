@@ -15,6 +15,9 @@
         ],
         "example": [
             ".meta/Example.vb"
+        ],
+        "invalidator": [
+          "Leap.vbproj"
         ]
     },
     "source": "JavaRanch Cattle Drive, exercise 3",

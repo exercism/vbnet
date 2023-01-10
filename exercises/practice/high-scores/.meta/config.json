@@ -13,6 +13,9 @@
       ],
       "example": [
         ".meta/Example.vb"
+      ],
+      "invalidator": [
+        "HighScores.vbproj"
       ]
     },
     "source": "Tribute to the eighties' arcade game Frogger"

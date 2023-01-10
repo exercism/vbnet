@@ -13,6 +13,9 @@
       ],
       "example": [
         ".meta/Example.vb"
+      ],
+      "invalidator": [
+        "CollatzConjecture.vbproj"
       ]
     },
     "source": "An unsolved problem in mathematics named after mathematician Lothar Collatz",
