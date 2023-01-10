@@ -7,7 +7,7 @@ Public Class BinaryTest
         Assert.Equal(New Binary("011").ToDecimal(), 3)
     End Sub
 
-    <Theory(Skip := "Remove this Skip property to run this test")>
+    <Theory(Skip:="Remove this Skip property to run this test")>
     <InLineData("1", 1)>
     <InLineData("10", 2)>
     <InLineData("11", 3)>
@@ -19,7 +19,7 @@ Public Class BinaryTest
         Assert.Equal( New Binary(binary).ToDecimal(), expected)
     End Sub
 
-	<Theory(Skip := "Remove this Skip property to run this test")>
+	<Theory(Skip:="Remove this Skip property to run this test")>
     <InLineData("carrot")>
     <InLineData("2")>
     <InLineData("5")>

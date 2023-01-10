@@ -1,7 +1,7 @@
 {
   "blurb": "Implement the classic method for composing secret messages called a square code.",
   "authors": ["brent113"],
-  "contributors": ["axtens"],
+  "contributors": ["axtens", "erikschierboom"],
   "files": {
     "solution": ["CryptoSquare.vb"],
     "test": ["CryptoSquareTests.vb"],

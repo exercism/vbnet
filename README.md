@@ -1,4 +1,4 @@
-# VB.NET
+# Exercism VB.NET Track
 
 Exercism problems in VB.NET
 
