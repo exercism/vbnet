@@ -31,6 +31,9 @@
     ],
     "exemplar": [
       ".meta/Exemplar.vb"
+    ],
+    "invalidator": [
+      "%{pascal_slug}.vbproj"
     ]
   },
   "exercises": {

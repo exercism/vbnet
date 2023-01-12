@@ -13,6 +13,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Clock.vbproj"
     ]
   },
   "source": "Pairing session with Erin Drummond",
