@@ -1,9 +1,7 @@
 {
-  "blurb": "Implement a clock that handles times without dates.",
   "authors": [
     "axtens"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "Clock.vb"
@@ -18,6 +16,7 @@
       "Clock.vbproj"
     ]
   },
+  "blurb": "Implement a clock that handles times without dates.",
   "source": "Pairing session with Erin Drummond",
   "source_url": "https://twitter.com/ebdrummond"
 }
