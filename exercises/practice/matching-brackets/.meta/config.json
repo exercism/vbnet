@@ -1,23 +1,21 @@
 {
-    "blurb": "Make sure the brackets and braces all match.",
-    "authors": [
-      "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "MatchingBrackets.vb"
     ],
-    "contributors": [],
-    "files": {
-      "solution": [
-        "MatchingBrackets.vb"
-      ],
-      "test": [
-        "MatchingBracketsTests.vb"
-      ],
-      "example": [
-        ".meta/Example.vb"
-      ],
-      "invalidator": [
-        "MatchingBrackets.vbproj"
-      ]
-    },
-    "source": "Ginna Baker"
-  }
-  
+    "test": [
+      "MatchingBracketsTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "MatchingBrackets.vbproj"
+    ]
+  },
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker"
+}
