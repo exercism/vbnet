@@ -1,12 +1,14 @@
+Imports System.Security.Cryptography
 Imports Xunit
 
 Public Class ReverseStringTests
     <Fact>
     Public Sub An_empty_string()
+        '2023-04-15 14:10:HM:Test passed.
         Assert.Equal("", ReverseString.Reverse(""))
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub A_word()
         Assert.Equal("tobor", ReverseString.Reverse("robot"))
     End Sub
