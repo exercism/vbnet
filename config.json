@@ -323,6 +323,20 @@
           "exceptions"
         ],
         "difficulty": 3
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
+        "practices": [
+          "casting"
+        ],
+        "prerequisites": [
+          "numbers",
+          "booleans",
+          "casting"
+        ],
+        "difficulty": 2
       }
     ]
   },
