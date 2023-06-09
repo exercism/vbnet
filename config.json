@@ -1145,6 +1145,21 @@
         "difficulty": 4
       },
       {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "a3845cd0-061c-4c1b-a687-45a28a9504a0",
+        "practices": [
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "for-loops",
+          "string-formatting"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
