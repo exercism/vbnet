@@ -626,6 +626,22 @@
         "difficulty": 6
       },
       {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "fb7282b4-36bc-4b98-b478-db0d5bb044fa",
+        "practices": [
+          "dictionaries",
+          "parallellism"
+        ],
+        "prerequisites": [
+          "strings",
+          "enumerables",
+          "dictionaries",
+          "parallellism"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
