@@ -836,6 +836,25 @@
         "difficulty": 7
       },
       {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "8376124d-92ea-4d73-9bca-ead57a25bc7b",
+        "practices": [
+          "higher-order-functions",
+          "generic-methods",
+          "lists",
+          "parameters"
+        ],
+        "prerequisites": [
+          "parameters",
+          "lists",
+          "generic-methods",
+          "generic-types",
+          "higher-order-functions"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
