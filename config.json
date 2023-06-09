@@ -1034,6 +1034,21 @@
         "difficulty": 4
       },
       {
+        "slug": "beer-song",
+        "name": "Beer Song",
+        "uuid": "2523e11e-3a9e-4936-9cbb-37f53a6d90cb",
+        "practices": [
+          "switch-statements",
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "for-loops"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
