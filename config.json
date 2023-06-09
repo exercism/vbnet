@@ -383,6 +383,25 @@
         "difficulty": 5
       },
       {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "7623e6c5-a893-4646-bc3c-c3d770572e7a",
+        "practices": [
+          "arrays",
+          "yield",
+          "for-loops",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "numbers",
+          "for-loops",
+          "exceptions"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
