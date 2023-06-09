@@ -402,6 +402,22 @@
         "difficulty": 1
       },
       {
+        "slug": "word-count",
+        "name": "Word Count",
+        "uuid": "af99f598-996e-4a03-ba5d-5cea5de96e0c",
+        "practices": [
+          "dictionaries",
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "dictionaries",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
