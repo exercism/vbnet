@@ -676,6 +676,24 @@
         "difficulty": 5
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "57d134bd-f992-4452-b14c-fe2b533d72ee",
+        "practices": [
+          "dictionaries",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "dictionaries",
+          "strings",
+          "chars",
+          "if-statements",
+          "foreach-loops",
+          "exceptions"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
