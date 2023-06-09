@@ -599,6 +599,21 @@
         "difficulty": 3
       },
       {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "551510bc-817d-4145-b974-f9149f7e1c5e",
+        "practices": [
+          "integral-numbers",
+          "while-loops"
+        ],
+        "prerequisites": [
+          "integral-numbers",
+          "arrays",
+          "while-loops"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
