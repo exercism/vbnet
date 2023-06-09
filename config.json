@@ -1016,6 +1016,24 @@
         "difficulty": 4
       },
       {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "1bbf5277-8fdf-411c-be19-ef19b6756246",
+        "practices": [
+          "properties",
+          "floating-point-numbers",
+          "concurrency",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "classes",
+          "properties",
+          "exceptions"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
