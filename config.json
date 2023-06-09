@@ -462,6 +462,20 @@
         "difficulty": 3
       },
       {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "69846818-29ff-4293-84c2-49e62ee8dc34",
+        "practices": [
+          "arrays"
+        ],
+        "prerequisites": [
+          "arrays",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
