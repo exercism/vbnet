@@ -918,6 +918,24 @@
         "difficulty": 3
       },
       {
+        "slug": "grep",
+        "name": "Grep",
+        "uuid": "0c349413-4dbd-4167-9537-1f828d86ffe3",
+        "practices": [
+          "flag-enums",
+          "if-statements",
+          "switch-statements",
+          "switch-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "flag-enums",
+          "if-statements",
+          "string-formatting"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
