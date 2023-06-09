@@ -1049,6 +1049,24 @@
         "difficulty": 3
       },
       {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "4555cf8b-e800-494e-bc23-61f9428c900b",
+        "practices": [
+          "linq",
+          "for-loops",
+          "floating-point-numbers",
+          "recursion"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "numbers",
+          "enumerables",
+          "for-loops"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
