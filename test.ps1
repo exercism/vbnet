@@ -37,7 +37,7 @@ function Copy-Exercise($SourceDir, $BuildDir) {
 
 function Enable-All-UnitTests($BuildDir) {
     Write-Output "Enabling all tests"
-    Get-ChildItem -Path $BuildDir -Include "*Tests.cs" -Recurse | ForEach-Object {
+    Get-ChildItem -Path $BuildDir -Include "*Tests.vb" -Recurse | ForEach-Object {
         (Get-Content $_.FullName) -Replace "\(Skip:=""Remove this Skip property to run this test""\)", "" | Set-Content $_.FullName
     }
 }
@@ -47,8 +47,8 @@ function Set-ExampleImplementation {
     param($ExercisesDir, $ReplaceFileName)
 
     if ($PSCmdlet.ShouldProcess("Exercise $ReplaceFileName", "replace solution with example")) {
-        Get-ChildItem -Path $ExercisesDir -Include "*.csproj" -Recurse | ForEach-Object {
-            $stub = Join-Path -Path $_.Directory ($_.BaseName + ".cs")
+        Get-ChildItem -Path $ExercisesDir -Include "*.vbproj" -Recurse | ForEach-Object {
+            $stub = Join-Path -Path $_.Directory ($_.BaseName + ".vb")
             $example = Join-Path -Path $_.Directory ".meta" $ReplaceFileName
 
             Move-Item -Path $example -Destination $stub -Force
@@ -62,7 +62,7 @@ function Use-ExampleImplementation {
 
     if ($PSCmdlet.ShouldProcess("Exercises directory", "replace all solutions with corresponding examples")) {
         Write-Output "Replacing practice exercise stubs with example"
-        Set-ExampleImplementation $PracticeExercisesDir "Example.cs"
+        Set-ExampleImplementation $PracticeExercisesDir "Example.vb"
     }
 }
 
