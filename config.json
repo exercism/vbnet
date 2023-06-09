@@ -953,6 +953,23 @@
         "difficulty": 2
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "17d6792c-ae1b-4e25-a845-2ba6a9cbaba9",
+        "practices": [
+          "string-formatting",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "string-formatting",
+          "numbers",
+          "if-statements",
+          "for-loops"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
