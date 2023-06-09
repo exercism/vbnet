@@ -353,6 +353,20 @@
         "difficulty": 1
       },
       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "e191cff0-b845-48f0-9ac9-daae63af9e8a",
+        "practices": [
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "strings",
+          "string-formatting",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
