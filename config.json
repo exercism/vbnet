@@ -1098,6 +1098,20 @@
         "difficulty": 1
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "55100bd3-8470-45d2-ae90-ac3eb9fd786c",
+        "practices": [
+          "floating-point-numbers",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "if-statements"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
