@@ -554,6 +554,22 @@
         "difficulty": 6
       },
       {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "ceb811d0-3aae-4517-9e37-1eca5ba07c39",
+        "practices": [
+          "tuples",
+          "generic-methods"
+        ],
+        "prerequisites": [
+          "tuples",
+          "numbers",
+          "enumerables",
+          "generic-methods"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",

@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "PythagoreanTriplet.vb"
+    ],
+    "test": [
+      "PythagoreanTripletTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product a * b * c.",
+  "source": "Problem 9 at Project Euler",
+  "source_url": "https://projecteuler.net/problem=9"
+}
