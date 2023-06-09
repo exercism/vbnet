@@ -1067,6 +1067,22 @@
         "difficulty": 5
       },
       {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "7d306a39-c748-4372-8ad6-eb9ff1d42a8b",
+        "practices": [
+          "nullability",
+          "classes"
+        ],
+        "prerequisites": [
+          "numbers",
+          "classes",
+          "nullability",
+          "exceptions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
