@@ -325,6 +325,21 @@
         "difficulty": 3
       },
       {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "542820e5-43a9-4c05-93c2-e3e07329f380",
+        "practices": [
+          "switch-statements",
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "6b82f416-8878-4142-86fc-140f0c58989f",
