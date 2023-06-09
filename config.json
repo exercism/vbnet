@@ -773,6 +773,22 @@
         "difficulty": 7
       },
       {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "664f766d-3f96-49d7-8ef7-9c1be4406f84",
+        "practices": [
+          "floating-point-numbers",
+          "classes"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "classes",
+          "constructors",
+          "numbers"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
