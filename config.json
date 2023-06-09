@@ -325,6 +325,19 @@
         "difficulty": 3
       },
       {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "6b82f416-8878-4142-86fc-140f0c58989f",
+        "practices": [
+          "datetimes"
+        ],
+        "prerequisites": [
+          "datetimes",
+          "numbers"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
