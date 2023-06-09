@@ -449,6 +449,19 @@
         "difficulty": 3
       },
       {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "2cdcf9b2-caa5-4116-bf38-e65138875112",
+        "practices": [
+          "dictionaries"
+        ],
+        "prerequisites": [
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
