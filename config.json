@@ -476,6 +476,23 @@
         "difficulty": 3
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "cbdb6929-d1cb-416a-b38a-8eda20401deb",
+        "practices": [
+          "multi-dimensional-arrays",
+          "tuples"
+        ],
+        "prerequisites": [
+          "multi-dimensional-arrays",
+          "tuples",
+          "enumerables",
+          "generic-methods",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
