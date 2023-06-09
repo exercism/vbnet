@@ -819,6 +819,23 @@
         "difficulty": 1
       },
       {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "0cbb69a6-f47f-4ca6-b6ae-11983bbfc7c7",
+        "practices": [
+          "switch-statements",
+          "for-loops"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "arrays",
+          "for-loops",
+          "if-statements"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
