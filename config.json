@@ -1000,6 +1000,22 @@
         "difficulty": 2
       },
       {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "5583fbaa-0d79-4069-a1c7-782659e737e4",
+        "practices": [
+          "chars",
+          "strings",
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "chars",
+          "strings",
+          "booleans"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
