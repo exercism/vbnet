@@ -1083,6 +1083,21 @@
         "difficulty": 6
       },
       {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "83d94c67-ce76-4676-a2fc-55284446ed3b",
+        "practices": [
+          "linq",
+          "math-operators",
+          "numbers"
+        ],
+        "prerequisites": [
+          "numbers",
+          "math-operators"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
