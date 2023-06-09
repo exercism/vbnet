@@ -435,6 +435,20 @@
         "difficulty": 1
       },
       {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "61ea38ad-7600-42fc-aa6b-07188259689f",
+        "practices": [
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "strings",
+          "bit-manipulation",
+          "arrays"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
