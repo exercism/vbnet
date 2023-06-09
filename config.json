@@ -970,6 +970,21 @@
         "difficulty": 5
       },
       {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "1c9d5334-855b-41af-868d-d674cb534b5d",
+        "practices": [
+          "enumerables",
+          "recursion",
+          "foreach-loops"
+        ],
+        "prerequisites": [
+          "enumerables",
+          "foreach-loops"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
