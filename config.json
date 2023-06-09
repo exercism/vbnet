@@ -642,6 +642,22 @@
         "difficulty": 5
       },
       {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "7db2492a-2d20-4be3-af4a-c9fad183c752",
+        "practices": [
+          "chars",
+          "strings",
+          "sets"
+        ],
+        "prerequisites": [
+          "chars",
+          "strings",
+          "booleans"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
