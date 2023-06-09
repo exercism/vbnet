@@ -539,6 +539,21 @@
         "difficulty": 2
       },
       {
+        "slug": "rail-fence-cipher",
+        "name": "Rail Fence Cipher",
+        "uuid": "b8645a9c-bd7e-4e57-81b4-079b5e0c3bb0",
+        "practices": [
+          "constructors"
+        ],
+        "prerequisites": [
+          "classes",
+          "constructors",
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
