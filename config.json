@@ -869,6 +869,21 @@
         "difficulty": 5
       },
       {
+        "slug": "ledger",
+        "name": "Ledger",
+        "uuid": "6837fcd5-6a6a-4142-b5cf-4713e952b8cc",
+        "practices": [
+          "globalization",
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "strings",
+          "string-formatting",
+          "globalization"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
