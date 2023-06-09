@@ -614,6 +614,18 @@
         "difficulty": 4
       },
       {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "65780c09-7730-447d-ae61-43f19283be85",
+        "practices": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
