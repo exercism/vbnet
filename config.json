@@ -1130,6 +1130,21 @@
         "difficulty": 4
       },
       {
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "uuid": "c9151160-d2e8-4c54-9191-04644d913cd6",
+        "practices": [
+          "chars",
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "chars",
+          "booleans"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
