@@ -418,6 +418,23 @@
         "difficulty": 4
       },
       {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "73799a06-b510-47e1-87a3-7496f2afc346",
+        "practices": [
+          "enumerables",
+          "foreach-loops",
+          "numbers"
+        ],
+        "prerequisites": [
+          "enumerables",
+          "numbers",
+          "foreach-loops",
+          "if-statements"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
