@@ -523,6 +523,22 @@
         "difficulty": 4
       },
       {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "36d91bd3-0cdc-4e53-94bf-4b9a797b596e",
+        "practices": [
+          "if-statements",
+          "casting"
+        ],
+        "prerequisites": [
+          "strings",
+          "if-statements",
+          "numbers",
+          "casting"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
