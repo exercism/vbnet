@@ -855,6 +855,20 @@
         "difficulty": 5
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "c6e80741-f7a4-4aef-8bb2-3f9cd2ffc182",
+        "practices": [
+          "generic-types"
+        ],
+        "prerequisites": [
+          "numbers",
+          "generic-types",
+          "classes"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
