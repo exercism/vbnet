@@ -902,6 +902,22 @@
         "difficulty": 4
       },
       {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "ffa3cdb7-5cc8-4583-b6b1-e17f18db2b5d",
+        "practices": [
+          "chars",
+          "strings",
+          "sets"
+        ],
+        "prerequisites": [
+          "chars",
+          "strings",
+          "booleans"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
