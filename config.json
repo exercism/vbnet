@@ -723,6 +723,23 @@
         "difficulty": 4
       },
       {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "2d9a1b92-9315-49cb-9e47-cff0caffe8a4",
+        "practices": [
+          "properties",
+          "classes",
+          "arrays"
+        ],
+        "prerequisites": [
+          "arrays",
+          "classes",
+          "numbers",
+          "properties"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
