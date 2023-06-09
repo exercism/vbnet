@@ -756,6 +756,23 @@
         "difficulty": 5
       },
       {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "428f8080-f804-4433-b0c9-9cc1e7f82fa1",
+        "practices": [
+          "integral-numbers",
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "integral-numbers",
+          "arrays",
+          "bit-manipulation",
+          "while-loops",
+          "exceptions"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
