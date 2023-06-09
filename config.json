@@ -1160,6 +1160,23 @@
         "difficulty": 4
       },
       {
+        "slug": "error-handling",
+        "name": "Error Handling",
+        "uuid": "09809c99-6fb9-4b7e-81b8-f069f79b0b0a",
+        "practices": [
+          "exceptions",
+          "casting",
+          "resource-cleanup"
+        ],
+        "prerequisites": [
+          "exceptions",
+          "casting",
+          "resource-cleanup",
+          "numbers"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
