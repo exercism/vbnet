@@ -1112,6 +1112,24 @@
         "difficulty": 2
       },
       {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "cb6a61c6-16fa-4caa-8727-2f50341861e5",
+        "practices": [
+          "queues",
+          "generic-types",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "queues",
+          "classes",
+          "generic-types",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
