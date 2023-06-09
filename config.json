@@ -789,6 +789,22 @@
         "difficulty": 1
       },
       {
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "c61a915a-9b85-4dc9-9025-518cf11e52ee",
+        "practices": [
+          "chars",
+          "linq",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "chars",
+          "strings",
+          "exceptions"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
