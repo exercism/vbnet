@@ -884,6 +884,24 @@
         "difficulty": 5
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "19675f15-ff61-41e9-8610-c27edaefde04",
+        "practices": [
+          "integral-numbers",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "integral-numbers",
+          "math-operators",
+          "strings",
+          "chars",
+          "for-loops",
+          "exceptions"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
