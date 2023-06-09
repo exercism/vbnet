@@ -508,6 +508,21 @@
         "difficulty": 5
       },
       {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "bced4d03-740d-4d71-8e08-7a47f6f0d6af",
+        "practices": [
+          "chars",
+          "strings"
+        ],
+        "prerequisites": [
+          "chars",
+          "strings",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
