@@ -584,6 +584,21 @@
         "difficulty": 3
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "d608e34e-2292-415b-b742-450155081fcd",
+        "practices": [
+          "while-loops",
+          "linq"
+        ],
+        "prerequisites": [
+          "strings",
+          "while-loops",
+          "arrays"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
