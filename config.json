@@ -493,6 +493,21 @@
         "difficulty": 4
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "b829510c-85d4-49cc-9598-047c93933a94",
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [
+          "strings",
+          "if-statements",
+          "foreach-loops",
+          "booleans"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
