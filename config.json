@@ -711,6 +711,18 @@
         "difficulty": 5
       },
       {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "2a099206-450b-4ef8-a282-66ec460aa286",
+        "practices": [
+          "datetimes"
+        ],
+        "prerequisites": [
+          "datetimes"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
