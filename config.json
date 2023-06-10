@@ -1192,6 +1192,23 @@
         "difficulty": 5
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "dc8c3579-87bb-4730-aafa-fd0c01955250",
+        "practices": [
+          "randomness",
+          "constructors"
+        ],
+        "prerequisites": [
+          "randomness",
+          "classes",
+          "properties",
+          "numbers",
+          "constructors"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
