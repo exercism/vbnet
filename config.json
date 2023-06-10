@@ -1177,6 +1177,21 @@
         "difficulty": 3
       },
       {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "043776f5-cc8a-4b34-9701-c1569610a995",
+        "practices": [
+          "enums",
+          "linq"
+        ],
+        "prerequisites": [
+          "enums",
+          "arrays",
+          "numbers"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
