@@ -1225,6 +1225,23 @@
         "difficulty": 7
       },
       {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "687037f7-bce0-4256-bcfd-1dda8bf0c401",
+        "practices": [
+          "randomness",
+          "classes",
+          "sets"
+        ],
+        "prerequisites": [
+          "randomness",
+          "strings",
+          "classes",
+          "generic-types"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
