@@ -1259,6 +1259,22 @@
         "difficulty": 6
       },
       {
+        "slug": "diffie-hellman",
+        "name": "Diffie-Hellman",
+        "uuid": "b561168e-835b-4301-b30c-0ff0970e4e35",
+        "practices": [
+          "randomness",
+          "big-integers",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "randomness",
+          "big-integers",
+          "math-operators"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
