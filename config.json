@@ -1225,6 +1225,21 @@
         "difficulty": 7
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "d222a3f9-1947-4010-b3db-bb365ad80cba",
+        "practices": [
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "numbers",
+          "string-formatting"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
