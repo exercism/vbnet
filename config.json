@@ -1209,6 +1209,22 @@
         "difficulty": 3
       },
       {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "e4e0150b-b8a6-42a9-ab07-80f488430193",
+        "practices": [
+          "ordering"
+        ],
+        "prerequisites": [
+          "enumerables",
+          "generic-methods",
+          "strings",
+          "ordering",
+          "if-statements"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
