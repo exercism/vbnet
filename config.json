@@ -1246,6 +1246,19 @@
         "difficulty": 5
       },
       {
+        "slug": "transpose",
+        "name": "Transpose",
+        "uuid": "729499b6-c3bb-4b53-9a9c-ab3567f527bc",
+        "practices": [
+          "for-loops"
+        ],
+        "prerequisites": [
+          "strings",
+          "for-loops"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
