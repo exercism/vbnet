@@ -1225,6 +1225,19 @@
         "difficulty": 7
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "2ed24a57-93fb-4053-934a-753bd2e11e45",
+        "practices": [
+          "lazy-evaluation",
+          "enums"
+        ],
+        "prerequisites": [
+          "enums"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
