@@ -1225,6 +1225,23 @@
         "difficulty": 7
       },
       {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "b15c0460-5174-4f92-bb20-1f0db50a4890",
+        "practices": [
+          "numbers",
+          "while-loops",
+          "extension-methods"
+        ],
+        "prerequisites": [
+          "strings",
+          "while-loops",
+          "numbers",
+          "extension-methods"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
