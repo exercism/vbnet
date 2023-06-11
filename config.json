@@ -1225,6 +1225,21 @@
         "difficulty": 7
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "85ba3b9b-ea14-4032-a7e5-45e911e0e5fd",
+        "practices": [
+          "arrays",
+          "for-loops"
+        ],
+        "prerequisites": [
+          "arrays",
+          "numbers",
+          "for-loops"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
