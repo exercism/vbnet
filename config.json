@@ -1225,6 +1225,26 @@
         "difficulty": 7
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "cac5e515-b42f-4b6f-b606-c40e642a4242",
+        "practices": [
+          "enums",
+          "generic-methods",
+          "generic-constraints",
+          "lists",
+          "comparing"
+        ],
+        "prerequisites": [
+          "enums",
+          "generic-methods",
+          "generic-constraints",
+          "lists",
+          "comparing"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
