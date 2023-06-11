@@ -1225,6 +1225,24 @@
         "difficulty": 7
       },
       {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "9066e7e7-d830-46a0-b022-a3b22acec455",
+        "practices": [
+          "constructors",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "classes",
+          "constructors",
+          "booleans",
+          "if-statements",
+          "math-operators",
+          "exceptions"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
