@@ -1225,6 +1225,25 @@
         "difficulty": 7
       },
       {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "99edb730-c79a-48b6-9bba-efc4b4882f44",
+        "practices": [
+          "switch-statements",
+          "switch-expressions",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "classes",
+          "constructors",
+          "properties",
+          "chars",
+          "switch-statements"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
