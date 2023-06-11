@@ -1225,6 +1225,27 @@
         "difficulty": 7
       },
       {
+        "slug": "tree-building",
+        "name": "Tree Building",
+        "uuid": "a135ee70-f24c-4b7c-8257-ace42d4f1c3b",
+        "practices": [
+          "properties",
+          "classes",
+          "enumerables"
+        ],
+        "prerequisites": [
+          "classes",
+          "properties",
+          "exceptions",
+          "foreach-loops",
+          "numbers",
+          "booleans",
+          "enumerables",
+          "generic-methods"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
