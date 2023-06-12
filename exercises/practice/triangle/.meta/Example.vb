@@ -27,7 +27,7 @@ Module Triangle
             Return TriangleKind.Invalid
         End If
 
-        Dim uniqueSides As Integer = UniqueSides(side1, side2, side3)
+        Dim uniqueSides As Integer = GetUniqueSides(side1, side2, side3)
         If uniqueSides = 1 Then Return TriangleKind.Equilateral
         If uniqueSides = 2 Then Return TriangleKind.Isosceles
         Return TriangleKind.Scalene
@@ -45,7 +45,7 @@ Module Triangle
         Return side1 + side2 <= side3 OrElse side1 + side3 <= side2 OrElse side2 + side3 <= side1
     End Function
 
-    Private Function UniqueSides(ByVal side1 As Double, ByVal side2 As Double, ByVal side3 As Double) As Integer
+    Private Function GetUniqueSides(ByVal side1 As Double, ByVal side2 As Double, ByVal side3 As Double) As Integer
         Dim sides As Double() = {side1, side2, side3}
         Return sides.Distinct().Count()
     End Function
