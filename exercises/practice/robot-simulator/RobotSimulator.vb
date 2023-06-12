@@ -1,6 +1,6 @@
 Imports System
 
-Public Enum Direction
+Public Enum DirectionType
     North
     East
     South
@@ -8,10 +8,10 @@ Public Enum Direction
 End Enum
 
 Public Class RobotSimulator
-    Public Sub New(ByVal direction As Direction, ByVal x As Integer, ByVal y As Integer)
+    Public Sub New(ByVal direction As DirectionType, ByVal x As Integer, ByVal y As Integer)
     End Sub
 
-    Public ReadOnly Property Direction As Direction
+    Public ReadOnly Property Direction As DirectionType
         Get
             Throw New NotImplementedException("You need to implement this function.")
         End Get
