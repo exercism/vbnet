@@ -9,23 +9,23 @@ End Enum
 
 Public Class RobotSimulator
 
-    Private _DirectionProp As Direction, _XProp As Integer, _YProp As Integer
-    Public Sub New(ByVal bearing As Direction, ByVal x As Integer, ByVal y As Integer)
-        Direction = bearing
-        X = x
-        Y = y
+    Private _DirectionProp As DirectionType, _XProp As Integer, _YProp As Integer
+    Public Sub New(ByVal bearing As DirectionType, ByVal x As Integer, ByVal y As Integer)
+        _DirectionProp = bearing
+        _XProp = x
+        _YProp = y
     End Sub
 
-    Public Property DirectionProp As Direction
+    Public Property Direction As DirectionType
         Get
             Return _DirectionProp
         End Get
-        Private Set(ByVal value As Direction)
+        Private Set(ByVal value As DirectionType)
             _DirectionProp = value
         End Set
     End Property
 
-    Public Property XProp As Integer
+    Public Property X As Integer
         Get
             Return _XProp
         End Get
@@ -34,7 +34,7 @@ Public Class RobotSimulator
         End Set
     End Property
 
-    Public Property YProp As Integer
+    Public Property Y As Integer
         Get
             Return _YProp
         End Get
@@ -49,7 +49,7 @@ Public Class RobotSimulator
         Next
     End Sub
 
-    Private Sub Move(ByVal code As Char)
+    Public Sub Move(ByVal code As Char)
         Select Case code
             Case "L"c
                 TurnLeft()
@@ -58,50 +58,50 @@ Public Class RobotSimulator
             Case "A"c
                 Advance()
             Case Else
-                Throw New ArgumentOutOfRangeException("Invalid instruction")
+                Throw New ArgumentOutOfRangeException(code)
         End Select
     End Sub
 
     Private Sub TurnLeft()
-        Select Case Direction
-            Case Me.Direction.North
-                Direction = Me.Direction.West
-            Case Me.Direction.East
-                Direction = Me.Direction.North
-            Case Me.Direction.South
-                Direction = Me.Direction.East
-            Case Me.Direction.West
-                Direction = Me.Direction.South
+        Select Case _DirectionProp
+            Case DirectionType.North
+                _DirectionProp = DirectionType.West
+            Case DirectionType.East
+                _DirectionProp = DirectionType.North
+            Case DirectionType.South
+                _DirectionProp = DirectionType.East
+            Case DirectionType.West
+                _DirectionProp = DirectionType.South
             Case Else
                 Throw New ArgumentOutOfRangeException()
         End Select
     End Sub
 
     Private Sub TurnRight()
-        Select Case Direction
-            Case Me.Direction.North
-                Direction = Me.Direction.East
-            Case Me.Direction.East
-                Direction = Me.Direction.South
-            Case Me.Direction.South
-                Direction = Me.Direction.West
-            Case Me.Direction.West
-                Direction = Me.Direction.North
+        Select Case _DirectionProp
+            Case DirectionType.North
+                _DirectionProp = DirectionType.East
+            Case DirectionType.East
+                _DirectionProp = DirectionType.South
+            Case DirectionType.South
+                _DirectionProp = DirectionType.West
+            Case DirectionType.West
+                _DirectionProp = DirectionType.North
             Case Else
                 Throw New ArgumentOutOfRangeException()
         End Select
     End Sub
 
     Private Sub Advance()
-        Select Case Direction
-            Case Me.Direction.North
-                Y += 1
-            Case Me.Direction.East
-                X += 1
-            Case Me.Direction.South
-                Y -= 1
-            Case Me.Direction.West
-                X -= 1
+        Select Case _DirectionProp
+            Case DirectionType.North
+                _YProp += 1
+            Case DirectionType.East
+                _XProp += 1
+            Case DirectionType.South
+                _YProp -= 1
+            Case DirectionType.West
+                _XProp -= 1
             Case Else
                 Throw New ArgumentOutOfRangeException()
         End Select
