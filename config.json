@@ -1240,6 +1240,139 @@
         "difficulty": 1
       },
       {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "4b4197d2-8123-4474-8c32-1191c1f9b5cd",
+        "practices": [
+          "exceptions",
+          "linq"
+        ],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "exceptions"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "b15c0460-5174-4f92-bb20-1f0db50a4890",
+        "practices": [
+          "numbers",
+          "while-loops",
+          "extension-methods"
+        ],
+        "prerequisites": [
+          "strings",
+          "while-loops",
+          "numbers",
+          "extension-methods"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "99edb730-c79a-48b6-9bba-efc4b4882f44",
+        "practices": [
+          "switch-statements",
+          "switch-expressions",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "classes",
+          "constructors",
+          "properties",
+          "chars",
+          "switch-statements"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "78113af6-b1a4-40ab-86c6-3b26afdec75f",
+        "practices": [
+          "floating-point-numbers",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "if-statements",
+          "booleans"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "687037f7-bce0-4256-bcfd-1dda8bf0c401",
+        "practices": [
+          "randomness",
+          "classes",
+          "sets"
+        ],
+        "prerequisites": [
+          "randomness",
+          "strings",
+          "classes",
+          "generic-types"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "tree-building",
+        "name": "Tree Building",
+        "uuid": "a135ee70-f24c-4b7c-8257-ace42d4f1c3b",
+        "practices": [
+          "properties",
+          "classes",
+          "enumerables"
+        ],
+        "prerequisites": [
+          "classes",
+          "properties",
+          "exceptions",
+          "foreach-loops",
+          "numbers",
+          "booleans",
+          "enumerables",
+          "generic-methods"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "transpose",
+        "name": "Transpose",
+        "uuid": "729499b6-c3bb-4b53-9a9c-ab3567f527bc",
+        "practices": [
+          "for-loops"
+        ],
+        "prerequisites": [
+          "strings",
+          "for-loops"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "diffie-hellman",
+        "name": "Diffie-Hellman",
+        "uuid": "b561168e-835b-4301-b30c-0ff0970e4e35",
+        "practices": [
+          "randomness",
+          "big-integers",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "randomness",
+          "big-integers",
+          "math-operators"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
