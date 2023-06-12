@@ -7,7 +7,7 @@ Public Class Robot
     Private Shared ReadOnly Random As Random = New Random()
     Private Shared ReadOnly names As HashSet(Of String) = New HashSet(Of String)()
 
-    Public Property NameProp As String
+    Public Property Name As String
         Get
             Return _NameProp
         End Get
@@ -31,10 +31,10 @@ Public Class Robot
     End Function
 
     Private Shared Function GetRandomCharacter() As String
-        Return Microsoft.VisualBasic.ChrW("A"c + Random.Next(CInt(26))).ToString()
+        Return Microsoft.VisualBasic.ChrW(Asc("A") + Random.Next(CInt(26))).ToString()
     End Function
 
-    Public Sub ResetMethod()
+    Public Sub Reset()
         Name = GenerateName()
     End Sub
 End Class
