@@ -8,10 +8,10 @@ Public Enum DirectionType
 End Enum
 
 Public Class RobotSimulator
-    Public Sub New(ByVal bearing As DirectionType, ByVal x As Integer, ByVal y As Integer)
-        Direction = bearing
-        X = x
-        Y = y
+    Public Sub New(ByVal startDirection As DirectionType, ByVal startX As Integer, ByVal startY As Integer)
+        Direction = startDirection
+        X = startX
+        Y = startY
     End Sub
 
     Public Property Direction As DirectionType
@@ -24,7 +24,7 @@ Public Class RobotSimulator
         Next
     End Sub
 
-    Public Sub Move(ByVal code As Char)
+    Private Sub Move(ByVal code As Char)
         Select Case code
             Case "L"c
                 TurnLeft()
