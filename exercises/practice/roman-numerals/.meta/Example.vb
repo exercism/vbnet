@@ -17,16 +17,16 @@ Module RomanNumeralExtension
         {5, "V"},
         {4, "IV"},
         {1, "I"}
-    }
+        }
 
     <Extension()>
     Function ToRoman(ByVal value As Integer) As String
         Dim result = New StringBuilder()
+        Dim remainder = value
 
         For Each conversion In ArabicToRomanConversions
-
-            While value / conversion.Key > 0
-                value -= conversion.Key
+            While remainder >= conversion.Key
+                remainder -= conversion.Key
                 result.Append(conversion.Value)
             End While
         Next
