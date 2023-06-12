@@ -1242,6 +1242,40 @@
         "difficulty": 5
       },
       {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "99edb730-c79a-48b6-9bba-efc4b4882f44",
+        "practices": [
+          "switch-statements",
+          "switch-expressions",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "classes",
+          "constructors",
+          "properties",
+          "chars",
+          "switch-statements"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "78113af6-b1a4-40ab-86c6-3b26afdec75f",
+        "practices": [
+          "floating-point-numbers",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "if-statements",
+          "booleans"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "robot-name",
         "name": "Robot Name",
         "uuid": "687037f7-bce0-4256-bcfd-1dda8bf0c401",
