@@ -3,7 +3,7 @@ Imports System.Text
 Imports System.Runtime.CompilerServices
 
 Module RomanNumeralExtension
-    Private Shared ReadOnly ArabicToRomanConversions As Dictionary(Of Integer, String) = New Dictionary(Of Integer, String) From {
+    Private ReadOnly ArabicToRomanConversions As New Dictionary(Of Integer, String) From {
         {1000, "M"},
         {900, "CM"},
         {500, "D"},
