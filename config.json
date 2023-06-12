@@ -1244,6 +1244,38 @@
         "difficulty": 3
       },
       {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "78113af6-b1a4-40ab-86c6-3b26afdec75f",
+        "practices": [
+          "floating-point-numbers",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "floating-point-numbers",
+          "if-statements",
+          "booleans"
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "687037f7-bce0-4256-bcfd-1dda8bf0c401",
+        "practices": [
+          "randomness",
+          "classes",
+          "sets"
+        ],
+        "prerequisites": [
+          "randomness",
+          "strings",
+          "classes",
+          "generic-types"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "tree-building",
         "name": "Tree Building",
         "uuid": "a135ee70-f24c-4b7c-8257-ace42d4f1c3b",
