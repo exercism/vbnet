@@ -1225,6 +1225,21 @@
         "difficulty": 7
       },
       {
+        "slug": "change",
+        "name": "Change",
+        "uuid": "4b4197d2-8123-4474-8c32-1191c1f9b5cd",
+        "practices": [
+          "exceptions",
+          "linq"
+        ],
+        "prerequisites": [
+          "numbers",
+          "arrays",
+          "exceptions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "b15c0460-5174-4f92-bb20-1f0db50a4890",
