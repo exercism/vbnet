@@ -58,10 +58,10 @@ Module ZebraPuzzle
     <Extension()>
     Private Function Permutations(Of T)(ByVal input As T(), ByVal length As Integer) As IEnumerable(Of T())
         If length = 1 Then
-            Return input.[Select](Function(t) {t})
+            Return input.[Select](Function(myT) {myT})
         End If
 
-        Return input.Permutations(length - 1).SelectMany(Function(t) input.Where(Function(e) Not t.Contains(e)), Function(t1, t2) t1.Concat({t2}).ToArray())
+        Return input.Permutations(length - 1).SelectMany(Function(myT) input.Where(Function(e) Not myT.Contains(e)), Function(t1, t2) t1.Concat({t2}).ToArray())
     End Function
 
     Private Structure Solution
