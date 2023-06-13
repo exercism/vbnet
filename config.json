@@ -1509,6 +1509,22 @@
         "difficulty": 4
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "76c02e13-da84-4fae-b09f-553de1b30fd4",
+        "practices": [
+          "chars",
+          "string-formatting",
+          "string-builder"
+        ],
+        "prerequisites": [
+          "strings",
+          "string-formatting",
+          "chars"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
