@@ -831,6 +831,19 @@
         "difficulty": 7
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "2ed24a57-93fb-4053-934a-753bd2e11e45",
+        "practices": [
+          "lazy-evaluation",
+          "enums"
+        ],
+        "prerequisites": [
+          "enums"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "sublist",
         "name": "Sublist",
         "uuid": "cac5e515-b42f-4b6f-b606-c40e642a4242",
