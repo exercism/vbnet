@@ -831,6 +831,21 @@
         "difficulty": 7
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "85ba3b9b-ea14-4032-a7e5-45e911e0e5fd",
+        "practices": [
+          "arrays",
+          "for-loops"
+        ],
+        "prerequisites": [
+          "arrays",
+          "numbers",
+          "for-loops"          
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "9066e7e7-d830-46a0-b022-a3b22acec455",
