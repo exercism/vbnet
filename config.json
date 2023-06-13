@@ -1509,6 +1509,20 @@
         "difficulty": 4
       },
       {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "505ac5cf-e30c-4162-9f56-dc88605d848e",
+        "practices": [
+          "lazy-evaluation"
+        ],
+        "prerequisites": [
+          "strings",
+          "lazy-evaluation",
+          "exceptions"
+        ],
+        "difficulty": 10
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
