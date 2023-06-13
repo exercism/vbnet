@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "React.vb"
+    ],
+    "test": [
+      "ReactTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Implement a basic reactive system."
+}

@@ -1509,6 +1509,23 @@
         "difficulty": 4
       },
       {
+        "slug": "react",
+        "name": "React",
+        "uuid": "eff96306-aa1c-4127-9f35-3b8b71208d2c",
+        "practices": [
+          "events"
+        ],
+        "prerequisites": [
+          "classes",
+          "inheritance",
+          "higher-order-functions",
+          "enumerables",
+          "numbers",
+          "events"
+        ],
+        "difficulty": 9
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
