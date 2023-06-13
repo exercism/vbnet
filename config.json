@@ -1491,6 +1491,24 @@
         "difficulty": 5
       },
       {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "uuid": "ed632f85-3488-4cec-bbbb-19582a380c1f",
+        "practices": [
+          "interfaces",
+          "generic-types",
+          "properties",
+          "enumerables"
+        ],
+        "prerequisites": [
+          "interfaces",
+          "generic-types",
+          "properties",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
