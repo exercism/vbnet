@@ -41,7 +41,7 @@ Public Class Tournament
         End Sub
     End Class
 
-    Private teams As Dictionary(Of String, Tournament.TeamResult)
+    Private ReadOnly teams As Dictionary(Of String, Tournament.TeamResult)
 
     Private Sub New()
         teams = New Dictionary(Of String, Tournament.TeamResult)()
@@ -55,7 +55,7 @@ Public Class Tournament
     End Sub
 
     Private Sub AddTeamOutcome(ByVal team As String, ByVal outcome As Tournament.Outcome)
-        Dim teamResult As Tournament.TeamResult
+        Dim teamResult As New Tournament.TeamResult
         If teams.TryGetValue(team, teamResult) Then
             teamResult.AddOutcome(outcome)
         Else
@@ -81,7 +81,7 @@ Public Class Tournament
 
     Public Shared Sub Tally(ByVal inStream As Stream, ByVal outStream As Stream)
         Dim tournament = New Tournament()
-        Dim encoding = New UTF8Encoding()
+        Dim encoding = New System.Text.UTF8Encoding()
         Dim inReader = New StreamReader(inStream, encoding)
 
         Dim line = inReader.ReadLine()
@@ -104,8 +104,8 @@ Public Class Tournament
             line = inReader.ReadLine()
         End While
 
-        Dim outWriter = New StreamWriter(outStream, encoding)
-        outWriter.NewLine = vbLf
+        Dim outWriter = New StreamWriter(outStream, encoding) With {
+            .NewLine = vbLf
         tournament.WriteResults(outWriter)
     End Sub
 End Class
