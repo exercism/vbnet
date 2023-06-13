@@ -106,6 +106,7 @@ Public Class Tournament
 
         Dim outWriter = New StreamWriter(outStream, encoding) With {
             .NewLine = vbLf
+        }
         tournament.WriteResults(outWriter)
     End Sub
 End Class
