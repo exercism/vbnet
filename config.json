@@ -1509,6 +1509,23 @@
         "difficulty": 4
       },
       {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "987a1619-7cf6-41a5-b6c9-7bd75bd1a31d",
+        "practices": [
+          "enums",
+          "switch-statements"
+        ],
+        "prerequisites": [
+          "strings",
+          "chars",
+          "enums",
+          "arrays",
+          "if-statements"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
