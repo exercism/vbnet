@@ -1509,6 +1509,20 @@
         "difficulty": 4
       },
       {
+        "slug": "rest-api",
+        "name": "REST API",
+        "uuid": "31b40119-cb73-420c-aec9-d920450966df",
+        "practices": [
+          "optional-parameters"
+        ],
+        "prerequisites": [
+          "strings",
+          "optional-parameters",
+          "constructors"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
