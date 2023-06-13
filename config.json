@@ -1509,6 +1509,20 @@
         "difficulty": 4
       },
       {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "a97e8a30-f7d8-4649-886a-b913a7e219af",
+        "practices": [
+          "lazy-evaluation"
+        ],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "exceptions"
+        ],
+        "difficulty": 10
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",

@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "Forth.vb"
+    ],
+    "test": [
+      "ForthTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Implement an evaluator for a very simple subset of Forth."
+}
