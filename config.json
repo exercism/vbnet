@@ -1509,6 +1509,22 @@
         "difficulty": 4
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "72fb347d-d5f1-42f8-8c51-a59cd0c13d13",
+        "practices": [
+          "enums",
+          "generic-methods"
+        ],
+        "prerequisites": [
+          "strings",
+          "enums",
+          "enumerables",
+          "generic-methods"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
