@@ -1509,6 +1509,25 @@
         "difficulty": 4
       },
       {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "755fda45-06ba-4ece-a942-1b4554e9c2cf",
+        "practices": [
+          "dictionaries",
+          "constructors",
+          "properties"
+        ],
+        "prerequisites": [
+          "strings",
+          "dictionaries",
+          "arrays",
+          "constructors",
+          "properties",
+          "exceptions"
+        ],
+        "difficulty": 9
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
