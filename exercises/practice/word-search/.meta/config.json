@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "WordSearch.vb"
+    ],
+    "test": [
+      "WordSearchTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Create a program to solve a word search puzzle."
+}
