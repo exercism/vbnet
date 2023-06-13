@@ -9,7 +9,6 @@ Public Module ResistorColorTrio
         If unit = "kiloohms" Then value \= 1_000
         Return String.Format("{0} {1}", value, unit)
     End Function    
-    End Function
     Private Function GetValue(ByVal colors As String()) As Integer
         Return (ResistorValue(colors(0)) * 10 + ResistorValue(colors(1))) * CInt(Math.Pow(10, ResistorValue(colors(2))))
     End Function
