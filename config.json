@@ -1509,6 +1509,21 @@
         "difficulty": 4
       },
       {
+        "slug": "pascals-triangle",
+        "name": "Pascal's Triangle",
+        "uuid": "0addb663-2f23-451d-91c3-e5d78cf0721e",
+        "practices": [
+          "yield",
+          "enumerables"
+        ],
+        "prerequisites": [
+          "for-loops",
+          "enumerables",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
