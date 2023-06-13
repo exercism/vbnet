@@ -1509,6 +1509,27 @@
         "difficulty": 4
       },
       {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "2997c85a-f253-4113-bcaf-9f0040f7430e",
+        "practices": [
+          "operator-overloading",
+          "structs",
+          "immutability",
+          "extension-methods",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "extension-methods",
+          "numbers",
+          "operator-overloading",
+          "structs",
+          "immutability",
+          "math-operators"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
