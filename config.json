@@ -1509,6 +1509,22 @@
         "difficulty": 4
       },
       {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "d3b77661-8e55-42c3-8bd4-953ad640aca6",
+        "practices": [
+          "properties",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "constructors",
+          "properties",
+          "numbers"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "tournament",
         "name": "Tournament",
         "uuid": "a15aad1a-b578-46f9-b720-7d448da0459c",
