@@ -19,5 +19,4 @@ Public Module ResistorColorTrio
         Return Array.IndexOf(AllColors, color)
     End Function
 
-    End Class
 End Module
