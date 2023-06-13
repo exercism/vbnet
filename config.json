@@ -831,6 +831,26 @@
         "difficulty": 7
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "cac5e515-b42f-4b6f-b606-c40e642a4242",
+        "practices": [
+          "enums",
+          "generic-methods",
+          "generic-constraints",
+          "lists",
+          "comparing"
+        ],
+        "prerequisites": [
+          "enums",
+          "generic-methods",
+          "generic-constraints",
+          "lists",
+          "comparing"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "85ba3b9b-ea14-4032-a7e5-45e911e0e5fd",
