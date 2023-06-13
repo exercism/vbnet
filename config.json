@@ -1509,6 +1509,22 @@
         "difficulty": 4
       },
       {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "1073feab-a665-4528-ac9a-dc65d3726aed",
+        "practices": [
+          "equality",
+          "recursion"
+        ],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "equality",
+          "exceptions"
+        ],
+        "difficulty": 10
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
