@@ -831,6 +831,21 @@
         "difficulty": 7
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "d222a3f9-1947-4010-b3db-bb365ad80cba",
+        "practices": [
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "arrays",
+          "strings",
+          "numbers",
+          "string-formatting"
+        ],
+        "difficulty": 1
+      },
+      {
         "slug": "zebra-puzzle",
         "name": "Zebra Puzzle",
         "uuid": "2ed24a57-93fb-4053-934a-753bd2e11e45",
