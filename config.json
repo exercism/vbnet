@@ -1509,6 +1509,21 @@
         "difficulty": 4
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
+        "practices": [
+          "for-loops",
+          "foreach-loops"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
