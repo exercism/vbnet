@@ -841,7 +841,25 @@
         "prerequisites": [
           "arrays",
           "numbers",
-          "for-loops"
+          "for-loops"          
+        ],
+        "difficulty": 3
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "9066e7e7-d830-46a0-b022-a3b22acec455",
+        "practices": [
+          "constructors",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "classes",
+          "constructors",
+          "booleans",
+          "if-statements",
+          "math-operators",
+          "exceptions"
         ],
         "difficulty": 3
       },
