@@ -1509,6 +1509,25 @@
         "difficulty": 4
       },
       {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "e3b53b64-2076-41cc-917f-191bf87cff4b",
+        "practices": [
+          "structs",
+          "immutability",
+          "extension-methods",
+          "math-operators"
+        ],
+        "prerequisites": [
+          "extension-methods",
+          "numbers",
+          "structs",
+          "immutability",
+          "math-operators"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
