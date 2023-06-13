@@ -1509,6 +1509,23 @@
         "difficulty": 4
       },
       {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "239ea6ae-13f2-49a5-92f5-b01c86f9920e",
+        "practices": [
+          "dictionaries",
+          "tuples"
+        ],
+        "prerequisites": [
+          "strings",
+          "enums",
+          "constructors",
+          "dictionaries",
+          "tuples"
+        ],
+        "difficulty": 9
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
