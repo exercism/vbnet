@@ -5,7 +5,7 @@ Imports System.Collections.Generic
 Public Class SimpleLinkedList(Of T)
     Implements IEnumerable(Of T)
 
-    Private _CountProp As Integer
+    Private _CountProp As Integer = 0
     Private Class Node
         Public Property Value As T
         Public Property [Next] As Node
@@ -22,16 +22,16 @@ Public Class SimpleLinkedList(Of T)
         Next
     End Sub
 
-    Public Property CountProp As Integer = 0
+    Public Property Count As Integer
         Get
             Return _CountProp
         End Get
-        Private Set(ByVal value As Integer)
+        Private Set(value As Integer)
             _CountProp = value
         End Set
     End Property
 
-    Public Sub PushMethod(ByVal value As T)
+    Public Sub Push(ByVal value As T)
         Dim node = New Node With {
             .Value = value,
             .[Next] = head
@@ -40,7 +40,7 @@ Public Class SimpleLinkedList(Of T)
         Count += 1
     End Sub
 
-    Public Function PopMethod() As T
+    Public Function Pop() As T
         If head Is Nothing Then
             Throw New InvalidOperationException("List is empty!")
         End If
