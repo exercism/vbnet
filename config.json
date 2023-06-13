@@ -1509,6 +1509,25 @@
         "difficulty": 4
       },
       {
+        "slug": "custom-set",
+        "name": "Custom Set",
+        "uuid": "5c02801f-8977-4f2a-a0b8-ae1634c19299",
+        "practices": [
+          "sets",
+          "immutability",
+          "constructors"
+        ],
+        "prerequisites": [
+          "sets",
+          "arrays",
+          "immutability",
+          "numbers",
+          "booleans",
+          "constructors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
