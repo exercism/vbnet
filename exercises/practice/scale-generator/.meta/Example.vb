@@ -6,17 +6,7 @@ Public Module ScaleGenerator
     Private ReadOnly ChromaticScale As String() = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"}
     Private ReadOnly FlatChromaticScale As String() = {"C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"}
     Private ReadOnly FlatKeys As String() = {"F", "Bb", "Eb", "Ab", "Db", "Gb", "d", "g", "c", "f", "bb", "eb"}
-        ''' Cannot convert FieldDeclarationSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.CommonConversions.RemodelVariableDeclaration(VariableDeclarationSyntax declaration) in /_/CodeConverter/VB/CommonConversions.cs:line 474
-'''    at ICSharpCode.CodeConverter.VB.NodesVisitor.VisitFieldDeclaration(FieldDeclarationSyntax node) in /_/CodeConverter/VB/NodesVisitor.cs:line 326
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingVisitorWrapper`1.Accept(SyntaxNode csNode, Boolean addSourceMapping) in /_/CodeConverter/VB/CommentConvertingVisitorWrapper.cs:line 20
-''' 
-''' Input:
-''' 
-    private static readonly System.Collections.Generic.Dictionary<char, int> Intervals = new() { ['m'] = 1, ['M'] = 2, ['A'] = 3 };
-
-''' 
+    Private ReadOnly Intervals As New Dictionary(Of Char, Integer) From {{"m"c, 1}, {"M"c, 2}, {"A"c, 3}}
 
     Private Function Scale(ByVal tonic As String) As String()
         Return If(FlatKeys.Contains(tonic), FlatChromaticScale, ChromaticScale)
