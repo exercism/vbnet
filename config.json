@@ -1509,6 +1509,21 @@
         "difficulty": 4
       },
       {
+        "slug": "dot-dsl",
+        "name": "DOT DSL",
+        "uuid": "20c9c219-232d-4c84-9645-00769ff325d2",
+        "practices": [
+          "classes",
+          "equality"
+        ],
+        "prerequisites": [
+          "classes",
+          "equality",
+          "exceptions"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",

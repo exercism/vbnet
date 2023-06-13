@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "DotDsl.vb"
+    ],
+    "test": [
+      "DotDslTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Write a Domain Specific Language similar to the Graphviz dot language.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/DOT_(graph_description_language)"
+}
