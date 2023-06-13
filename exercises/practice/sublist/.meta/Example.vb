@@ -2,7 +2,7 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
-Public Enum SublistTypeType
+Public Enum SublistType
     Equal
     Unequal
     Superlist
@@ -10,7 +10,7 @@ Public Enum SublistTypeType
 End Enum
 
 Public Module Sublist
-    Public Function ClassifyMethod(Of T As IComparable)(ByVal list1 As List(Of T), ByVal list2 As List(Of T)) As SublistType
+    Public Function Classify(Of T As IComparable)(ByVal list1 As List(Of T), ByVal list2 As List(Of T)) As SublistType
         If list1.Count = list2.Count Then
             Return If(AreEqual(list1, list2), SublistType.Equal, SublistType.Unequal)
         End If
@@ -23,7 +23,7 @@ Public Module Sublist
     End Function
 
     Private Function AreEqual(Of T As IComparable)(ByVal list1 As List(Of T), ByVal list2 As List(Of T)) As Boolean
-        Return Not list1.Where(Function(t, i) t.CompareTo(list2(i)) <> 0).Any()
+        Return Not list1.Where(Function(myT, i) myT.CompareTo(list2(i)) <> 0).Any()
     End Function
 
     Private Function IsSublist(Of T As IComparable)(ByVal list1 As List(Of T), ByVal list2 As List(Of T)) As Boolean
