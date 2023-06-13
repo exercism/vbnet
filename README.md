@@ -1,8 +1,7 @@
-# Exercism VB.NET Track
+# Exercism Visual Basic Track
 
-Exercism problems in VB.NET
+Exercism problems in Visual Basic
 
 ## Contributing Guide
 
 Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
-
