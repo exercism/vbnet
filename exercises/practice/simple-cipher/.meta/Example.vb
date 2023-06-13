@@ -5,19 +5,19 @@ Imports System.Text
 Public Class SimpleCipher
     Private Const Alphabet As String = "abcdefghijklmnopqrstuvwxyz"
 
-    Private Shared ReadOnly Rand As Random = New Random()
+    Private Shared ReadOnly Rand As New Random()
 
-    Public ReadOnly Property KeyProp As String
+    Public ReadOnly Property Key As String
 
     Public Sub New()
         Key = New String(Enumerable.Range(0, 100).[Select](Function(x) Alphabet(Rand.Next(Alphabet.Length))).ToArray())
     End Sub
 
     Public Sub New(ByVal key As String)
-        Key = key
+        Me.Key = key
     End Sub
 
-    Public Function EncodeMethod(ByVal plaintext As String) As String
+    Public Function Encode(ByVal plaintext As String) As String
         Dim ciphertext = New StringBuilder(plaintext.Length)
 
         For i = 0 To plaintext.Length - 1
@@ -33,7 +33,7 @@ Public Class SimpleCipher
         Return Alphabet(alphabetIdx)
     End Function
 
-    Public Function DecodeMethod(ByVal ciphertext As String) As String
+    Public Function Decode(ByVal ciphertext As String) As String
         Dim plaintext = New StringBuilder(ciphertext.Length)
 
         For i = 0 To ciphertext.Length - 1
