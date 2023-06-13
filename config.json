@@ -1509,6 +1509,24 @@
         "difficulty": 4
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "fdec37b3-f7a9-4ff9-bcc4-f3da210e7181",
+        "practices": [
+          "generic-methods",
+          "higher-order-functions",
+          "yield",
+          "lazy-evaluation"
+        ],
+        "prerequisites": [
+          "generic-types",
+          "generic-methods",
+          "numbers",
+          "higher-order-functions"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
