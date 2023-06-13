@@ -5,10 +5,11 @@ Module BinarySearch
     End Function
 
     Private Function FindHelper(ByVal input As Integer(), ByVal target As Integer, ByVal minIndex As Integer, ByVal maxIndex As Integer) As Integer
-        Dim middleIndex = (minIndex + maxIndex) / 2
-        If input(middleIndex) = target Then Return middleIndex
-        If middleIndex <= 0 OrElse middleIndex >= input.Length - 1 OrElse minIndex = maxIndex Then Return -1
-        If input(middleIndex) > target Then Return FindHelper(input, target, minIndex, middleIndex - 1)
+        Dim middleIndex = minIndex + ((maxIndex - minIndex) \ 2)
+        Dim look = input(middleIndex)
+        If look = target Then Return middleIndex
+        If minIndex >= maxIndex Then Return -1
+        If target < look Then Return FindHelper(input, target, minIndex, middleIndex - 1)
         Return FindHelper(input, target, middleIndex + 1, maxIndex)
     End Function
 End Module
