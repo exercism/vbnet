@@ -1509,6 +1509,30 @@
         "difficulty": 4
       },
       {
+        "slug": "hangman",
+        "name": "Hangman",
+        "uuid": "15155e67-1064-4f2a-9d22-da5ce87476c9",
+        "practices": [
+          "sets",
+          "immutability",
+          "properties",
+          "inheritance",
+          "exceptions"
+        ],
+        "prerequisites": [
+          "sets",
+          "immutability",
+          "properties",
+          "constructors",
+          "chars",
+          "numbers",
+          "inheritance",
+          "exceptions",
+          "observables"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
