@@ -831,6 +831,22 @@
         "difficulty": 7
       },
       {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "e017f9e9-d928-43d1-b69f-5176d4d93785",
+        "practices": [
+          "dictionaries",
+          "ordering"
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "enumerables",
+          "ordering"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "change",
         "name": "Change",
         "uuid": "4b4197d2-8123-4474-8c32-1191c1f9b5cd",
