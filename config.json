@@ -1523,6 +1523,37 @@
         "difficulty": 5
       },
       {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "d3b77661-8e55-42c3-8bd4-953ad640aca6",
+        "practices": [
+          "properties",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "constructors",
+          "properties",
+          "numbers"
+        ],
+        "difficulty": 8
+      },
+      {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "a15aad1a-b578-46f9-b720-7d448da0459c",
+        "practices": [
+          "streams",
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "streams",
+          "strings",
+          "string-formatting"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
