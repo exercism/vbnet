@@ -1509,6 +1509,25 @@
         "difficulty": 4
       },
       {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "00e37d50-5f3d-4cf1-841e-8eaf299e54ba",
+        "practices": [
+          "generic-types",
+          "properties",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enumerables",
+          "generic-types",
+          "properties",
+          "numbers",
+          "classes",
+          "constructors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
