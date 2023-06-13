@@ -831,6 +831,24 @@
         "difficulty": 7
       },
       {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "f0155d4f-052f-4d13-a3dd-67777ef3520a",
+        "practices": [
+          "integral-numbers",
+          "while-loops",
+          "if-statements"
+        ],
+        "prerequisites": [
+          "integral-numbers",
+          "strings",
+          "while-loops",
+          "if-statements",
+          "exceptions"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "grade-school",
         "name": "Grade School",
         "uuid": "e017f9e9-d928-43d1-b69f-5176d4d93785",
