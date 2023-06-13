@@ -1509,6 +1509,20 @@
         "difficulty": 4
       },
       {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "a345a56b-40d5-4e3a-8916-debdfa40b19a",
+        "practices": [
+          "lazy-evaluation",
+          "yield"
+        ],
+        "prerequisites": [
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
