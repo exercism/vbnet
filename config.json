@@ -1509,6 +1509,22 @@
         "difficulty": 4
       },
       {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "d94cca9e-c864-487d-b7a4-739acef24ca2",
+        "practices": [
+          "tuples",
+          "lazy-evaluation"
+        ],
+        "prerequisites": [
+          "enumerables",
+          "tuples",
+          "numbers",
+          "booleans"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "b6f4c895-255f-49ae-8163-ee26c2fc1189",
