@@ -3,9 +3,9 @@ Imports System.Collections.Generic
 Imports System.Linq
 
 Public Module Say
-    Public Function InEnglishMethod(ByVal number As Long) As String
+    Public Function InEnglish(ByVal number As Long) As String
         If number < 0L OrElse number >= 1000000000000L Then
-            Throw New ArgumentOutOfRangeException("Number out of range.")
+            Throw New ArgumentOutOfRangeException(number)
         End If
 
         If number = 0L Then
@@ -43,7 +43,7 @@ Public Module Say
 
         Dim values = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"}
 
-        Dim count = number / 10L
+        Dim count = number \ 10L
         Dim remainder = number Mod 10L
         Dim bases = Say.Bases(remainder)
 
@@ -58,7 +58,7 @@ Public Module Say
             Return Say.Tens(number)
         End If
 
-        Dim count = number / 100L
+        Dim count = number \ 100L
         Dim remainder = number Mod 100L
         Dim bases = Say.Bases(count)
         Dim tens = Say.Tens(remainder)
@@ -83,13 +83,13 @@ Public Module Say
     End Function
 
     Private Function Counts(ByVal number As Long) As Tuple(Of Long, Long, Long, Long)
-        Dim billionsCount = number / 1000000000L
+        Dim billionsCount = number \ 1000000000L
         Dim billionsRemainder = number Mod 1000000000L
 
-        Dim millionsCount = billionsRemainder / 1000000L
+        Dim millionsCount = billionsRemainder \ 1000000L
         Dim millionsRemainder = billionsRemainder Mod 1000000L
 
-        Dim thousandsCount = millionsRemainder / 1000L
+        Dim thousandsCount = millionsRemainder \ 1000L
         Dim thousandsRemainder = millionsRemainder Mod 1000L
 
         Return Tuple.Create(billionsCount, millionsCount, thousandsCount, thousandsRemainder)
