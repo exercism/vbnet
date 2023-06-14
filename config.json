@@ -1547,12 +1547,6 @@
         "difficulty": 4
       },
       {
-          "arrays",
-          "foreach-loops"
-        ],
-        "difficulty": 5
-      },
-      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "d3b77661-8e55-42c3-8bd4-953ad640aca6",
