@@ -3,9 +3,9 @@ Imports System.Linq
 Imports System.Text
 
 Public Module AffineCipher
-    Private m As Integer = 26
+    Private ReadOnly m As Integer = 26
 
-    Public Function Encode(ByVal plainText As String, ByVal a As Integer, ByVal b As Integer) As String
+    Public Function Encode(plainText As String, a As Integer, b As Integer) As String
         Dim inverse = FindInverse(a, m)
 
         Dim source = plainText.Where(Function(p) Char.IsLetterOrDigit(p)).[Select](Function(p) Encrypt(p, a, b)).ToList()
@@ -23,7 +23,7 @@ Public Module AffineCipher
         Return sb.ToString()
     End Function
 
-    Public Function Decode(ByVal cipheredText As String, ByVal a As Integer, ByVal b As Integer) As String
+    Public Function Decode(cipheredText As String, a As Integer, b As Integer) As String
         Dim inv = FindInverse(a, m)
 
         Dim source = cipheredText.Where(Function(p) Char.IsLetterOrDigit(p)).[Select](Function(p) Decrypt(p, inv, b)).ToList()
@@ -37,7 +37,7 @@ Public Module AffineCipher
         Return sb.ToString()
     End Function
 
-    Private Function Decrypt(ByVal c As Char, ByVal a As Integer, ByVal b As Integer) As Char
+    Private Function Decrypt(c As Char, a As Integer, b As Integer) As Char
         If Not Char.IsLetter(c) Then
             Return c
         End If
@@ -47,17 +47,17 @@ Public Module AffineCipher
         End If
 
 
-        Dim x As Integer = c - 97
-        Dim [mod] = (x - b) * a Mod m
+        Dim x As Integer = Asc(c) - 97
+        Dim [mod] = ((x - b) * a) Mod m
 
         If [mod] < 0 Then
-            [mod] = [mod] + m
+            [mod] += m
         End If
 
         Return Microsoft.VisualBasic.ChrW([mod] + 97)
     End Function
 
-    Private Function Encrypt(ByVal c As Char, ByVal a As Integer, ByVal b As Integer) As Char
+    Private Function Encrypt(c As Char, a As Integer, b As Integer) As Char
         If Not Char.IsLetter(c) Then
             Return c
         End If
@@ -67,24 +67,24 @@ Public Module AffineCipher
         End If
 
 
-        Dim x As Integer = c - 97
+        Dim x As Integer = Asc(c) - 97
         Dim [mod] = (a * x + b) Mod m
 
         If [mod] < 0 Then
-            [mod] = [mod] + m
+            [mod] += m
         End If
 
         Return Microsoft.VisualBasic.ChrW([mod] + 97)
     End Function
 
-    Private Function FindInverse(ByVal a As Integer, ByVal b As Integer) As Integer
+    Private Function FindInverse(a As Integer, b As Integer) As Integer
         Dim x0 = 1
         Dim x1 = 0
         Dim y0 = 0
         Dim y1 = 1
 
         While a <> 0
-            Dim q = b / a
+            Dim q = b \ a
             Dim tmp = b Mod a
             b = a
             a = tmp
