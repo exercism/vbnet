@@ -1513,7 +1513,8 @@
         "name": "Affine Cipher",
         "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
         "practices": [
-          "for-loops",
+          "for-loops"
+        ]
       },
       {
         "slug": "zipper",
