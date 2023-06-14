@@ -1509,6 +1509,21 @@
         "difficulty": 4
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
+        "practices": [
+          "for-loops",
+          "foreach-loops"          
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4        
+      },
+      {
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "a04f1d58-34b5-439d-8f23-e67aa31412ff",
