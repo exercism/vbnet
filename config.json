@@ -1515,7 +1515,7 @@
         "practices": [
           "for-loops",
           "foreach-loops"          
-        ]
+        ],
         "prerequisites": [
           "strings",
           "numbers",
