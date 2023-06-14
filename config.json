@@ -1513,8 +1513,15 @@
         "name": "Affine Cipher",
         "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
         "practices": [
-          "for-loops"
+          "for-loops",
+          "foreach-loops"          
         ]
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4        
       },
       {
         "slug": "zipper",
@@ -1541,10 +1548,10 @@
         ],
         "prerequisites": [
           "strings",
-          "numbers",
-          "exceptions"
+          "arrays",
+          "foreach-loops"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "two-bucket",
