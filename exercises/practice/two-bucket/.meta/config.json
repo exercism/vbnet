@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "TwoBucket.vb"
+    ],
+    "test": [
+      "TwoBucketTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Given two buckets of different size, demonstrate how to measure an exact number of liters.",
+  "source": "Water Pouring Problem",
+  "source_url": "https://demonstrations.wolfram.com/WaterPouringProblem/"
+}

@@ -1520,6 +1520,81 @@
           "optional-parameters",
           "constructors"
         ],
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
+        "practices": [
+          "for-loops",
+          "foreach-loops"          
+        ],
+        "prerequisites": [
+          "strings",
+          "numbers",
+          "exceptions"
+        ],
+        "difficulty": 4        
+      },
+      {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "a04f1d58-34b5-439d-8f23-e67aa31412ff",
+        "practices": [
+          "immutability",
+          "equality",
+          "recursion"
+        ],
+        "prerequisites": [
+          "numbers",
+          "classes",
+          "equality"
+        ],
+        "difficulty": 10
+      },
+      {
+        "slug": "scale-generator",
+        "name": "Scale Generator",
+        "uuid": "c3b7092d-080b-4fad-8dc8-5ab891123ac3",
+        "practices": [
+          "foreach-loops"
+        ],
+        "prerequisites": [
+          "strings",
+          "arrays",
+          "foreach-loops"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "d3b77661-8e55-42c3-8bd4-953ad640aca6",
+        "practices": [
+          "properties",
+          "constructors"
+        ],
+        "prerequisites": [
+          "enums",
+          "constructors",
+          "properties",
+          "numbers"
+        ],
+        "difficulty": 8
+      },
+      {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "a15aad1a-b578-46f9-b720-7d448da0459c",
+        "practices": [
+          "streams",
+          "string-formatting"
+        ],
+        "prerequisites": [
+          "streams",
+          "strings",
+          "string-formatting"
+        ],
         "difficulty": 6
       },
       {
