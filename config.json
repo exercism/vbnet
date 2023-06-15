@@ -1509,6 +1509,20 @@
         "difficulty": 4
       },
       {
+        "slug": "rest-api",
+        "name": "REST API",
+        "uuid": "31b40119-cb73-420c-aec9-d920450966df",
+        "practices": [
+          "optional-parameters"
+        ],
+        "prerequisites": [
+          "strings",
+          "optional-parameters",
+          "constructors"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
