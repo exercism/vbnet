@@ -4,86 +4,86 @@ Imports System.Linq
 Imports System.Text.Json
 
 Public Class User
-    Public ReadOnly Property name As String
-    Public Property owes As IDictionary(Of String, Double)
-    Public Property owed_by As IDictionary(Of String, Double)
-    Public ReadOnly Property balance As Double
+    Public ReadOnly Property Name As String
+    Public Property Owes As IDictionary(Of String, Double)
+    Public Property OwedBy As IDictionary(Of String, Double)
+    Public ReadOnly Property Balance As Double
         Get
-            Return owed_by.Sum(Function(x) x.Value) - owes.Sum(Function(x) x.Value)
+            Return OwedBy.Sum(Function(x) x.Value) - Owes.Sum(Function(x) x.Value)
         End Get
     End Property
 
-    Public Sub New(ByVal name As String)
-        Me.name = name
-        owes = New Dictionary(Of String, Double)()
-        owed_by = New Dictionary(Of String, Double)()
+    Public Sub New(name As String)
+        Me.Name = name
+        Owes = New Dictionary(Of String, Double)()
+        OwedBy = New Dictionary(Of String, Double)()
     End Sub
 
-    Public Sub Lend(ByVal borrower As User, ByVal amount As Double)
+    Public Sub Lend(borrower As User, amount As Double)
         Dim remaining = amount
-        If owes.ContainsKey(borrower.name) Then
-            remaining = owes(borrower.name) - amount
+        If Owes.ContainsKey(borrower.Name) Then
+            remaining = Owes(borrower.Name) - amount
             If remaining > 0 Then
-                owes(borrower.name) = remaining
+                Owes(borrower.Name) = remaining
                 Return
             End If
 
-            owes.Remove(borrower.name)
+            Owes.Remove(borrower.Name)
             remaining *= -1
         End If
 
         If remaining > 0 Then
-            If owed_by.ContainsKey(borrower.name) Then
-                owed_by(borrower.name) += remaining
+            If OwedBy.ContainsKey(borrower.Name) Then
+                OwedBy(borrower.Name) += remaining
             Else
-                owed_by.Add(borrower.name, remaining)
-                owed_by = owed_by.OrderBy(Function(x) x.Key).ToDictionary(Function(x) x.Key, Function(x) x.Value)
+                OwedBy.Add(borrower.Name, remaining)
+                OwedBy = OwedBy.OrderBy(Function(x) x.Key).ToDictionary(Function(x) x.Key, Function(x) x.Value)
             End If
         End If
     End Sub
 
-    Public Sub Borrow(ByVal lender As User, ByVal amount As Double)
+    Public Sub Borrow(lender As User, amount As Double)
         Dim remaining = amount
-        If owed_by.ContainsKey(lender.name) Then
-            remaining = owed_by(lender.name) - amount
+        If OwedBy.ContainsKey(lender.Name) Then
+            remaining = OwedBy(lender.Name) - amount
             If remaining > 0 Then
-                owed_by(lender.name) = remaining
+                OwedBy(lender.Name) = remaining
                 Return
             End If
 
-            owed_by.Remove(lender.name)
+            OwedBy.Remove(lender.Name)
             remaining *= -1
         End If
 
         If remaining > 0 Then
-            If owes.ContainsKey(lender.name) Then
-                owes(lender.name) += remaining
+            If Owes.ContainsKey(lender.Name) Then
+                Owes(lender.Name) += remaining
             Else
-                owes.Add(lender.name, remaining)
-                owes = owes.OrderBy(Function(x) x.Key).ToDictionary(Function(x) x.Key, Function(x) x.Value)
+                Owes.Add(lender.Name, remaining)
+                Owes = Owes.OrderBy(Function(x) x.Key).ToDictionary(Function(x) x.Key, Function(x) x.Value)
             End If
         End If
     End Sub
 End Class
 
 Public Class RestApi
-    Private users As IList(Of User)
+    Private ReadOnly users As IList(Of User)
 
-    Public Sub New(ByVal database As String)
+    Public Sub New(database As String)
         users = JsonSerializer.Deserialize(Of List(Of User))(database)
     End Sub
 
-    Public Function Get(ByVal url As String, ByVal Optional payload As String = Nothing) As String
+    Public Function [Get](url As String, Optional payload As String = Nothing) As String
         If Not Equals(payload, Nothing) Then
             Dim values = JsonSerializer.Deserialize(Of Dictionary(Of String, IEnumerable(Of String)))(payload)
             Dim requestedUsers = values("users")
-            Return JsonSerializer.Serialize(users.Where(Function(x) requestedUsers.Contains(x.name)))
+            Return JsonSerializer.Serialize(users.Where(Function(x) requestedUsers.Contains(x.Name)))
         End If
 
-        Return JsonSerializer.Serialize(users)
+        Return If(url = "/users", JsonSerializer.Serialize(users), "[]")
     End Function
 
-    Public Function Post(ByVal url As String, ByVal payload As String) As String
+    Public Function Post(url As String, payload As String) As String
         If Equals(url, "/add") Then
             Dim values = JsonSerializer.Deserialize(Of Dictionary(Of String, String))(payload)
             Dim newUser = New User(values("user"))
@@ -91,13 +91,13 @@ Public Class RestApi
             Return JsonSerializer.Serialize(newUser)
         ElseIf Equals(url, "/iou") Then
             Dim values = JsonSerializer.Deserialize(Of Dictionary(Of String, Object))(payload)
-            Dim lender = users.First(Function(x) x.name.Equals(values("lender").ToString()))
-            Dim borrower = users.First(Function(x) x.name.Equals(values("borrower").ToString()))
+            Dim lender = users.First(Function(x) x.Name.Equals(values("lender").ToString()))
+            Dim borrower = users.First(Function(x) x.Name.Equals(values("borrower").ToString()))
             Dim amount = Double.Parse(values("amount").ToString())
             lender.Lend(borrower, amount)
             borrower.Borrow(lender, amount)
 
-            Return JsonSerializer.Serialize({lender, borrower}.OrderBy(Function(x) x.name))
+            Return JsonSerializer.Serialize({lender, borrower}.OrderBy(Function(x) x.Name))
         End If
 
         Return String.Empty
