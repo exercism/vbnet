@@ -12,17 +12,17 @@ Your task is to implement a simple [RESTful API][restful-wikipedia] that receive
 
 ```json
 {
-  "name": "Adam",
-  "owes": {
+  "Name": "Adam",
+  "Owes": {
     "Bob": 12.0,
     "Chuck": 4.0,
     "Dan": 9.5
   },
-  "owed_by": {
+  "OwedBy": {
     "Bob": 6.5,
     "Dan": 2.75,
   },
-  "balance": "<(total owed by other users) - (total owed to other users)>"
+  "Balance": "<(total owed by other users) - (total owed to other users)>"
 }
 ```
 
