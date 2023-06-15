@@ -1520,6 +1520,7 @@
           "optional-parameters",
           "constructors"
         ],
+        "difficulty": 6
       },
       {
         "slug": "affine-cipher",
