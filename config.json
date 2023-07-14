@@ -9,7 +9,7 @@
     "analyzer": false
   },
   "test_runner": {
-    "average_run_time": 7.0
+    "average_run_time": 7
   },
   "blurb": "Visual Basic is an object-oriented programming language implemented on the .NET Framework.",
   "version": 3,
