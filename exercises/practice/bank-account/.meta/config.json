@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "BankAccount.vb"
+    ],
+    "test": [
+      "BankAccountTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!"
+}

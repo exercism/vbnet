@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "LinkedList.vb"
+    ],
+    "test": [
+      "LinkedListTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Implement a doubly linked list.",
+  "source": "Classic computer science topic"
+}

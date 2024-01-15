@@ -1,22 +1,25 @@
 {
-    "blurb": "Given a year, report if it is a leap year.",
-    "authors": [
-        "ch020"
+  "authors": [
+    "ch020"
+  ],
+  "contributors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "Leap.vb"
     ],
-    "contributors": [
-        "axtens"
+    "test": [
+      "LeapTests.vb"
     ],
-    "files": {
-        "solution": [
-            "Leap.vb"
-        ],
-        "test": [
-            "LeapTests.vb"
-        ],
-        "example": [
-            ".meta/Example.vb"
-        ]
-    },
-    "source": "JavaRanch Cattle Drive, exercise 3",
-    "source_url": "http://www.javaranch.com/leap.jsp"
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Leap.vbproj"
+    ]
+  },
+  "blurb": "Given a year, report if it is a leap year.",
+  "source": "CodeRanch Cattle Drive, Assignment 3",
+  "source_url": "https://coderanch.com/t/718816/Leap"
 }

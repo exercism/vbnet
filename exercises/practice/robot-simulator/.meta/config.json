@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "RobotSimulator.vb"
+    ],
+    "test": [
+      "RobotSimulatorTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}

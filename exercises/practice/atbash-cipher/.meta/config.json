@@ -1,12 +1,25 @@
 {
-  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
-  "authors": ["brent113"],
-  "contributors": ["axtens"],
+  "authors": [
+    "brent113"
+  ],
+  "contributors": [
+    "axtens"
+  ],
   "files": {
-    "solution": ["AtbashCipher.vb"],
-    "test": ["AtbashCipherTests.vb"],
-    "example": [".meta/Example.vb"]
+    "solution": [
+      "AtbashCipher.vb"
+    ],
+    "test": [
+      "AtbashCipherTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "AtbashCipher.vbproj"
+    ]
   },
+  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
   "source": "Wikipedia",
-  "source_url": "http://en.wikipedia.org/wiki/Atbash"
+  "source_url": "https://en.wikipedia.org/wiki/Atbash"
 }

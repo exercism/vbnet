@@ -1,19 +1,20 @@
 {
-    "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-    "authors": [
-      "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "AllYourBase.vb"
     ],
-    "contributors": [],
-    "files": {
-      "solution": [
-        "AllYourBase.vb"
-      ],
-      "test": [
-        "AllYourBaseTests.vb"
-      ],
-      "example": [
-        ".meta/Example.vb"
-      ]
-    }
-  }
-  
+    "test": [
+      "AllYourBaseTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "AllYourBase.vbproj"
+    ]
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
+}

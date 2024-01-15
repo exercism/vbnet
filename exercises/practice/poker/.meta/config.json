@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "Poker.vb"
+    ],
+    "test": [
+      "PokerTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Pick the best hand(s) from a list of poker hands.",
+  "source": "Inspired by the training course from Udacity.",
+  "source_url": "https://www.udacity.com/course/design-of-computer-programs--cs212"
+}

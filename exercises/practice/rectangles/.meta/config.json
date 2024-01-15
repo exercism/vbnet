@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "Rectangles.vb"
+    ],
+    "test": [
+      "RectanglesTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Count the rectangles in an ASCII diagram."
+}

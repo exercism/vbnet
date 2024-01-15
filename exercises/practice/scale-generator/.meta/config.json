@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "ScaleGenerator.vb"
+    ],
+    "test": [
+      "ScaleGeneratorTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Generate musical scales, given a starting note and a set of intervals."
+}

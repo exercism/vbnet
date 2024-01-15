@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "ErikSchierboom",
+    "bobahop"
+  ],
+  "files": {
+    "solution": [
+      "Tournament.vb"
+    ],
+    "test": [
+      "TournamentTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Tally the results of a small football competition."
+}

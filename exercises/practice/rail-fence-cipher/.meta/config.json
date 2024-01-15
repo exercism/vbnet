@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "RailFenceCipher.vb"
+    ],
+    "test": [
+      "RailFenceCipherTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Implement encoding and decoding for the rail fence cipher.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher"
+}

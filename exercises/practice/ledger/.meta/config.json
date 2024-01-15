@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "Ledger.vb"
+    ],
+    "test": [
+      "LedgerTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Refactor a ledger printer."
+}

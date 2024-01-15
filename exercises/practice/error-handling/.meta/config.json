@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ErikSchierboom"
+  ],
+  "files": {
+    "solution": [
+      "ErrorHandling.vb"
+    ],
+    "test": [
+      "ErrorHandlingTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ]
+  },
+  "blurb": "Implement various kinds of error handling and resource management."
+}
