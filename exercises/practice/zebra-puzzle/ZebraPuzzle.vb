@@ -11,7 +11,7 @@ End Enum
 Public Enum Nationality
     Englishman
     Spaniard
-    Ukranian
+    Ukrainian
     Japanese
     Norwegian
 End Enum

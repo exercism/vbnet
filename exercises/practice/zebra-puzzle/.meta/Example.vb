@@ -14,7 +14,7 @@ End Enum
 Public Enum Nationality
     Englishman
     Spaniard
-    Ukranian
+    Ukrainian
     Japanese
     Norwegian
 End Enum
@@ -91,9 +91,9 @@ Module ZebraPuzzle
 
     Private Function MatchesDrinkRules(ByVal colors As Color(), ByVal nationalities As Nationality(), ByVal drinks As Drink()) As Boolean
         Dim coffeeDrunkInGreenHouse = IsIndexMatch(colors, Color.Green, drinks, Drink.Coffee)
-        Dim ukranianDrinksTee = IsIndexMatch(nationalities, Nationality.Ukranian, drinks, Drink.Tea)
+        Dim ukrainianDrinksTee = IsIndexMatch(nationalities, Nationality.Ukrainian, drinks, Drink.Tea)
         Dim milkDrunkInMiddleHouse = drinks(2) = Drink.Milk
-        Return coffeeDrunkInGreenHouse AndAlso ukranianDrinksTee AndAlso milkDrunkInMiddleHouse
+        Return coffeeDrunkInGreenHouse AndAlso ukrainianDrinksTee AndAlso milkDrunkInMiddleHouse
     End Function
 
     Private Function MatchesSmokeRules(ByVal colors As Color(), ByVal nationalities As Nationality(), ByVal drinks As Drink(), ByVal pets As Pet(), ByVal smokes As Smoke()) As Boolean
