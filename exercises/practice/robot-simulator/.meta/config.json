@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RobotSimulator.vbproj"
     ]
   },
   "blurb": "Write a robot simulator.",

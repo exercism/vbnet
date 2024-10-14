@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "BinarySearch.vbproj"
     ]
   },
   "blurb": "Implement a binary search algorithm.",

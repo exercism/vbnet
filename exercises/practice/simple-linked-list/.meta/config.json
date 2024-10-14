@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "SimpleLinkedList.vbproj"
     ]
   },
   "blurb": "Write a simple linked list implementation that uses Elements and a List.",

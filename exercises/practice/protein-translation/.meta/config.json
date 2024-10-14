@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ProteinTranslation.vbproj"
     ]
   },
   "blurb": "Translate RNA sequences into proteins.",

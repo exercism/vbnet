@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Triangle.vbproj"
     ]
   },
   "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",

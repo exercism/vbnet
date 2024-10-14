@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ArmstrongNumbers.vbproj"
     ]
   },
   "blurb": "Determine if a number is an Armstrong number.",

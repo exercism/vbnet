@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "VariableLengthQuantity.vbproj"
     ]
   },
   "blurb": "Implement variable length quantity encoding and decoding.",

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Wordy.vbproj"
     ]
   },
   "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",

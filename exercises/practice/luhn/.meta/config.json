@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Luhn.vbproj"
     ]
   },
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "PigLatin.vbproj"
     ]
   },
   "blurb": "Implement a program that translates from English to Pig Latin.",

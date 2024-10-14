@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ZebraPuzzle.vbproj"
     ]
   },
   "blurb": "Solve the zebra puzzle.",

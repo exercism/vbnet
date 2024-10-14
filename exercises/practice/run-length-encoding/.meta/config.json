@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RunLengthEncoding.vbproj"
     ]
   },
   "blurb": "Implement run-length encoding and decoding.",

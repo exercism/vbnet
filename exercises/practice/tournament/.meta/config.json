@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Tournament.vbproj"
     ]
   },
   "blurb": "Tally the results of a small football competition."

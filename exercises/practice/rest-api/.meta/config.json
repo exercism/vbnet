@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RestApi.vbproj"
     ]
   },
   "blurb": "Implement a RESTful API for tracking IOUs."

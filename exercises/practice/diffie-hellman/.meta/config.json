@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "DiffieHellman.vbproj"
     ]
   },
   "blurb": "Diffie-Hellman key exchange.",

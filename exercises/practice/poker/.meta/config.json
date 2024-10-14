@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Poker.vbproj"
     ]
   },
   "blurb": "Pick the best hand(s) from a list of poker hands.",
