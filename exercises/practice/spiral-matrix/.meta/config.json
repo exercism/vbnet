@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "SpiralMatrix.vbproj"
     ]
   },
   "blurb": "Given the size, return a square matrix of numbers in spiral order.",

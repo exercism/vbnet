@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Pangram.vbproj"
     ]
   },
   "blurb": "Determine if a sentence is a pangram.",

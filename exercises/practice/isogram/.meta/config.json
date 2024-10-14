@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Isogram.vbproj"
     ]
   },
   "blurb": "Determine if a word or phrase is an isogram.",

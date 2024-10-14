@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Meetup.vbproj"
     ]
   },
   "blurb": "Calculate the date of meetups.",

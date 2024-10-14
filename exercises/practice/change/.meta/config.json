@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Change.vbproj"
     ]
   },
   "blurb": "Correctly determine change to be given using the least number of coins.",

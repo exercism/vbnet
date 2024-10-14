@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RomanNumerals.vbproj"
     ]
   },
   "blurb": "Convert modern Arabic numbers into Roman numerals.",

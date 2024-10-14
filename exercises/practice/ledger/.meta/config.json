@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Ledger.vbproj"
     ]
   },
   "blurb": "Refactor a ledger printer."

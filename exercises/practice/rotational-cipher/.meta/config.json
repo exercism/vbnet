@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RotationalCipher.vbproj"
     ]
   },
   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",

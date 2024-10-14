@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Acronym.vbproj"
     ]
   },
   "blurb": "Convert a long phrase to its acronym.",

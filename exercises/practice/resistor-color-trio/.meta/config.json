@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ResistorColorTrio.vbproj"
     ]
   },
   "blurb": "Convert color codes, as used on resistors, to a human-readable label.",

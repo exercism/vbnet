@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Zipper.vbproj"
     ]
   },
   "blurb": "Creating a zipper for a binary tree."

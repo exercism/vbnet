@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ListOps.vbproj"
     ]
   },
   "blurb": "Implement basic list operations."

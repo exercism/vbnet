@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ResistorColorDuo.vbproj"
     ]
   },
   "blurb": "Convert color codes, as used on resistors, to a numeric value.",

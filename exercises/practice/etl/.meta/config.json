@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Etl.vbproj"
     ]
   },
   "blurb": "Change the data format for scoring a game to more easily add other languages.",

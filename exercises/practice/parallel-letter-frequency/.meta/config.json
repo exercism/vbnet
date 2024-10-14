@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ParallelLetterFrequency.vbproj"
     ]
   },
   "blurb": "Count the frequency of letters in texts using parallel computation."

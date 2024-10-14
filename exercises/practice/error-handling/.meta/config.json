@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "ErrorHandling.vbproj"
     ]
   },
   "blurb": "Implement various kinds of error handling and resource management."

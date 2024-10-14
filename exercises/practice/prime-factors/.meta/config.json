@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "PrimeFactors.vbproj"
     ]
   },
   "blurb": "Compute the prime factors of a given natural number.",

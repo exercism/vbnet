@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Minesweeper.vbproj"
     ]
   },
   "blurb": "Add the numbers to a minesweeper board."
