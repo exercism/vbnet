@@ -8,9 +8,6 @@
     "representer": false,
     "analyzer": false
   },
-  "test_runner": {
-    "average_run_time": 7
-  },
   "blurb": "Visual Basic is an object-oriented programming language implemented on the .NET Framework.",
   "version": 3,
   "online_editor": {
@@ -18,7 +15,9 @@
     "indent_size": 2,
     "highlightjs_language": "vbnet"
   },
-  "checklist_issue": 3,
+  "test_runner": {
+    "average_run_time": 7
+  },
   "files": {
     "solution": [
       "%{pascal_slug}.vb"
@@ -37,7 +36,6 @@
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -1037,6 +1035,15 @@
         "slug": "beer-song",
         "name": "Beer Song",
         "uuid": "2523e11e-3a9e-4936-9cbb-37f53a6d90cb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "status": "deprecated"
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "7495b54e-0c0c-4e1f-af6a-f367402483b2",
         "practices": [
           "switch-statements",
           "string-formatting"
@@ -1528,14 +1535,14 @@
         "uuid": "2273d375-590c-44fb-bdcb-e67dcf64dfeb",
         "practices": [
           "for-loops",
-          "foreach-loops"          
+          "foreach-loops"
         ],
         "prerequisites": [
           "strings",
           "numbers",
           "exceptions"
         ],
-        "difficulty": 4        
+        "difficulty": 4
       },
       {
         "slug": "zipper",
@@ -1609,55 +1616,54 @@
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
-      "icon": "powerful",
       "title": "Modern",
-      "content": "Visual Basic is a modern, powerful language."
+      "content": "Visual Basic is a modern, powerful language.",
+      "icon": "powerful"
     },
     {
-      "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "Visual Basic runs on almost any platform and chipset."
+      "content": "Visual Basic runs on almost any platform and chipset.",
+      "icon": "cross-platform"
     },
     {
-      "icon": "multi-paradigm",
       "title": "Multi-paradigm",
-      "content": "Visual Basic is primarily an object-oriented language, but also has lots of functional features."
+      "content": "Visual Basic is primarily an object-oriented language, but also has lots of functional features.",
+      "icon": "multi-paradigm"
     },
     {
-      "icon": "general-purpose",
       "title": "General purpose",
-      "content": "Visual Basic is used for a wide variety of workloads, like websites, gui and console applications."
+      "content": "Visual Basic is used for a wide variety of workloads, like websites, gui and console applications.",
+      "icon": "general-purpose"
     },
     {
-      "icon": "tooling",
       "title": "Tooling",
-      "content": "Visual Basic has excellent tooling, with linting and advanced refactoring options built-in."
+      "content": "Visual Basic has excellent tooling, with linting and advanced refactoring options built-in.",
+      "icon": "tooling"
     },
     {
-      "icon": "documentation",
       "title": "Documentation",
-      "content": "Documentation is excellent and exhaustive, making it easy to get started with Visual Basic."
+      "content": "Documentation is excellent and exhaustive, making it easy to get started with Visual Basic.",
+      "icon": "documentation"
     }
   ],
   "tags": [
+    "execution_mode/compiled",
     "paradigm/functional",
     "paradigm/imperative",
     "paradigm/object_oriented",
+    "platform/android",
+    "platform/ios",
+    "platform/linux",
+    "platform/mac",
+    "platform/web",
+    "platform/windows",
+    "runtime/clr",
+    "typing/dynamic",
     "typing/static",
     "typing/strong",
-    "typing/dynamic",
     "typing/weak",
-    "execution_mode/compiled",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "platform/ios",
-    "platform/android",
-    "platform/web",
-    "runtime/clr",
     "used_for/backends",
     "used_for/cross_platform_development",
     "used_for/frontends",
