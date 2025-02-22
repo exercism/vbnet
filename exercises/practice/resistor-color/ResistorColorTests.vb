@@ -17,6 +17,6 @@ Public Class ResistorColorTest
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Colors()
-        Assert.Equal({"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}, ResistorColor.Colors())
+        Assert.Equal({"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}, ResistorColor.Colors().AsEnumerable())
     End Sub
 End Class

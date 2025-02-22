@@ -7,7 +7,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("diaper")
         Dim words = New String() {"hello", "world", "zombies", "pants"}
         Dim results = New String() {}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -15,7 +15,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("ant")
         Dim words = New String() {"tan", "stand", "at"}
         Dim results = New String() {"tan"}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -23,7 +23,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("master")
         Dim words = New String() {"stream", "pigeon", "maters"}
         Dim results = New String() {"maters", "stream"}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -31,7 +31,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("galea")
         Dim words = New String() {"eagle"}
         Dim results = New String() {}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -40,7 +40,7 @@ Public Class AnagramTest
         Dim words = New String() {"corn", "dark", "Corn", "rank", "CORN", "cron",
             "park"}
         Dim results = New String() {"cron"}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -48,7 +48,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("mass")
         Dim words = New String() {"last"}
         Dim results = New String(-1) {}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -56,7 +56,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("good")
         Dim words = New String() {"dog", "goody"}
         Dim results = New String(-1) {}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -64,7 +64,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("allergy")
         Dim words = New String() {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
         Dim results = New String() {"gallery", "largely", "regally"}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -72,7 +72,7 @@ Public Class AnagramTest
         Dim detector = New Anagram("Orchestra")
         Dim words = New String() {"cashregister", "Carthorse", "radishes"}
         Dim results = New String() {"Carthorse"}
-        Assert.Equal(detector.Match(words), results)
+        Assert.Equal(detector.Match(words).AsEnumerable(), results)
     End Sub
 
 End Class
