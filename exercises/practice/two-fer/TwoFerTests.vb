@@ -18,6 +18,6 @@ Public Class TwoFerTests
     Public Sub AnotherNameGiven()
         Dim expected = "One for Bob, one for me."
         Dim result as String = TwoFer.Speak("Bob")
-        Asset.Equal(expected, result)
+        Assert.Equal(expected, result)
     End Sub
 End Class
