@@ -3,61 +3,97 @@ Imports Xunit
 Public Class PrimeFactorsTests
     <Fact>
     Public Sub No_factors()
-        Assert.Empty(PrimeFactors.Factors(1L).AsEnumerable())
+        dim number = 1L
+        dim expected = Array.Empty(Of Long)()
+        dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Prime_number()
-        Assert.Equal({2L}, PrimeFactors.Factors(2L).AsEnumerable())
+        dim number = 2L
+        dim expected = {2L}
+        dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Another_prime_number()
-        Assert.Equal({3L}, PrimeFactors.Factors(3L).AsEnumerable())
+        dim number = 3L
+        dim expected = {3L}
+        dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Square_of_a_prime()
-        Assert.Equal({3L, 3L}, PrimeFactors.Factors(9L).AsEnumerable())
+        Dim number = 9L
+        Dim expected = {3L, 3L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_first_prime()
-        Assert.Equal({2L, 2L}, PrimeFactors.Factors(4L).AsEnumerable())
+        Dim number = 4L
+        Dim expected = {2L, 2L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Cube_of_a_prime()
-        Assert.Equal({2L, 2L, 2L}, PrimeFactors.Factors(8L).AsEnumerable())
+        Dim number = 8L
+        Dim expected = {2L, 2L, 2L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_second_prime()
-        Assert.Equal({3L, 3L, 3L}, PrimeFactors.Factors(27L).AsEnumerable())
+        Dim number = 27L
+        Dim expected = {3L, 3L, 3L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_third_prime()
-        Assert.Equal({5L, 5L, 5L, 5L}, PrimeFactors.Factors(625L).AsEnumerable())
+        Dim number = 625L
+        Dim expected = {5L, 5L, 5L, 5L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_first_and_second_prime()
-        Assert.Equal({2L, 3L}, PrimeFactors.Factors(6L).AsEnumerable())
+        Dim number = 6L
+        Dim expected = {2L, 3L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_primes_and_non_primes()
-        Assert.Equal({2L, 2L, 3L}, PrimeFactors.Factors(12L).AsEnumerable())
+        Dim number = 12L
+        Dim expected = {2L, 2L, 3L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Product_of_primes()
-        Assert.Equal({5L, 17L, 23L, 461L}, PrimeFactors.Factors(901255L).AsEnumerable())
+        Dim number = 901255L
+        Dim expected = {5L, 17L, 23L, 461L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Factors_include_a_large_prime()
-        Assert.Equal({11L, 9539L, 894119L}, PrimeFactors.Factors(93819012551L).AsEnumerable())
+        Dim number = 93819012551L
+        Dim expected = {11L, 9539L, 894119L}
+        Dim result as IEnumerable(of Long) = PrimeFactors.Factors(number)
+        Assert.Equal(expected, result)
     End Sub
 End Class

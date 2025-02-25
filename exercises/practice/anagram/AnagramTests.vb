@@ -5,74 +5,83 @@ Public Class AnagramTest
     <Fact>
     Public Sub NoMatches()
         Dim detector = New Anagram("diaper")
-        Dim words = New String() {"hello", "world", "zombies", "pants"}
-        Dim results = New String() {}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"hello", "world", "zombies", "pants"}
+        Dim expected = Array.Empty(Of String)()
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub DetectSimpleAnagram()
         Dim detector = New Anagram("ant")
-        Dim words = New String() {"tan", "stand", "at"}
-        Dim results = New String() {"tan"}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"tan", "stand", "at"}
+        Dim expected = {"tan"}
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub DetectMultipleAnagrams()
         Dim detector = New Anagram("master")
-        Dim words = New String() {"stream", "pigeon", "maters"}
-        Dim results = New String() {"maters", "stream"}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"stream", "pigeon", "maters"}
+        Dim expected = {"maters", "stream"}
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub DoesNotConfuseDifferentDuplicates()
         Dim detector = New Anagram("galea")
-        Dim words = New String() {"eagle"}
-        Dim results = New String() {}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"eagle"}
+        Dim expected = Array.Empty(Of String)()
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub IdenticalWordIsNotAnagram()
         Dim detector = New Anagram("corn")
-        Dim words = New String() {"corn", "dark", "Corn", "rank", "CORN", "cron",
+        Dim words = {"corn", "dark", "Corn", "rank", "CORN", "cron",
             "park"}
-        Dim results = New String() {"cron"}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim expected = {"cron"}
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub EliminateAnagramsWithSameChecksum()
         Dim detector = New Anagram("mass")
-        Dim words = New String() {"last"}
-        Dim results = New String(-1) {}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"last"}
+        Dim expected = Array.Empty(Of String)()
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub EliminateAnagramSubsets()
         Dim detector = New Anagram("good")
-        Dim words = New String() {"dog", "goody"}
-        Dim results = New String(-1) {}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"dog", "goody"}
+        Dim expected = Array.Empty(Of String)()
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub DetectAnagrams()
         Dim detector = New Anagram("allergy")
-        Dim words = New String() {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
-        Dim results = New String() {"gallery", "largely", "regally"}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"gallery", "ballerina", "regally", "clergy", "largely", "leading"}
+        Dim expected = {"gallery", "largely", "regally"}
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub AnagramsAreCaseInsensitive()
         Dim detector = New Anagram("Orchestra")
-        Dim words = New String() {"cashregister", "Carthorse", "radishes"}
-        Dim results = New String() {"Carthorse"}
-        Assert.Equal(detector.Match(words).AsEnumerable(), results)
+        Dim words = {"cashregister", "Carthorse", "radishes"}
+        Dim expected = {"Carthorse"}
+        Dim result as IEnumerable(Of String) = detector.Match(words)
+        Assert.Equal(expected, result)
     End Sub
 
 End Class
