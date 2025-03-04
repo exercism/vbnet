@@ -7,7 +7,8 @@ Public Class AllYourBaseTests
         Dim digits = {1}
         Dim outputBase = 10
         Dim expected = {1}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -16,7 +17,8 @@ Public Class AllYourBaseTests
         Dim digits = {1, 0, 1}
         Dim outputBase = 10
         Dim expected = {5}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -25,7 +27,8 @@ Public Class AllYourBaseTests
         Dim digits = {5}
         Dim outputBase = 2
         Dim expected = {1, 0, 1}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -34,7 +37,8 @@ Public Class AllYourBaseTests
         Dim digits = {1, 0, 1, 0, 1, 0}
         Dim outputBase = 10
         Dim expected = {4, 2}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -43,7 +47,8 @@ Public Class AllYourBaseTests
         Dim digits = {4, 2}
         Dim outputBase = 2
         Dim expected = {1, 0, 1, 0, 1, 0}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -52,7 +57,8 @@ Public Class AllYourBaseTests
         Dim digits = {1, 1, 2, 0}
         Dim outputBase = 16
         Dim expected = {2, 10}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -61,7 +67,8 @@ Public Class AllYourBaseTests
         Dim digits = {2, 10}
         Dim outputBase = 3
         Dim expected = {1, 1, 2, 0}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -70,7 +77,8 @@ Public Class AllYourBaseTests
         Dim digits = {3, 46, 60}
         Dim outputBase = 73
         Dim expected = {6, 10, 45}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -79,7 +87,8 @@ Public Class AllYourBaseTests
         Dim digits = Array.Empty(Of Integer)()
         Dim outputBase = 10
         Dim expected = {0}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -88,7 +97,8 @@ Public Class AllYourBaseTests
         Dim digits = {0}
         Dim outputBase = 2
         Dim expected = {0}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -97,7 +107,8 @@ Public Class AllYourBaseTests
         Dim digits = {0, 0, 0}
         Dim outputBase = 2
         Dim expected = {0}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -106,7 +117,8 @@ Public Class AllYourBaseTests
         Dim digits = {0, 6, 0}
         Dim outputBase = 10
         Dim expected = {4, 2}
-        Assert.Equal(expected, Rebase(inputBase, digits, outputBase))
+        Dim result as IEnumerable(Of Integer) = Rebase(inputBase, digits, outputBase)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>

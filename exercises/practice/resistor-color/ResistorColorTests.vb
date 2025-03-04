@@ -16,7 +16,9 @@ Public Class ResistorColorTest
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Colors()
-        Assert.Equal({"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}, ResistorColor.Colors())
+    Public Sub AllColors()
+        Dim expected = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}
+        Dim result as IEnumerable(Of String) = Colors()
+        Assert.Equal(expected, result)
     End Sub
 End Class

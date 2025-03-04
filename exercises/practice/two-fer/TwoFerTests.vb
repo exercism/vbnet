@@ -2,16 +2,22 @@ Imports Xunit
 Public Class TwoFerTests
     <Fact>
     Public Sub NoNameGiven()
-        Assert.Equal("One for you, one for me.", TwoFer.Speak())
+        Dim expected = "One for you, one for me."
+        Dim result as String = TwoFer.Speak()
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub ANameGiven()
-        Assert.Equal("One for Alice, one for me.", TwoFer.Speak("Alice"))
+        Dim expected = "One for Alice, one for me."
+        Dim result as String = TwoFer.Speak("Alice")
+        Assert.Equal(expected, result)
     End Sub
   
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub AnotherNameGiven()
-        Assert.Equal("One for Bob, one for me.", TwoFer.Speak("Bob"))
+        Dim expected = "One for Bob, one for me."
+        Dim result as String = TwoFer.Speak("Bob")
+        Assert.Equal(expected, result)
     End Sub
 End Class

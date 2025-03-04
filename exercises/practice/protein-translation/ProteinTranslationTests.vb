@@ -8,72 +8,114 @@ Public Class ProteinTranslationTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Methionine_rna_sequence()
-        Assert.Equal({"Methionine"}, Proteins("AUG"))
+        Dim strand = "AUG"
+        Dim expected = {"Methionine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Phenylalanine_rna_sequence_1()
-        Assert.Equal({"Phenylalanine"}, Proteins("UUU"))
+        Dim strand = "UUU"
+        Dim expected = {"Phenylalanine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Phenylalanine_rna_sequence_2()
-        Assert.Equal({"Phenylalanine"}, Proteins("UUC"))
+        Dim strand = "UUC"
+        Dim expected = {"Phenylalanine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Leucine_rna_sequence_1()
-        Assert.Equal({"Leucine"}, Proteins("UUA"))
+        Dim strand = "UUA"
+        Dim expected = {"Leucine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Leucine_rna_sequence_2()
-        Assert.Equal({"Leucine"}, Proteins("UUG"))
+        Dim strand = "UUG"
+        Dim expected = {"Leucine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Serine_rna_sequence_1()
-        Assert.Equal({"Serine"}, Proteins("UCU"))
+        Dim strand = "UCU"
+        Dim expected = {"Serine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Serine_rna_sequence_2()
-        Assert.Equal({"Serine"}, Proteins("UCC"))
+        Dim strand = "UCC"
+        Dim expected = {"Serine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Serine_rna_sequence_3()
-        Assert.Equal({"Serine"}, Proteins("UCA"))
+        Dim strand = "UCA"
+        Dim expected = {"Serine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Serine_rna_sequence_4()
-        Assert.Equal({"Serine"}, Proteins("UCG"))
+        Dim strand = "UCG"
+        Dim expected = {"Serine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Tyrosine_rna_sequence_1()
-        Assert.Equal({"Tyrosine"}, Proteins("UAU"))
+        Dim strand = "UAU"
+        Dim expected = {"Tyrosine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Tyrosine_rna_sequence_2()
-        Assert.Equal({"Tyrosine"}, Proteins("UAC"))
+        Dim strand = "UAC"
+        Dim expected = {"Tyrosine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Cysteine_rna_sequence_1()
-        Assert.Equal({"Cysteine"}, Proteins("UGU"))
+        Dim strand = "UGU"
+        Dim expected = {"Cysteine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Cysteine_rna_sequence_2()
-        Assert.Equal({"Cysteine"}, Proteins("UGC"))
+        Dim strand = "UGC"
+        Dim expected = {"Cysteine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Tryptophan_rna_sequence()
-        Assert.Equal({"Tryptophan"}, Proteins("UGG"))
+        Dim strand = "UGG"
+        Dim expected = {"Tryptophan"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -93,17 +135,26 @@ Public Class ProteinTranslationTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Sequence_of_two_protein_codons_translates_into_proteins()
-        Assert.Equal({"Phenylalanine", "Phenylalanine"}, Proteins("UUUUUU"))
+        Dim strand = "UUUUUU"
+        Dim expected = {"Phenylalanine", "Phenylalanine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Sequence_of_two_different_protein_codons_translates_into_proteins()
-        Assert.Equal({"Leucine", "Leucine"}, Proteins("UUAUUG"))
+        Dim strand = "UUAUUG"
+        Dim expected = {"Leucine", "Leucine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Translate_rna_strand_into_correct_protein_list()
-        Assert.Equal({"Methionine", "Phenylalanine", "Tryptophan"}, Proteins("AUGUUUUGG"))
+        Dim strand = "AUGUUUUGG"
+        Dim expected = {"Methionine", "Phenylalanine", "Tryptophan"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -113,21 +164,33 @@ Public Class ProteinTranslationTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Translation_stops_if_stop_codon_at_end_of_two_codon_sequence()
-        Assert.Equal({"Tryptophan"}, Proteins("UGGUAG"))
+        Dim strand = "UGGUAG"
+        Dim expected = {"Tryptophan"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Translation_stops_if_stop_codon_at_end_of_three_codon_sequence()
-        Assert.Equal({"Methionine", "Phenylalanine"}, Proteins("AUGUUUUAA"))
+        Dim strand = "AUGUUUUAA"
+        Dim expected = {"Methionine", "Phenylalanine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Translation_stops_if_stop_codon_in_middle_of_three_codon_sequence()
-        Assert.Equal({"Tryptophan"}, Proteins("UGGUAGUGG"))
+        Dim strand = "UGGUAGUGG"
+        Dim expected = {"Tryptophan"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Translation_stops_if_stop_codon_in_middle_of_six_codon_sequence()
-        Assert.Equal({"Tryptophan", "Cysteine", "Tyrosine"}, Proteins("UGGUGUUAUUAAUGGUUU"))
+        Dim strand = "UGGUGUUAUUAAUGGUUU"
+        Dim expected = {"Tryptophan", "Cysteine", "Tyrosine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
     End Sub
 End Class

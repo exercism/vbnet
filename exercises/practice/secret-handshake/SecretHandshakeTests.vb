@@ -3,37 +3,51 @@ Imports Xunit
 Public Class SecretHandshakeTests
     <Fact>
     Public Sub Wink_for_1()
-        Assert.Equal({"wink"}, SecretHandshake.Commands(1))
+        Dim expected = {"wink"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(1)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Double_blink_for_10()
-        Assert.Equal({"double blink"}, SecretHandshake.Commands(2))
+        Dim expected = {"double blink"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(2) 
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Close_your_eyes_for_100()
-        Assert.Equal({"close your eyes"}, SecretHandshake.Commands(4))
+        Dim expected = {"close your eyes"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(4)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Jump_for_1000()
-        Assert.Equal({"jump"}, SecretHandshake.Commands(8))
+        Dim expected = {"jump"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(8)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Combine_two_actions()
-        Assert.Equal({"wink", "double blink"}, SecretHandshake.Commands(3))
+        Dim expected = {"wink", "double blink"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(3)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reverse_two_actions()
-        Assert.Equal({"double blink", "wink"}, SecretHandshake.Commands(19))
+        Dim expected = {"double blink", "wink"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(19)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reversing_one_action_gives_the_same_action()
-        Assert.Equal({"jump"}, SecretHandshake.Commands(24))
+        Dim expected = {"jump"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(24)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -43,12 +57,16 @@ Public Class SecretHandshakeTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub All_possible_actions()
-        Assert.Equal({"wink", "double blink", "close your eyes", "jump"}, SecretHandshake.Commands(15))
+        Dim expected = {"wink", "double blink", "close your eyes", "jump"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(15)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reverse_all_possible_actions()
-        Assert.Equal({"jump", "close your eyes", "double blink", "wink"}, SecretHandshake.Commands(31))
+        Dim expected = {"jump", "close your eyes", "double blink", "wink"}
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(31)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
