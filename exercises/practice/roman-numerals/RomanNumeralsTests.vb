@@ -37,6 +37,11 @@ Public Class RomanNumeralsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_16_is_xvi()
+        Assert.Equal("XVI", 16.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_27_is_xxvii()
         Assert.Equal("XXVII", 27.ToRoman())
     End Sub
@@ -57,6 +62,11 @@ Public Class RomanNumeralsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_66_is_lix()
+        Assert.Equal("LXVI", 66.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_93_is_xciii()
         Assert.Equal("XCIII", 93.ToRoman())
     End Sub
@@ -72,6 +82,11 @@ Public Class RomanNumeralsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_166_is_clxvi()
+        Assert.Equal("CLXVI", 166.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_402_is_cdii()
         Assert.Equal("CDII", 402.ToRoman())
     End Sub
@@ -79,6 +94,11 @@ Public Class RomanNumeralsTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_575_is_dlxxv()
         Assert.Equal("DLXXV", 575.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_666_is_dclxvi()
+        Assert.Equal("DCLXVI", 666.ToRoman())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -92,38 +112,22 @@ Public Class RomanNumeralsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_1066_is_mdclxvi()
+        Assert.Equal("MDCLXVI", 1066.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_3000_is_mmm()
         Assert.Equal("MMM", 3000.ToRoman())
     End Sub
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_16_is_xvi()
-        Assert.Equal("XVI", 16.ToRoman())
-    End Sub
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_66_is_lxvi()
-        Assert.Equal("LXVI", 66.ToRoman())
-    End Sub
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_166_is_clxvi()
-        Assert.Equal("CLXVI", 166.ToRoman())
-    End Sub
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_666_is_dclxvi()
-        Assert.Equal("DCLXVI", 666.ToRoman())
-    End Sub
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_1666_is_mdclxvi()
-        Assert.Equal("MDCLXVI", 1666.ToRoman())
-    End Sub
-
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Number_3001_is_mmmi()
         Assert.Equal("MMMI", 3001.ToRoman())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Number_3888_is_mmmdccclxxxviii()
+        Assert.Equal("MMMDCCCLXXXVIII", 3888.ToRoman())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
