@@ -112,8 +112,8 @@ Public Class RomanNumeralsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_1066_is_mdclxvi()
-        Assert.Equal("MDCLXVI", 1066.ToRoman())
+    Public Sub Number_1666_is_mdclxvi()
+        Assert.Equal("MDCLXVI", 1666.ToRoman())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
