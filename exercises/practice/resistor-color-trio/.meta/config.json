@@ -3,6 +3,9 @@
     "ErikSchierboom",
     "bobahop"
   ],
+  "contributors": [
+    "BNAndras"
+  ],
   "files": {
     "solution": [
       "ResistorColorTrio.vb"
