@@ -243,6 +243,14 @@
         ]
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "c867b7c0-3810-40c5-9d71-5763f2e28505",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "39e7d0e6-d926-4d69-99d8-7f3084cab476",
