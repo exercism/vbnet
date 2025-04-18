@@ -194,6 +194,14 @@
         ]
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "5704628e-f23f-4867-ae95-63151fbbc97f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "751e4fea-1ee7-4c66-ba2b-802f3ab5f7d6",
