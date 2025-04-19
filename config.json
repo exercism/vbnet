@@ -1637,6 +1637,14 @@
           "casting"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "5734890a-67af-4eaf-8c78-7d7580b8db70",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
