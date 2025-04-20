@@ -5,7 +5,7 @@ Imports XUnit
 Public Class EliudsEggsTests
     <Fact>
     Public Sub Zero_eggs()
-        Assert.Equal(0, EggCount(1))
+        Assert.Equal(0, EggCount(0))
     End Sub
  
     <Fact(Skip:="Remove this Skip property to run this test")>
