@@ -1242,6 +1242,14 @@
         "difficulty": 4
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "ed5b4ff7-c787-4907-8a66-62920a5c5022",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "rest-api",
         "name": "REST API",
         "uuid": "31b40119-cb73-420c-aec9-d920450966df",
