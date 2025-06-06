@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "NthPrime.vbproj"
     ]
   },
   "blurb": "Given a number n, determine what the nth prime is.",
