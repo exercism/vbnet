@@ -95,4 +95,12 @@ Public Class AllergiesTest
             "cats" _
         })
     End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub NoAllergenScorePartsWithoutHighestValidScore()
+        Dim allergies = New Allergies(257)
+        Assert.Equal(allergies.List(), New List(Of String)() From { _
+            "eggs"
+        })
+    End Sub
 End Class
