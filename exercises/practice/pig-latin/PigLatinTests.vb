@@ -52,6 +52,11 @@ Public Class PigLatinTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Word_beginning_with_consonant_and_vowel_containing_qu()
+        Assert.Equal("iquidlay", PigLatin.Translate("liquid"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Word_beginning_with_ch()
         Assert.Equal("airchay", PigLatin.Translate("chair"))
     End Sub
