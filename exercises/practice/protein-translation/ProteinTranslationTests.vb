@@ -193,4 +193,12 @@ Public Class ProteinTranslationTests
         Dim result as IEnumerable(Of String) = Proteins(strand)
         Assert.Equal(expected, result)
     End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon()
+        Dim strand = "AUGAUG"
+        Dim expected = {"Methionine", "Methionine"}
+        Dim result as IEnumerable(Of String) = Proteins(strand)
+        Assert.Equal(expected, result)
+    End Sub
 End Class
