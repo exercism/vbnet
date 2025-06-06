@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "RelativeDistance.vbproj"
     ]
   },
   "blurb": "Given a family tree, calculate the degree of separation.",
