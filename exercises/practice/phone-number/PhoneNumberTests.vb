@@ -51,13 +51,13 @@ Public Class PhoneNumberTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub InvalidWithLetters()
-        Dim phrase = "123-abc-7890"
+        Dim phrase = "523-abc-7890"
         Assert.Throws(Of ArgumentException)(Function() PhoneNumber.Clean(phrase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub InvalidWithPunctuations()
-        Dim phrase = "123-@:!-7890"
+        Dim phrase = "523-@:!-7890"
         Assert.Throws(Of ArgumentException)(Function() PhoneNumber.Clean(phrase))
     End Sub
 
