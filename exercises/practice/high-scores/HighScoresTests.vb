@@ -1,5 +1,6 @@
 Imports System.Collections.Generic
 Imports Xunit
+
 Public Class HighScoresTest
     <Fact>
     Public Sub ListOfScores()
@@ -111,5 +112,74 @@ Public Class HighScoresTest
         Assert.Equal(New List(Of Integer) From {
             40
         }, sut.PersonalTopThree())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub LatestScoreAfterPersonalTopScores()
+        Dim sut = New HighScores(New List(Of Integer) From {
+            70,
+            50,
+            20,
+            30
+        })
+        Assert.Equal(new List(Of Integer) From {
+            70,
+            50,
+            30
+        } , sut.PersonalTopThree())
+        Assert.Equal(30, sut.Latest())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub ScoresAfterPersonalTopScores()
+        Dim sut = New HighScores(New List(Of Integer) From {
+            30,
+            50,
+            20,
+            70
+        })
+        Assert.Equal(New List(Of Integer) From {
+            70,
+            50,
+            30
+        }, sut.PersonalTopThree())
+        Assert.Equal(New List(Of Integer) From {
+            30,
+            50,
+            20,
+            70
+        }, sut.Scores())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub LatestScoreAfterPersonalBest()
+        Dim sut = New HighScores(New List(Of Integer) From {
+            20,
+            70,
+            15,
+            25,
+            30
+        })
+        Assert.Equal(70, sut.PersonalBest())
+        Assert.Equal(30, sut.Latest())
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub ScoresAfterPersonalBest()
+        Dim sut = New HighScores(New List(Of Integer) From {
+            20,
+            70,
+            15,
+            25,
+            30
+        })
+        Assert.Equal(70, sut.PersonalBest())
+        Assert.Equal(New List(Of Integer) From {
+            20,
+            70,
+            15,
+            25,
+            30
+        }, sut.Scores())
     End Sub
 End Class
