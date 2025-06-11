@@ -49,28 +49,28 @@ Public Class FlattenArrayTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result()
+    Public Sub Consecutive_null_values_at_the_front_of_the_array_are_omitted_from_the_final_result()
         Dim array = New Object() {Nothing, Nothing, 3}
         Dim expected = {3}
         Assert.Equal(expected, Flatten(array))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result()
+    Public Sub Consecutive_null_values_in_the_middle_of_the_array_are_omitted_from_the_final_result()
         Dim array = New Object() {1, Nothing, Nothing, 4}
         Dim expected = {1, 4}
         Assert.Equal(expected, Flatten(array))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Number_6_level_nest_list_with_null_values()
+    Public Sub Number_6_level_nested_array_with_null_values()
         Dim array = New Object() {0, 2, New Object() {New Object() {2, 3}, 8, New Object() {New Object() {100}}, Nothing, New Object() {New Object() {Nothing}}}, -2}
         Dim expected = {0, 2, 2, 3, 8, 100, -2}
         Assert.Equal(expected, Flatten(array))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub All_values_in_nested_list_are_null()
+    Public Sub All_values_in_nested_array_are_null()
         Dim array = New Object() {Nothing, New Object() {New Object() {New Object() {Nothing}}}, Nothing, Nothing, New Object() {New Object() {Nothing, Nothing}, Nothing}, Nothing}
         Assert.Empty(Flatten(array))
     End Sub
