@@ -79,6 +79,12 @@ Public Class MatchingBracketsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub PairedAndWrongNestedBracketsButInnermostAreCorrect()
+        Dim value = "[({}])"
+        Assert.False(IsPaired(value))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub PairedAndIncompleteBrackets()
         Dim value = "{}["
         Assert.False(IsPaired(value))
@@ -87,6 +93,18 @@ Public Class MatchingBracketsTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub TooManyClosingBrackets()
         Dim value = "[]]"
+        Assert.False(IsPaired(value))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub EarlyUnexpectedBrackets()
+        Dim value = ")()"
+        Assert.False(IsPaired(value))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub EarlyMismatchedBrackets()
+        Dim value = "{)()"
         Assert.False(IsPaired(value))
     End Sub
 
