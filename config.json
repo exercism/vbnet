@@ -958,6 +958,23 @@
         "difficulty": 5
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "0feed64d-57e7-4dfb-bf9f-5796222f8099",
+        "practices": [
+          "string-formatting",
+          "chars"
+        ],
+        "prerequisites": [
+          "strings",
+          "chars",
+          "string-formatting",
+          "arrays",
+          "if-statements"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "17d6792c-ae1b-4e25-a845-2ba6a9cbaba9",
@@ -1151,18 +1168,10 @@
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "4b2add72-b584-4f37-b401-61bf540187b6",
-        "practices": [
-          "string-formatting",
-          "chars"
-        ],
-        "prerequisites": [
-          "strings",
-          "chars",
-          "string-formatting",
-          "arrays",
-          "if-statements"
-        ],
-        "difficulty": 5
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "status": "deprecated"
       },
       {
         "slug": "ocr-numbers",
