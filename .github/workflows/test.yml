@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
-      - uses: actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d
+      - uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602
         with:
           dotnet-version: "9.0.200"
       - run: ./test.ps1
