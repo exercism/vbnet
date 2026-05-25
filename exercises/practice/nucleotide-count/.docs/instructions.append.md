@@ -1,4 +1,8 @@
-# Hints
+# Instructions append
 
-This exercise requires the use of a Dictionary. For more information see
-[this page.](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2
+## Hints
+
+This exercise requires the use of a Dictionary.
+For more information see [idictionary].
+
+[idictionary]: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.idictionary-2
