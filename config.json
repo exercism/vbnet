@@ -81,6 +81,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
+        "status": "deprecated",
         "topics": [
           "math"
         ]
@@ -1054,23 +1055,18 @@
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "b2e12f15-5cae-4848-9ee8-2e1b0992b69c",
-        "practices": [
-          "lambdas",
-          "foreach",
-          "yield"
-        ],
-        "prerequisites": [
-          "lambdas",
-          "generic-types",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "status": "deprecated",
+        "topics": [
           "foreach",
           "enumerables",
-          "extension-methods"
-        ],
-        "difficulty": 5,
-        "topics": [
-          "extension_methods",
+          "extension-methods",
+          "lambdas",
           "sequences",
-          "transforming"
+          "transforming",
+          "yield"
         ]
       },
       {
@@ -1531,17 +1527,15 @@
         "slug": "diffie-hellman",
         "name": "Diffie-Hellman",
         "uuid": "b561168e-835b-4301-b30c-0ff0970e4e35",
-        "practices": [
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7,
+        "status": "deprecated",
+        "topics": [
           "randomness",
           "big-integers",
           "math-operators"
-        ],
-        "prerequisites": [
-          "randomness",
-          "big-integers",
-          "math-operators"
-        ],
-        "difficulty": 7
+        ]
       },
       {
         "slug": "poker",

@@ -1,6 +1,8 @@
 *      text=auto
 
 *.sh   text eol=lf
+*.json text eol=lf
+
 *.vb   text
 
 *.jpg  binary
