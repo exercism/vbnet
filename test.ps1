@@ -70,7 +70,7 @@ function Test-ExerciseImplementation($Exercise, $BuildDir, $PracticeExercisesDir
     Write-Output "Running tests"
 
     if (-Not $Exercise) {
-        Invoke-CallScriptExitOnError { dotnet test "$BuildDir/Exercises.sln" }
+        Invoke-CallScriptExitOnError { dotnet test "$BuildDir/Exercises.slnx" }
     }
     elseif (Test-Path "$PracticeExercisesDir/$Exercise") {
         Invoke-CallScriptExitOnError { dotnet test "$PracticeExercisesDir/$Exercise" }
