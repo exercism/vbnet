@@ -55,7 +55,7 @@
         "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 5,
         "topics": [
           "filtering",
           "strings"
@@ -67,7 +67,7 @@
         "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 5,
         "topics": [
           "algorithms",
           "strings",
@@ -91,7 +91,7 @@
         "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 5,
         "topics": [
           "conditionals",
           "strings"
@@ -103,7 +103,7 @@
         "uuid": "5f6ed6d3-fd66-406a-9a92-544745a5e4ee",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 5,
         "topics": [
           "algorithms",
           "strings",
@@ -358,7 +358,7 @@
         "uuid": "c867b7c0-3810-40c5-9d71-5763f2e28505",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 5
       },
       {
         "slug": "darts",
@@ -440,7 +440,7 @@
         "uuid": "5734890a-67af-4eaf-8c78-7d7580b8db70",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 5
       },
       {
         "slug": "nucleotide-count",
@@ -1066,7 +1066,7 @@
           "enumerables",
           "extension-methods"
         ],
-        "difficulty": 5,
+        "difficulty": 2,
         "topics": [
           "extension_methods",
           "sequences",
@@ -1097,7 +1097,7 @@
         "uuid": "6ea6e17c-9dbb-45c5-ab70-362791e5dd60",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5
+        "difficulty": 8
       },
       {
         "slug": "flatten-array",
