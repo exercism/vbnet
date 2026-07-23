@@ -43,7 +43,7 @@
         "uuid": "0488d664-0386-4471-b569-01f847ec6054",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "bitwise_operations",
           "filtering"
@@ -55,7 +55,7 @@
         "uuid": "ff07d780-2531-4728-9432-bd786652ad51",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "filtering",
           "strings"
@@ -67,7 +67,7 @@
         "uuid": "cd829c1c-8e35-4cf7-a47e-3b394a036637",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "algorithms",
           "strings",
@@ -80,7 +80,7 @@
         "uuid": "b5363091-1350-428f-b709-550f9352d562",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "math"
         ]
@@ -91,7 +91,7 @@
         "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "conditionals",
           "strings"
@@ -103,7 +103,7 @@
         "uuid": "5f6ed6d3-fd66-406a-9a92-544745a5e4ee",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "algorithms",
           "strings",
@@ -123,7 +123,7 @@
           "numbers",
           "math-operators"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "gigasecond",
@@ -136,7 +136,7 @@
           "datetimes",
           "numbers"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "hello-world",
@@ -144,7 +144,7 @@
         "uuid": "a3da97d9-8e55-47a2-ba80-7446ee8ddaa9",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "strings"
         ]
@@ -163,7 +163,7 @@
           "constructors",
           "numbers"
         ],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "lists"
         ]
@@ -174,7 +174,7 @@
         "uuid": "9b1ce07f-05fb-4d01-b4cd-cf7a8799db2f",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "conditionals",
           "integers"
@@ -192,7 +192,7 @@
           "integers",
           "strings"
         ],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "arrays"
         ]
@@ -209,7 +209,7 @@
           "strings",
           "numbers"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "resistor-color-trio",
@@ -224,7 +224,7 @@
           "numbers",
           "string-formatting"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "reverse-string",
@@ -232,7 +232,7 @@
         "uuid": "af6ae113-35b5-45a2-bf24-27381adf5c6f",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "strings"
         ]
@@ -251,7 +251,7 @@
           "strings",
           "exceptions"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "series",
@@ -270,7 +270,7 @@
           "for-loops",
           "exceptions"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "space-age",
@@ -286,7 +286,7 @@
           "constructors",
           "numbers"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "sum-of-multiples",
@@ -303,7 +303,7 @@
           "foreach-loops",
           "if-statements"
         ],
-        "difficulty": 1
+        "difficulty": 2
       },
       {
         "slug": "two-fer",
@@ -317,7 +317,7 @@
           "optional-parameters",
           "string-interpolation"
         ],
-        "difficulty": 1,
+        "difficulty": 2,
         "topics": [
           "optional_values",
           "strings"
@@ -506,7 +506,7 @@
         "uuid": "2523e11e-3a9e-4936-9cbb-37f53a6d90cb",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
+        "difficulty": 2,
         "status": "deprecated"
       },
       {
@@ -522,7 +522,7 @@
           "numbers",
           "for-loops"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "bottle-song",
@@ -537,7 +537,7 @@
           "numbers",
           "for-loops"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "dnd-character",
@@ -554,7 +554,7 @@
           "numbers",
           "constructors"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "error-handling",
@@ -571,7 +571,7 @@
           "resource-cleanup",
           "numbers"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "grade-school",
@@ -587,7 +587,7 @@
           "enumerables",
           "ordering"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "isogram",
@@ -603,7 +603,7 @@
           "strings",
           "booleans"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "perfect-numbers",
@@ -617,7 +617,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "phone-number",
@@ -625,7 +625,7 @@
         "uuid": "d620068b-b36f-464a-ba78-82e1f8532c53",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
+        "difficulty": 2,
         "topics": [
           "parsing",
           "transforming"
@@ -644,7 +644,7 @@
           "while-loops",
           "arrays"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "proverb",
@@ -658,7 +658,7 @@
           "arrays",
           "for-loops"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "queen-attack",
@@ -676,7 +676,7 @@
           "math-operators",
           "exceptions"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "robot-name",
@@ -693,7 +693,7 @@
           "classes",
           "generic-types"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "robot-simulator",
@@ -712,7 +712,7 @@
           "chars",
           "switch-statements"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "scrabble-score",
@@ -725,7 +725,7 @@
           "numbers",
           "strings"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "secret-handshake",
@@ -739,7 +739,7 @@
           "bit-manipulation",
           "arrays"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "sieve",
@@ -753,7 +753,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "triangle",
@@ -768,7 +768,7 @@
           "if-statements",
           "booleans"
         ],
-        "difficulty": 3
+        "difficulty": 2
       },
       {
         "slug": "acronym",
@@ -784,7 +784,7 @@
           "strings",
           "booleans"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "affine-cipher",
@@ -799,7 +799,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "all-your-base",
@@ -807,7 +807,7 @@
         "uuid": "016ea49c-036b-44f7-909b-4c38aa62d636",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
+        "difficulty": 5,
         "topics": [
           "integers",
           "math",
@@ -830,7 +830,7 @@
           "properties",
           "exceptions"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "circular-buffer",
@@ -848,7 +848,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "clock",
@@ -856,7 +856,7 @@
         "uuid": "12ce6363-d4dd-4ef0-82a6-388218aa71b7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
+        "difficulty": 5,
         "topics": [
           "classes",
           "equality"
@@ -874,7 +874,7 @@
           "string-formatting",
           "numbers"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "isbn-verifier",
@@ -889,7 +889,7 @@
           "chars",
           "booleans"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "largest-series-product",
@@ -907,7 +907,7 @@
           "for-loops",
           "exceptions"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "matrix",
@@ -924,7 +924,7 @@
           "numbers",
           "properties"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "meetup",
@@ -936,7 +936,7 @@
         "prerequisites": [
           "datetimes"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "prime-factors",
@@ -951,7 +951,7 @@
           "arrays",
           "while-loops"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "pythagorean-triplet",
@@ -967,7 +967,7 @@
           "enumerables",
           "generic-methods"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "rotational-cipher",
@@ -982,7 +982,7 @@
           "strings",
           "numbers"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "saddle-points",
@@ -999,7 +999,7 @@
           "generic-methods",
           "numbers"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "simple-linked-list",
@@ -1017,7 +1017,7 @@
           "properties",
           "numbers"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "twelve-days",
@@ -1032,7 +1032,7 @@
           "for-loops",
           "string-formatting"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "word-count",
@@ -1048,7 +1048,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 4
+        "difficulty": 5
       },
       {
         "slug": "accumulate",
@@ -1441,7 +1441,7 @@
           "nullability",
           "exceptions"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "change",
@@ -1456,7 +1456,7 @@
           "arrays",
           "exceptions"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "pig-latin",
@@ -1468,7 +1468,7 @@
         "prerequisites": [
           "strings"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "rail-fence-cipher",
@@ -1483,7 +1483,7 @@
           "numbers",
           "strings"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "rest-api",
@@ -1497,7 +1497,7 @@
           "optional-parameters",
           "constructors"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "tournament",
@@ -1512,7 +1512,7 @@
           "strings",
           "string-formatting"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "transpose",
@@ -1525,7 +1525,7 @@
           "strings",
           "for-loops"
         ],
-        "difficulty": 6
+        "difficulty": 5
       },
       {
         "slug": "diffie-hellman",
@@ -1541,7 +1541,7 @@
           "big-integers",
           "math-operators"
         ],
-        "difficulty": 7
+        "difficulty": 8
       },
       {
         "slug": "poker",
@@ -1557,7 +1557,7 @@
           "ordering",
           "if-statements"
         ],
-        "difficulty": 7
+        "difficulty": 8
       },
       {
         "slug": "rectangles",
@@ -1574,7 +1574,7 @@
           "for-loops",
           "if-statements"
         ],
-        "difficulty": 7
+        "difficulty": 8
       },
       {
         "slug": "variable-length-quantity",
@@ -1591,7 +1591,7 @@
           "while-loops",
           "exceptions"
         ],
-        "difficulty": 7
+        "difficulty": 8
       },
       {
         "slug": "wordy",
@@ -1606,7 +1606,7 @@
           "numbers",
           "exceptions"
         ],
-        "difficulty": 7
+        "difficulty": 8
       },
       {
         "slug": "say",
@@ -1669,7 +1669,7 @@
           "classes",
           "equality"
         ],
-        "difficulty": 10
+        "difficulty": 8
       }
     ]
   },
