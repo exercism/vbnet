@@ -1,5 +1,5 @@
-Public Module modmain
-   Sub Main()
-     Console.WriteLine ("Hello World!")
-   End Sub
+Public Module HelloWorld
+    Public Function Hello() As String
+        Return "Hello, World!"
+    End Function
 End Module
