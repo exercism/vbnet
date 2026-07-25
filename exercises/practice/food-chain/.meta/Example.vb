@@ -14,8 +14,7 @@ Public Module FoodChain
     End Function
 
     Public Function Recite(ByVal startVerse As Integer, ByVal endVerse As Integer) As String
-        Return String.Join(vbLf & vbLf, Enumerable.Range(startVerse, endVerse - startVerse + 1).Select(Function(i) $"{VerseBegin(i)}
-{VerseEnd(i)}"))
+        Return String.Join(vbLf & vbLf, Enumerable.Range(startVerse, endVerse - startVerse + 1).Select(Function(i) $"{VerseBegin(i)}{vbLf}{VerseEnd(i)}"))
     End Function
 
     Private Function VerseBegin(ByVal number As Integer) As String
@@ -29,8 +28,7 @@ Public Module FoodChain
 
         Dim subject = Subjects(number - 2)
         Dim followUp = FollowUps(number - 2)
-        Return $"I know an old lady who swallowed a {subject}.
-{followUp}"
+        Return $"I know an old lady who swallowed a {subject}.{vbLf}{followUp}"
     End Function
 
     Private Function VerseEnd(ByVal number As Integer) As String
