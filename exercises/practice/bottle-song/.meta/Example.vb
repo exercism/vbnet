@@ -4,10 +4,10 @@ Imports System.Linq
 
 Public Module BottleSong
     Public Function Recite(ByVal startBottles As Integer, ByVal takeDown As Integer) As String
-        Return String.Join(Environment.NewLine & Environment.NewLine, _
+        Return String.Join(vbLf & vbLf, _
             Enumerable.Range(startBottles - takeDown + 1, takeDown) _
             .Reverse() _
-            .Select(Function(n) String.Join(Environment.NewLine, Verse(n))))
+            .Select(Function(n) String.Join(vbLf, Verse(n))))
     End Function
 
     Private Function Verse(ByVal number As Integer) As List(Of String)
