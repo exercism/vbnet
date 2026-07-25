@@ -3,12 +3,12 @@ Imports System.Collections.Generic
 
 Public Module AllYourBase
     Public Function Rebase(ByVal inputBase As Integer, ByVal inputDigits As Integer(), ByVal outputBase As Integer) As Integer()
-        If outputBase <= 1 OrElse inputBase <= 1 Then Throw New ArgumentException()
+        If outputBase <= 1 OrElse inputBase <= 1 Then Throw New ArgumentOutOfRangeException()
         Dim inputValue = 0
         Dim exponent = 0, place = inputDigits.Length - 1
 
         While exponent < inputDigits.Length
-            If inputDigits(place) < 0 OrElse inputDigits(place) >= inputBase Then Throw New ArgumentException()
+            If inputDigits(place) < 0 OrElse inputDigits(place) >= inputBase Then Throw New ArgumentOutOfRangeException()
             inputValue += inputDigits(place) * CInt(Math.Pow(inputBase, exponent))
             exponent += 1
             place -= 1
