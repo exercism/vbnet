@@ -126,7 +126,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 1
         Dim digits = {0}
         Dim outputBase = 10
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -134,7 +134,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 0
         Dim digits = Array.Empty(Of Integer)()
         Dim outputBase = 10
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -142,7 +142,7 @@ Public Class AllYourBaseTests
         Dim inputBase = -2
         Dim digits = {1}
         Dim outputBase = 10
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -150,7 +150,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 2
         Dim digits = {1, -1, 1, 0, 1, 0}
         Dim outputBase = 10
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -158,7 +158,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 2
         Dim digits = {1, 2, 1, 0, 1, 0}
         Dim outputBase = 10
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -166,7 +166,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 2
         Dim digits = {1, 0, 1, 0, 1, 0}
         Dim outputBase = 1
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -174,7 +174,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 10
         Dim digits = {7}
         Dim outputBase = 0
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -182,7 +182,7 @@ Public Class AllYourBaseTests
         Dim inputBase = 2
         Dim digits = {1}
         Dim outputBase = -7
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -190,6 +190,6 @@ Public Class AllYourBaseTests
         Dim inputBase = -2
         Dim digits = {1}
         Dim outputBase = -7
-        Assert.Throws(Of ArgumentException)(Function() Rebase(inputBase, digits, outputBase))
+        Assert.Throws(Of ArgumentOutOfRangeException)(Function() Rebase(inputBase, digits, outputBase))
     End Sub
 End Class
