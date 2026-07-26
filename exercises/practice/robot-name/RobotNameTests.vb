@@ -4,7 +4,7 @@ Imports System.Linq
 Imports Xunit
 
 Public Class RobotNameTests
-    Private ReadOnly robot As Robot = New Robot()
+    Private ReadOnly robot As Robot = New()
 
     <Fact>
     Public Sub Robot_has_a_name()
