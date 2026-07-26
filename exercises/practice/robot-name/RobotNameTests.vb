@@ -1,5 +1,6 @@
-Imports System.Linq
 Imports System.Collections.Generic
+Imports System.Linq
+
 Imports Xunit
 
 Public Class RobotNameTests

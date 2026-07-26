@@ -1,5 +1,6 @@
-Imports Xunit
 Imports System.Collections.Generic
+
+Imports Xunit
 
 Public Class RelativeDistanceTest
     <Fact>
