@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Class GameOfLife
     Public Sub New(ByVal matrix As List(Of List(Of Integer)))
         Throw New NotImplementedException("You need to implement this function")

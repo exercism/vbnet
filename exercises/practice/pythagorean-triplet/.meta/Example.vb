@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module PythagoreanTriplet
 
     Public Iterator Function TripletsWithSum(ByVal sum As Integer) As IEnumerable(Of (Integer, Integer, Integer))

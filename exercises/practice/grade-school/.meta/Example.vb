@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Class GradeSchool
     Private ReadOnly _roster As New SortedDictionary(Of Integer, List(Of String))
 

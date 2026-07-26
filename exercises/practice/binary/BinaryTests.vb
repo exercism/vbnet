@@ -1,6 +1,3 @@
-Imports XUnit
-
-
 Public Class BinaryTest
     <Fact>
     Public Sub BinaryCanConvertFormattedStrings()

@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Class Bob
     Private Function IsShouted(s As String) As Boolean
         Return s.Any(AddressOf Char.IsUpper) AndAlso Not s.Any(AddressOf Char.IsLower)

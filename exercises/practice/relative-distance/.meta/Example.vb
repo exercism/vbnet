@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module RelativeDistance
     Public Function DegreesOfSeparation(
                                         ByVal familyTree As Dictionary(Of String, String()),

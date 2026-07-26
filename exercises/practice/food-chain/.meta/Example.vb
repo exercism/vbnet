@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module FoodChain
     Private Const Verses As Integer = 8
 

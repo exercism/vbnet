@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Class Matrix
     Private ReadOnly _rows As Integer()()
     Private ReadOnly _cols As Integer()()

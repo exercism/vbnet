@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module DifferenceOfSquares
     Public Function CalculateSquareOfSum(ByVal max As Integer) As Integer
         Dim numbers = Enumerable.Range(1, max)

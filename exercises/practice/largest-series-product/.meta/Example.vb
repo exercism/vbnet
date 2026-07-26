@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module LargestSeriesProduct
     Public Function GetLargestProduct(ByVal digits As String, ByVal span As Integer) As Long
         Return GetSlices(ParseDigits(digits), span).Max(Function(l) GetProduct(l))

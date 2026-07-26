@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
 Imports System.Text.RegularExpressions
 
 Public Module Grep

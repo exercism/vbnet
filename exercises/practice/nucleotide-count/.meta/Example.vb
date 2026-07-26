@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module NucleotideCount
     Public Function Count(ByVal sequence As String) As IDictionary(Of Char, Integer)
         Dim nucleotideCounts = New Dictionary(Of Char, Integer) From {

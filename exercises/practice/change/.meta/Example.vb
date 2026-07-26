@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module Change
     Public Function FindFewestCoins(ByVal coins As Integer(), ByVal target As Integer) As Integer()
         If target = 0 Then

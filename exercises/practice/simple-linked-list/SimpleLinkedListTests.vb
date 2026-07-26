@@ -1,7 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
-
 Public Class SimpleLinkedListTests
     <Fact>
     Public Sub Empty_list_has_no_elements()

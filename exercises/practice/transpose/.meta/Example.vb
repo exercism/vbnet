@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module Transpose
     Public Function Text(ByVal input As String) As String
         Dim rows = input.Split(ChrW(10))

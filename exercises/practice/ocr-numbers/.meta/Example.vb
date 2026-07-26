@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module OcrNumbers
     Private Const CharacterWidth As Integer = 3
     Private Const CharacterHeight As Integer = 4

@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module ProteinTranslation
     Public Function Proteins(ByVal strand As String) As String()
         Dim results = New List(Of String)()

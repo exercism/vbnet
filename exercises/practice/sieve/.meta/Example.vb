@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class Sieve
     Public Shared Function Primes(ByVal limit As Integer) As Integer()
         Return Sieve.InitializePrimes(limit)

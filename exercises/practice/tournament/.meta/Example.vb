@@ -1,6 +1,4 @@
-Imports System.Collections.Generic
 Imports System.IO
-Imports System.Linq
 
 ''' <summary>
 ''' Tournament tally system.

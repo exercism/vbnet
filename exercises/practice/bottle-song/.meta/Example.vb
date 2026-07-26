@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module BottleSong
     Public Function Recite(ByVal startBottles As Integer, ByVal takeDown As Integer) As String
         Return String.Join(vbLf & vbLf, _

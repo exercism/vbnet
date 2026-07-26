@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Class Pangram
     Public Shared Function IsPangram(ByVal input As String) As Boolean
         Dim chars = New HashSet(Of Char)()

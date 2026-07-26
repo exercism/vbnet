@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module Series
     Public Function Slices(ByVal numbers As String, ByVal sliceLength As Integer) As String()
         If numbers.Length = 0 OrElse sliceLength <= 0 OrElse sliceLength > numbers.Length Then Throw New ArgumentException()

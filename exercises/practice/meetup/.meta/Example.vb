@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Enum Schedule
     Teenth
     First

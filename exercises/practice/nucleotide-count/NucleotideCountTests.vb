@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-
-
 Public Class NucleotideCountTests
     <Fact>
     Public Sub Empty_strand()

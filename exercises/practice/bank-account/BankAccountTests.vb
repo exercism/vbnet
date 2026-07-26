@@ -1,7 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Threading.Tasks
-
-
 Public Class BankAccountTests
     <Fact>
     Public Sub Returns_empty_balance_after_opening()

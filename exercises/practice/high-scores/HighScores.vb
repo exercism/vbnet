@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Class HighScores
     Public Sub New(ByVal scores As List(Of Integer))
         Throw New NotImplementedException("You need to implement this function")

@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module RnaTranscription
     Private ReadOnly DnaToRna As Dictionary(Of Char, Char) = New Dictionary(Of Char, Char) From {
     {"G"c, "C"c},

@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module Rectangles
     Public Function Count(ByVal rows As String()) As Integer
         Dim grid = ParseGrid(rows)

@@ -1,5 +1,3 @@
-Imports System.Collections
-
 Public Module FlattenArray
     Public Iterator Function Flatten(ByVal input As IEnumerable) As IEnumerable
         For Each element In input

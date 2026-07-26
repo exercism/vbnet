@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module Isogram
     Public Function IsIsogram(ByVal word As String) As Boolean
         Dim letters = New HashSet(Of Char)()

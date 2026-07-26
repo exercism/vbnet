@@ -1,4 +1,3 @@
-Imports System.Linq
 Imports System.Text
 
 Public Module AffineCipher

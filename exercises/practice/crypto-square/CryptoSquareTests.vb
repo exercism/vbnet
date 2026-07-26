@@ -1,5 +1,3 @@
-Imports XUnit
-
 Public Class CryptoSquareTest
     <Fact>
     Public Sub EmptyPlaintextResultsInAnEmptyplaintext()

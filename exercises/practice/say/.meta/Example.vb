@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module Say
     Public Function InEnglish(ByVal number As Long) As String
         If number < 0L OrElse number >= 1000000000000L Then

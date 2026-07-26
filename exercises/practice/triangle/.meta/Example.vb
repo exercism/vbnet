@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Enum TriangleKind
     Equilateral
     Isosceles

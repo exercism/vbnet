@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Class BowlingGame
     Private Const NumberOfFrames As Integer = 10
     Private Const MaximumFrameScore As Integer = 10

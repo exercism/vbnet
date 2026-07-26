@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class CircularBuffer(Of T)
     Private ReadOnly capacity As Integer
     Private items As List(Of T)

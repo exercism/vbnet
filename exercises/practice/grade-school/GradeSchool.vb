@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Class GradeSchool
     Public Function Add(ByVal student As String, ByVal grade As Integer) As Boolean
         Throw New NotImplementedException("You need to implement this function.")

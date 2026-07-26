@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class BinTree
     Public Sub New(ByVal value As Integer, ByVal left As BinTree, ByVal right As BinTree)
         Me.Value = value

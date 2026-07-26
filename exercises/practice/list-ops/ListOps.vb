@@ -1,5 +1,3 @@
-Imports System.Collections.Generic
-
 Public Module ListOps
     Public Function Length(Of T)(ByVal input As List(Of T)) As Integer
         Throw New NotImplementedException("You need to implement this function.")

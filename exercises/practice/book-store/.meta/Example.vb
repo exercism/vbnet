@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module BookStore
     Private Const BookPrice As Decimal = 8.0D
 

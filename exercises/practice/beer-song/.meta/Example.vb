@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module BeerSong
     Public Function Verse(ByVal number As Integer) As String
         Select Case number

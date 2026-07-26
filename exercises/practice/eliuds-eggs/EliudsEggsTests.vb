@@ -1,6 +1,3 @@
-Imports XUnit
-
-
 Public Class EliudsEggsTests
     <Fact>
     Public Sub Zero_eggs()

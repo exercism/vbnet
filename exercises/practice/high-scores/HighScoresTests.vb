@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-
-
 Public Class HighScoresTest
     <Fact>
     Public Sub ListOfScores()

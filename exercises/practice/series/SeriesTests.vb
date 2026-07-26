@@ -1,6 +1,3 @@
-Imports System.Linq
-
-
 Public Class SeriesTests
     <Fact>
     Public Sub Slices_of_one_from_one()

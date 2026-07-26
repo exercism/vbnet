@@ -1,7 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
-
 Public Class RobotNameTests
     Private ReadOnly robot As Robot = New Robot()
 

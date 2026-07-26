@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-
-
 Public Class BowlingTests
     <Fact>
     Public Sub Should_be_able_to_score_a_game_with_all_zeros()

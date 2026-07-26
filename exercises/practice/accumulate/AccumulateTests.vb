@@ -1,6 +1,3 @@
-Imports XUnit
-
-
 Public Class AccumulateTest
     <Fact>
     Public Sub EmptyAccumulationProducesEmptyAccumulation()
