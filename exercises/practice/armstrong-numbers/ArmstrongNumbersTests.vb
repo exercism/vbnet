@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ArmstrongNumbersTests
     <Fact>
     Public Sub Zero_is_an_armstrong_number()

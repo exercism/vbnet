@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ProteinTranslationTests
     <Fact>
     Public Sub Empty_rna_sequence_results_in_no_proteins()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class YachtTests
     <Fact>
     Public Sub Yacht()

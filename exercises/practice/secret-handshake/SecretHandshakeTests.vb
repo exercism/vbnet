@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SecretHandshakeTests
     <Fact>
     Public Sub Wink_for_1()

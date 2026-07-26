@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class LuhnTests
     <Fact>
     Public Sub Single_digit_strings_can_not_be_valid()

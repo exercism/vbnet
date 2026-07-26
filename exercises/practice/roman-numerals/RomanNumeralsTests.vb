@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RomanNumeralsTests
     <Fact>
     Public Sub Number_1_is_i()

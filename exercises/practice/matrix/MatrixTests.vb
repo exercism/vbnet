@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class MatrixTests
     <Fact>
     Public Sub Extract_row_from_one_number_matrix()

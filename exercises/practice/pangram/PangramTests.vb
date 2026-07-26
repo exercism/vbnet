@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class PangramTests
     <Fact>
     Public Sub Empty_sentence()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SieveTests
     <Fact>
     Public Sub No_primes_under_two()

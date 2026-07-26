@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ChangeTests
     <Fact>
     Public Sub Change_for_1_cent()

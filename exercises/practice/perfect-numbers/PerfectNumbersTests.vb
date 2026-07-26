@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class PerfectNumbersTests
     <Fact>
     Public Sub SmallestPerfectNumberIsClassifiedCorrectly()

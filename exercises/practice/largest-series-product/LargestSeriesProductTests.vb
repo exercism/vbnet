@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class LargestSeriesProductTests
     <Fact>
     Public Sub Finds_the_largest_product_if_span_equals_length()

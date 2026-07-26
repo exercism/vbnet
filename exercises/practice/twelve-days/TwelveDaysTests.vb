@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class TwelveDaysTests
     <Fact>
     Public Sub First_day_a_partridge_in_a_pear_tree()

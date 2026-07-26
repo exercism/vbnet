@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RobotSimulatorTests
     <Fact>
     Public Sub Create_robot_at_origin_facing_north()

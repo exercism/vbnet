@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SpiralMatrixTests
     <Fact>
     Public Sub Empty_spiral()

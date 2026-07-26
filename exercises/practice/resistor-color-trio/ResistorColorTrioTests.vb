@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ResistorColorTrioTests
     <Fact>
     Public Sub Orange_and_orange_and_black()

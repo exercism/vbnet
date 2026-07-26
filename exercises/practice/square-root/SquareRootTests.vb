@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SquareRootTests
     <Fact>
     Public Sub Root_of_1()

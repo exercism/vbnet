@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class LeapTests
     <Fact>
     Public Sub Year_not_divisible_by_4_in_common_year()

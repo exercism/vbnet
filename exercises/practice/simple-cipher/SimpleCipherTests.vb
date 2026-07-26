@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SimpleCipherTests
     <Fact>
     Public Sub Random_key_cipher_can_encode()

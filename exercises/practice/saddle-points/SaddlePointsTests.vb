@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SaddlePointsTests
     <Fact>
     Public Sub Can_identify_single_saddle_point()

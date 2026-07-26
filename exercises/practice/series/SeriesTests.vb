@@ -1,6 +1,5 @@
 Imports System.Linq
 
-Imports Xunit
 
 Public Class SeriesTests
     <Fact>

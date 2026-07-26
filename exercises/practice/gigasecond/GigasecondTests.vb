@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class GigasecondTests
     <Fact>
     Public Sub Date_only_specification_of_time()

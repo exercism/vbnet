@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ScrabbleScoreTests
     <Fact>
     Public Sub Lowercase_letter()

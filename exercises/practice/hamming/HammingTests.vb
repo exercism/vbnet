@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class HammingTest
     <Fact>
     Public Sub EmptyStrands()

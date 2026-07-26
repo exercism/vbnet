@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ScaleGeneratorTests
     <Fact>
     Public Sub Chromatic_scale_with_sharps()

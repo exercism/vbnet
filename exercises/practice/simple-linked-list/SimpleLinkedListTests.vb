@@ -1,7 +1,6 @@
 Imports System.Collections.Generic
 Imports System.Linq
 
-Imports Xunit
 
 Public Class SimpleLinkedListTests
     <Fact>

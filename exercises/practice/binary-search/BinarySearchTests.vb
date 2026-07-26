@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class BinarySearchTests
     <Fact>
     Public Sub Finds_a_value_in_an_array_with_one_element()

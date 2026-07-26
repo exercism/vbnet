@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class AtbashCipherTests
     <Fact>
     Public Sub EncodeYes()

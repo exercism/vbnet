@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ResistorColorDuoTests
     <Fact>
     Public Sub Brown_and_black()

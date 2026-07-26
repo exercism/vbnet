@@ -1,7 +1,6 @@
 Imports System.Collections.Generic
 Imports System.Linq
 
-Imports Xunit
 
 Public Class ParallelLetterFrequencyTests
     ' Poem by Friedrich Schiller. The corresponding music is the European Anthem.

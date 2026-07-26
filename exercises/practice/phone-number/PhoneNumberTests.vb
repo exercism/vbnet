@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class PhoneNumberTests
     <Fact>
     Public Sub CleansTheNumber()

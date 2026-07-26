@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class BobTest
     Private teenager = New Bob()
 

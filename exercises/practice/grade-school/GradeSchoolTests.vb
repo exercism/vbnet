@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class GradeSchoolTests
     <Fact>
     Public Sub Roster_is_empty_when_no_student_is_added()

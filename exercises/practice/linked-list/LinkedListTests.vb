@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class DequeTests
     <Fact>
     Public Sub Push_and_pop_are_first_in_last_out_order()

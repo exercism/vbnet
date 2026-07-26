@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class HouseTests
     <Fact>
     Public Sub Verse_one_the_house_that_jack_built()

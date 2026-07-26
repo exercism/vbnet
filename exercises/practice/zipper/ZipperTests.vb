@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ZipperTests
     <Fact>
     Public Sub Data_is_retained()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class TwoBucketTests
     <Fact>
     Public Sub Measure_using_bucket_one_of_size_3_and_bucket_two_of_size_5_start_with_bucket_one()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class MeetupTests
     <Fact>
     Public Sub When_teenth_monday_is_the_13th_the_first_day_of_the_teenth_week()

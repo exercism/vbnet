@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class OcrNumbersTests
     <Fact>
     Public Sub Recognizes_0()

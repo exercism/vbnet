@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class PigLatinTests
     <Fact>
     Public Sub Word_beginning_with_a()

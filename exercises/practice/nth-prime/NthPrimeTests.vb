@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class NthPrimeTests
     <Fact>
     Public Sub FirstPrime()

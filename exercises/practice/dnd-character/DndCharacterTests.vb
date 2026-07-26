@@ -1,6 +1,5 @@
 Imports System.Collections.Generic
 
-Imports Xunit
 
 Public Class DndCharacterTests
     <Fact>
