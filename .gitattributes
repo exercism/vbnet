@@ -1,7 +1,7 @@
 *      text=auto
 
 *.sh   text eol=lf
-*.vb   text
+*.vb   text eol=lf
 
 *.jpg  binary
 *.png  binary
