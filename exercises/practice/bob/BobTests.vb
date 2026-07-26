@@ -14,7 +14,7 @@ Public Class BobTest
     Public Sub Shouting()
         Dim expected = "Whoa, chill out!"
         Dim result as String = teenager.Hey("WATCH OUT!")
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, result)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
