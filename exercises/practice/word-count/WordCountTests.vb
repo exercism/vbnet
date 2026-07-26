@@ -1,4 +1,5 @@
 Imports System.Collections.Generic
+
 Imports Xunit
 
 Public Class WordCountTests

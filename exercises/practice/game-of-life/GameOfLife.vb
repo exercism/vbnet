@@ -7,8 +7,8 @@ Public Class GameOfLife
     End Sub
 
     Public Function Tick()
-        Throw New NotImplementedException("You need to implement this function")    
-    End Function 
+        Throw New NotImplementedException("You need to implement this function")
+    End Function
 
     Public Function Matrix() As List(Of List(Of Integer))
         Throw New NotImplementedException("You need to implement this function")

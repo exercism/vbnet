@@ -11,7 +11,7 @@ Public Class SecretHandshakeTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Double_blink_for_10()
         Dim expected = {"double blink"}
-        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(2) 
+        Dim result As IEnumerable(Of String) = SecretHandshake.Commands(2)
         Assert.Equal(expected, result)
     End Sub
 
