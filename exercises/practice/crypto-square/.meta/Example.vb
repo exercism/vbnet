@@ -1,6 +1,6 @@
 Imports System.Runtime.CompilerServices
 
-Module Crypto
+Friend Module Crypto
 	Public Function Ciphertext(plaintext As String) As String
 		If plaintext.Length = 0
 			Return ""

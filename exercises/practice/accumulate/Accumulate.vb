@@ -1,5 +1,5 @@
 Imports System.Runtime.CompilerServices
 
-Module AccumulateExtensions
+Friend Module AccumulateExtensions
 
 End Module
