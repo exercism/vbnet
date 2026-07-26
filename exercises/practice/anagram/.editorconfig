@@ -85,4 +85,5 @@ visual_basic_preferred_modifier_order = Partial, Default, Private, Protected, Pu
 visual_basic_style_unused_variable_expression_statement_preference = unused_local_variable:suggestion
 visual_basic_style_unused_value_assignment_preference = unused_local_variable:suggestion
 visual_basic_style_prefer_isnot_expression = true:suggestion
-visual_basic_style_prefer_simplified_object_creation = true:suggestion
+visual_basic_style_prefer_simplified_object_creation = false:none
+dotnet_diagnostic.IDE0090.severity = none
