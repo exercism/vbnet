@@ -10,10 +10,10 @@
     The slug of the exercise to verify (optional).
 .EXAMPLE
     The example below will verify the full solution
-    PS C:\> ./test.ps1
+    PS C:\> ./bin/test.ps1
 .EXAMPLE
     The example below will verify the "acronym" exercise
-    PS C:\> ./test.ps1 acronym
+    PS C:\> ./bin/test.ps1 acronym
 #>
 
 [CmdletBinding(SupportsShouldProcess)]
@@ -23,7 +23,7 @@ param (
 )
 
 # Import shared functionality
-. ./shared.ps1
+. (Join-Path $PSScriptRoot "shared.ps1")
 
 function Clean($BuildDir) {
     Write-Output "Cleaning previous build"
@@ -81,9 +81,10 @@ function Test-ExerciseImplementation($Exercise, $BuildDir, $PracticeExercisesDir
 }
 
 
-$buildDir = Join-Path $PSScriptRoot "build"
+$repoRoot = Split-Path -Parent $PSScriptRoot
+$buildDir = Join-Path $repoRoot "build"
 $practiceExercisesDir = Join-Path $buildDir "practice"
-$sourceDir = Resolve-Path "exercises"
+$sourceDir = Join-Path $repoRoot "exercises"
 
 Clean $buildDir
 Copy-Exercise $sourceDir $buildDir
