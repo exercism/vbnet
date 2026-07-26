@@ -1,5 +1,3 @@
-Imports System
-
 Public Class BankAccount
     Public Sub OpenMethod()
         Throw New NotImplementedException("You need to implement this function.")

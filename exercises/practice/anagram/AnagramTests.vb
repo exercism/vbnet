@@ -1,6 +1,3 @@
-Imports XUnit
-
-
 Public Class AnagramTest
     <Fact>
     Public Sub NoMatches()

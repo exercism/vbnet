@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class DiamondTest
     <Fact>
     Public Sub Degenerate_case_with_a_single_A_row()

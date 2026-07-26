@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class IsogramTests
     <Fact>
     Public Sub Empty_string()

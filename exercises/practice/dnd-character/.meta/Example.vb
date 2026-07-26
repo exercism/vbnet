@@ -1,6 +1,3 @@
-Imports System
-Imports System.Linq
-
 Public Class DndCharacter
     Private Shared ReadOnly Random As Random = New Random()
 

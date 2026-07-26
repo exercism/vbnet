@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class GrainsTests
     <Fact>
     Public Sub Grains_on_square_1()

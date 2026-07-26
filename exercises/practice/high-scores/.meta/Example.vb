@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class HighScores
     Private scoresField = New List(Of Integer)
 

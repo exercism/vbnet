@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class VariableLengthQuantityTests
     <Fact>
     Public Sub Zero()

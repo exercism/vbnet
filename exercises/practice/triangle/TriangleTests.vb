@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class TriangleTests
     <Fact>
     Public Sub Equilateral_triangle_all_sides_are_equal()

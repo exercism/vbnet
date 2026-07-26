@@ -1,5 +1,3 @@
-Imports System
-
 Public Class RailFenceCipher
     Public Sub New(ByVal rails As Integer)
     End Sub

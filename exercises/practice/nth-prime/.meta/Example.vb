@@ -1,5 +1,3 @@
-Imports System
-
 Public Module NthPrime
     Public Function Prime(ByVal number As Integer)
         If number < 1 Then

@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class ResistorColorTest
     <Fact>
     Public Sub Black()

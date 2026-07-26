@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class AffineCipherTests
     <Fact>
     Public Sub Encode_yes()

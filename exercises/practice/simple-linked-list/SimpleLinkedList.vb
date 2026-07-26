@@ -1,5 +1,3 @@
-Imports System
-
 Public Class SimpleLinkedList(Of T)
     Public ReadOnly Property Count As Integer
         Get
@@ -17,7 +15,7 @@ Public Class SimpleLinkedList(Of T)
 
     Private Class CSharpImpl
         <Obsolete("Please refactor calling code to use normal throw statements")>
-        Shared Function __Throw(Of T)(ByVal e As Exception) As T
+        Public Shared Function __Throw(Of T)(ByVal e As Exception) As T
             Throw e
         End Function
     End Class

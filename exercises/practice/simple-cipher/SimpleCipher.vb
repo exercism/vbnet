@@ -1,5 +1,3 @@
-Imports System
-
 Public Class SimpleCipher
     Public Sub New()
         Throw New NotImplementedException("You need to implement this function.")

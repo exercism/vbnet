@@ -1,5 +1,3 @@
-Imports System
-
 Public Module TwelveDays
     Public Function Recite(ByVal verseNumber As Integer) As String
         Throw New NotImplementedException("You need to implement this function.")

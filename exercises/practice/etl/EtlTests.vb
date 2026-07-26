@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class EtlTests
     <Fact>
     Public Sub Single_letter()

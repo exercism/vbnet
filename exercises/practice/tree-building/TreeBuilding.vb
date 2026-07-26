@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class TreeBuildingRecord
     Public Property ParentId As Integer
     Public Property RecordId As Integer

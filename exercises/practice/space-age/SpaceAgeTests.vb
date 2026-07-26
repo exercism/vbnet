@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class SpaceAgeTests
     <Fact>
     Public Sub Age_on_earth()

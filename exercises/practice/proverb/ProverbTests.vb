@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class ProverbTests
     <Fact>
     Public Sub Zero_pieces()

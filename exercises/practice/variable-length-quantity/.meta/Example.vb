@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module VariableLengthQuantity
     Private Const SevenBitsMask As UInteger = &H7fUI
     Private Const EightBitMask As UInteger = &H80UI

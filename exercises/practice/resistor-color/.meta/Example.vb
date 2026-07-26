@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module ResistorColor
     Private resistorColors = New Dictionary(Of String, Integer) From {
         {"black", 0},

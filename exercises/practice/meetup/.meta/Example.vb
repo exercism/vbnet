@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Enum Schedule
     Teenth
     First
@@ -47,7 +44,7 @@ Public Class Meetup
     Private Class TeenthScheduler
         Inherits Scheduler
         Public Overrides Function Day(ByVal year As Integer, ByVal month As Integer, ByVal dayOfWeek As DayOfWeek) As Date
-            Return FindFirstDayOfWeek(dayOfWeek, New DateTime(year, month, 13), 1)
+            Return FindFirstDayOfWeek(dayOfWeek, New Date(year, month, 13), 1)
         End Function
     End Class
 
@@ -60,7 +57,7 @@ Public Class Meetup
         End Sub
 
         Public Overrides Function Day(ByVal year As Integer, ByVal month As Integer, ByVal dayOfWeek As DayOfWeek) As Date
-            Dim [date] = FindFirstDayOfWeek(dayOfWeek, New DateTime(year, month, 1), 1)
+            Dim [date] = FindFirstDayOfWeek(dayOfWeek, New Date(year, month, 1), 1)
             Return [date].AddDays(nthWeek * 7)
         End Function
     End Class
@@ -68,7 +65,7 @@ Public Class Meetup
     Private Class LastScheduler
         Inherits Scheduler
         Public Overrides Function Day(ByVal year As Integer, ByVal month As Integer, ByVal dayOfWeek As DayOfWeek) As Date
-            Dim startingDate = New DateTime(year, month, Date.DaysInMonth(year, month))
+            Dim startingDate = New Date(year, month, Date.DaysInMonth(year, month))
             Return FindFirstDayOfWeek(dayOfWeek, startingDate, -1)
         End Function
     End Class

@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class HighScoresTest
     <Fact>
     Public Sub ListOfScores()
@@ -126,7 +123,7 @@ Public Class HighScoresTest
             70,
             50,
             30
-        } , sut.PersonalTopThree())
+        }, sut.PersonalTopThree())
         Assert.Equal(30, sut.Latest())
     End Sub
 

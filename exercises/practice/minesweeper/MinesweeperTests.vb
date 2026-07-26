@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class MinesweeperTests
     <Fact>
     Public Sub No_rows()

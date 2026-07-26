@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class SumOfMultiplesTests
     <Fact>
     Public Sub No_multiples_within_limit()

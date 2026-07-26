@@ -1,5 +1,3 @@
-Imports System
-
 Public Class SpaceAge
     Public Sub New(ByVal seconds As Integer)
     End Sub

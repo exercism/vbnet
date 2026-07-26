@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class RectanglesTests
     <Fact>
     Public Sub No_rows()

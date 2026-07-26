@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class DndCharacterTests
     <Fact>
     Public Sub Ability_modifier_for_score_3_is_minus_4()

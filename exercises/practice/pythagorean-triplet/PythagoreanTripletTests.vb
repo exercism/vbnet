@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class PythagoreanTripletTests
     <Fact>
     Public Sub Triplets_whose_sum_is_12()

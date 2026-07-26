@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class AcronymTests
     <Fact>
     Public Sub Basic()

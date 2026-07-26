@@ -1,6 +1,3 @@
-Imports System
-Imports System.Linq
-
 Public Module Proverb
     Public Function Recite(ByVal subjects As String()) As String()
         Dim line As Func(Of Integer, String) = Function(lineIndex)

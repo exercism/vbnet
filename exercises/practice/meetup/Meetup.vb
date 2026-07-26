@@ -1,5 +1,3 @@
-Imports System
-
 Public Enum ScheduleType
     Teenth
     First

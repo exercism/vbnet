@@ -1,7 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-Imports Xunit
-
 Public Class ParallelLetterFrequencyTests
     ' Poem by Friedrich Schiller. The corresponding music is the European Anthem.
     Private Const OdeAnDieFreude As String = "Freude schöner Götterfunken" & vbLf & "Tochter aus Elysium," & vbLf & "Wir betreten feuertrunken," & vbLf & "Himmlische, dein Heiligtum!" & vbLf & "Deine Zauber binden wieder" & vbLf & "Was die Mode streng geteilt;" & vbLf & "Alle Menschen werden Brüder," & vbLf & "Wo dein sanfter Flügel weilt."

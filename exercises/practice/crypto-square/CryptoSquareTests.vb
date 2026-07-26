@@ -1,30 +1,28 @@
-Imports XUnit
-
 Public Class CryptoSquareTest
     <Fact>
     Public Sub EmptyPlaintextResultsInAnEmptyplaintext()
         Dim plaintext = ""
         Assert.Equal("", Ciphertext(plaintext))
     End Sub
-    
+
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Lowercase()
         Dim plaintext = "A"
         Assert.Equal("a", Ciphertext(plaintext))
     End Sub
-    
+
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub RemoveSpaces()
         Dim plaintext = "  b "
         Assert.Equal("b", Ciphertext(plaintext))
     End Sub
-    
+
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub RemovePunctuation()
         Dim plaintext = "@1,%!"
         Assert.Equal("1", Ciphertext(plaintext))
     End Sub
-    
+
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub NineCharacterPlaintextResultsInThreeChunksOfThreeCharacters()
         Dim plaintext = "This is fun!"

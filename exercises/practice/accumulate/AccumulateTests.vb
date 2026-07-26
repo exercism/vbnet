@@ -1,6 +1,3 @@
-Imports XUnit
-
-
 Public Class AccumulateTest
     <Fact>
     Public Sub EmptyAccumulationProducesEmptyAccumulation()
@@ -9,7 +6,7 @@ Public Class AccumulateTest
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub AccumulateSquares()
-        Assert.Equal({1, 2, 3}.Accumulate(Function(x) x * x),{1, 4, 9})
+        Assert.Equal({1, 2, 3}.Accumulate(Function(x) x * x), {1, 4, 9})
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>

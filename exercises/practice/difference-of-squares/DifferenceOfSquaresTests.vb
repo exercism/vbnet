@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class DifferenceOfSquaresTests
     <Fact>
     Public Sub Square_of_sum_1()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RunLengthEncodingTests
     <Fact>
     Public Sub Run_length_encode_a_string_empty_string()

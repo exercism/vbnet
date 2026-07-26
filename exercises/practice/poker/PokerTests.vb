@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class PokerTests
     <Fact>
     Public Sub Single_hand_always_wins()

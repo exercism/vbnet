@@ -1,6 +1,4 @@
-Imports System
 Imports System.Text.RegularExpressions
-Imports System.Linq
 
 Public Class PhoneNumber
     Private Shared phoneNumberPattern As Regex = New Regex("[2-9]{1}\d{2}[2-9]{1}\d{2}\d{4}", RegexOptions.Compiled Or RegexOptions.CultureInvariant)

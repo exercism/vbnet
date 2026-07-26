@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class GameOfLifeTests
     <Fact>
     Public Sub Empty_matrix()

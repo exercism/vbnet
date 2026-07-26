@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class FoodChainTests
     <Fact>
     Public Sub Fly()

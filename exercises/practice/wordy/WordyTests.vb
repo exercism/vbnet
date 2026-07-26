@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class WordyTests
     <Fact>
     Public Sub Just_a_number()

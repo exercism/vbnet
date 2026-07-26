@@ -1,5 +1,3 @@
-Imports System.Linq
-
 Public Module RotationalCipher
     Private Const LowerCaseLetters As String = "abcdefghijklmnopqrstuvwxyz"
     Private Const UpperCaseLetters As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"

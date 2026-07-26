@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ZebraPuzzleTests
     <Fact>
     Public Sub Resident_who_drinks_water()

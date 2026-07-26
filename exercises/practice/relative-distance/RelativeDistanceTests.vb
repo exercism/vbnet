@@ -1,6 +1,3 @@
-Imports Xunit
-Imports System.Collections.Generic
-
 Public Class RelativeDistanceTest
     <Fact>
     Public Sub Direct_parent_child_relation()
@@ -8,7 +5,7 @@ Public Class RelativeDistanceTest
             {"Vera", {"Tomoko"}},
             {"Tomoko", {"Aditi"}}
         }
-        Assert.Equal(1,  DegreesOfSeparation(familyTree, "Vera", "Tomoko"))
+        Assert.Equal(1, DegreesOfSeparation(familyTree, "Vera", "Tomoko"))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>

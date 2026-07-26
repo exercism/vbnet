@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class SaddlePoints
     Public Shared Function Calculate(ByVal matrix As Integer(,)) As IEnumerable(Of (Integer, Integer))
         Dim rowCount = matrix.GetLength(0)

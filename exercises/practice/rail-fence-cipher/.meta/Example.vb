@@ -1,6 +1,3 @@
-Imports System
-Imports System.Linq
-
 Public Class RailFenceCipher
     Private ReadOnly _rails As Integer
     Private ReadOnly _size As Integer

@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class MatchingBracketsTests
     <Fact>
     Public Sub PairedSquareBrackets()

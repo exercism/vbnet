@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RestApiTests
     <Fact>
     Public Sub No_users()

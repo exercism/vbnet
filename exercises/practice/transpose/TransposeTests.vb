@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class TransposeTests
     <Fact>
     Public Sub Empty_string()

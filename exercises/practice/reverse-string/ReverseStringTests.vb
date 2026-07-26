@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class ReverseStringTests
     <Fact>
     Public Sub An_empty_string()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class FlattenArrayTests
     <Fact>
     Public Sub Empty()

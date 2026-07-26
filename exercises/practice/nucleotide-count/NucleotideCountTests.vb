@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class NucleotideCountTests
     <Fact>
     Public Sub Empty_strand()

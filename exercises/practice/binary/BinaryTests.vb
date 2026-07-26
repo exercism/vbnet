@@ -1,8 +1,5 @@
-Imports XUnit
-
-
 Public Class BinaryTest
-	<Fact>
+    <Fact>
     Public Sub BinaryCanConvertFormattedStrings()
         Assert.Equal(New Binary("011").ToDecimal(), 3)
     End Sub
@@ -16,10 +13,10 @@ Public Class BinaryTest
     <InLineData("11010", 26)>
     <InLineData("10001101000", 1128)>
     Public Sub BinaryConvertsToDecimal(binary As String, expected as integer)
-        Assert.Equal( New Binary(binary).ToDecimal(), expected)
+        Assert.Equal(New Binary(binary).ToDecimal(), expected)
     End Sub
 
-	<Theory(Skip:="Remove this Skip property to run this test")>
+    <Theory(Skip:="Remove this Skip property to run this test")>
     <InLineData("carrot")>
     <InLineData("2")>
     <InLineData("5")>

@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Module AllYourBase
     Public Function Rebase(ByVal inputBase As Integer, ByVal inputDigits As Integer(), ByVal outputBase As Integer) As Integer()
         If outputBase <= 1 OrElse inputBase <= 1 Then Throw New ArgumentOutOfRangeException()

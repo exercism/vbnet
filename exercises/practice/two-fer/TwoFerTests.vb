@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class TwoFerTests
     <Fact>
     Public Sub NoNameGiven()
@@ -13,7 +12,7 @@ Public Class TwoFerTests
         Dim result as String = TwoFer.Speak("Alice")
         Assert.Equal(expected, result)
     End Sub
-  
+
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub AnotherNameGiven()
         Dim expected = "One for Bob, one for me."

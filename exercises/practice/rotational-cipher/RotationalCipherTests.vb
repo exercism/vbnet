@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RotationalCipherTests
     <Fact>
     Public Sub Rotate_a_by_0_same_output_as_input()

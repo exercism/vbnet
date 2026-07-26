@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Class Minesweeper
     Public Shared Function Annotate(ByVal input As String()) As String()
         Dim results = New List(Of String)()

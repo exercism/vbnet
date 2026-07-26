@@ -1,7 +1,3 @@
-Imports System.Linq
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class RobotNameTests
     Private ReadOnly robot As Robot = New Robot()
 

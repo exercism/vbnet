@@ -1,5 +1,3 @@
-Imports System
-
 Public Class Matrix
     Public Sub New(ByVal input As String)
     End Sub

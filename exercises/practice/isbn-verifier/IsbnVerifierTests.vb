@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class IsbnVerifierTests
     <Fact>
     Public Sub Valid_isbn()

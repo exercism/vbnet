@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module ParallelLetterFrequency
     Public Function Calculate(ByVal texts As IEnumerable(Of String)) As Dictionary(Of Char, Integer)
         Return texts.AsParallel().Aggregate(New Dictionary(Of Char, Integer)(), New Func(Of Dictionary(Of Char, Integer), String, Dictionary(Of Char, Integer))(AddressOf AddCount))

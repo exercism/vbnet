@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class LedgerTests
     <Fact>
     Public Sub Empty_ledger()

@@ -1,6 +1,3 @@
-Imports System
-Imports System.Linq
-
 Public Module Luhn
     Public Function IsValid(ByVal number As String) As Boolean
         number = number.Replace(" ", "")

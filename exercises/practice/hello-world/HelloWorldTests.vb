@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class HelloWorldTest
     <Fact>
     Public Sub Say_hi_()

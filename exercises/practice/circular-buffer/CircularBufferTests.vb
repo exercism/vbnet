@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class CircularBufferTests
     <Fact>
     Public Sub Reading_empty_buffer_should_fail()

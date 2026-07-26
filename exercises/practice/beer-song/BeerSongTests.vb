@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class BeerSongTests
     <Fact>
     Public Sub First_generic_verse()

@@ -1,8 +1,7 @@
-Imports System.Collections.Generic
 Imports System.Text
 Imports System.Runtime.CompilerServices
 
-Module RomanNumeralExtension
+Friend Module RomanNumeralExtension
     Private ReadOnly ArabicToRomanConversions As New Dictionary(Of Integer, String) From {
         {1000, "M"},
         {900, "CM"},
@@ -20,7 +19,7 @@ Module RomanNumeralExtension
         }
 
     <Extension()>
-    Function ToRoman(ByVal value As Integer) As String
+    Public Function ToRoman(ByVal value As Integer) As String
         Dim result = New StringBuilder()
         Dim remainder = value
 

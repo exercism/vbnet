@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RaindropsTests
     <Fact>
     Public Sub The_sound_for_1_is_1()

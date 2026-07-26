@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Class SpaceAge
     Private Enum Planet
         Earth

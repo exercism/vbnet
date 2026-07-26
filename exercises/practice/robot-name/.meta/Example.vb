@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Class Robot
 
     Private _NameProp As String

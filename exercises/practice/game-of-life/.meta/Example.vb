@@ -1,6 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-
 Public Class GameOfLife
     Private _matrix As List(Of List(Of Integer))
     Private _rows As Integer

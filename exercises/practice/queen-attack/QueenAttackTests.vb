@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class QueenAttackTests
     <Fact>
     Public Sub Queen_with_a_valid_position()

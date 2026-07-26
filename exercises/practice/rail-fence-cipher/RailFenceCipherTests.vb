@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RailFenceCipherTests
     <Fact>
     Public Sub Encode_with_two_rails()

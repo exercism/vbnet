@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Class SecretHandshake
     Private Shared ReadOnly CommandValues As Dictionary(Of Integer, String) = New Dictionary(Of Integer, String) From {
     {1, "wink"},

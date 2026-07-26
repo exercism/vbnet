@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class RnaTranscriptionTests
     <Fact>
     Public Sub Empty_rna_sequence()

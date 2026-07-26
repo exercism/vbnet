@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports Xunit
-
 Public Class WordCountTests
     <Fact>
     Public Sub Count_one_word()

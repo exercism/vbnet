@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class BookStoreTests
     <Fact>
     Public Sub Only_a_single_book()

@@ -1,5 +1,3 @@
-Imports Xunit
-
 Public Class DartsTests
     <Fact>
     Public Sub Missed_target()

@@ -1,5 +1,3 @@
-Imports XUnit
-
 Public Class AllergiesTest
     <Fact>
     Public Sub NotAllergicToAnythingEggs()

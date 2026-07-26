@@ -1,5 +1,3 @@
-Imports System
-
 Public Class BinTree
     Public Sub New(ByVal value As Integer, ByVal left As BinTree, ByVal right As BinTree)
         Throw New NotImplementedException("You need to implement this function.")

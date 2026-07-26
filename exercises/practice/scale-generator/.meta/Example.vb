@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module ScaleGenerator
     Private ReadOnly ChromaticScale As String() = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"}
     Private ReadOnly FlatChromaticScale As String() = {"C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"}

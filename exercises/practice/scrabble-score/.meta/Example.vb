@@ -1,6 +1,3 @@
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module ScrabbleScore
     Private ReadOnly LetterScores As Dictionary(Of Char, Integer) = New Dictionary(Of Char, Integer) From {
     {"a"c, 1},

@@ -1,4 +1,3 @@
-Imports Xunit
 Public Class ClockTests
     <Fact>
     Public Sub OnTheHour()

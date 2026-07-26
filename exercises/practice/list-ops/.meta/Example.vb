@@ -1,7 +1,3 @@
-Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-
 Public Module ListOps
     Private Function Cons(Of T)(ByVal x As T, ByVal input As List(Of T)) As List(Of T)
         Dim list = New List(Of T)(input)

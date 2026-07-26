@@ -1,4 +1,3 @@
-Imports System
 Imports System.IO
 
 Public Module Tournament

@@ -1,6 +1,3 @@
-Imports System
-Imports Xunit
-
 Public Class SayTests
     <Fact>
     Public Sub Zero()

@@ -1,5 +1,3 @@
-Imports System
-Imports System.Linq
 Imports System.Text
 
 Public Class SimpleCipher

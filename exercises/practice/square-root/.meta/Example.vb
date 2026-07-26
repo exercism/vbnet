@@ -1,5 +1,3 @@
-Imports System
-
 Public Module SquareRoot
     Public Function SquareRoot(ByVal radicand As Integer)
         If radicand = 1 Then

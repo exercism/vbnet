@@ -1,5 +1,3 @@
-Imports System
-
 Public Class Queen
     Public Sub New(ByVal row As Integer, ByVal column As Integer)
         Me.Row = row

@@ -1,5 +1,3 @@
-Imports System
-
 Public Class BankAccount
     Private ReadOnly _lock As Object = New Object()
 
