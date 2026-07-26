@@ -1,5 +1,3 @@
-Imports System
-
 Public Module ArmstrongNumbers
     Public Function IsArmstrongNumber(ByVal number As Integer) As Boolean
         Dim numString = number.ToString()

@@ -1,5 +1,3 @@
-Imports System
-
 Public Class Deque(Of T)
     Public Sub PushMethod(ByVal value As T)
         Throw New NotImplementedException("You need to implement this function.")

@@ -1,5 +1,3 @@
-Imports System
-
 Public Class SimpleLinkedList(Of T)
     Public ReadOnly Property Count As Integer
         Get

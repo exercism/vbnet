@@ -1,5 +1,3 @@
-Imports System
-
 Public Module Diamond
     Public Function Rows(ByVal letter As String) As String
         If letter = "A" Then

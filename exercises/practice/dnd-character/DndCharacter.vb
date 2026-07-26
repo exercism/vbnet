@@ -1,5 +1,3 @@
-Imports System
-
 Public Class DndCharacter
     Public ReadOnly Property StrengthProp As Integer
     Public ReadOnly Property DexterityProp As Integer

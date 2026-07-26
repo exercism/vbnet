@@ -1,4 +1,3 @@
-Imports System
 Imports System.Collections
 
 Public Module FlattenArray

@@ -1,5 +1,3 @@
-Imports System
-
 Public Module CollatzConjecture
     Private stepCount As Integer
 

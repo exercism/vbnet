@@ -1,5 +1,3 @@
-Imports System
-
 Public Module EliudsEggs
     Public Function EggCount(ByVal number As Integer) As Integer
         If number = 1 Then

@@ -1,5 +1,3 @@
-Imports System
-
 Public Enum Bucket
     One
     Two

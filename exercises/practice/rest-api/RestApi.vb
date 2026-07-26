@@ -1,5 +1,3 @@
-Imports System
-
 Public Class RestApi
     Public Sub New(database As String)
         Throw New NotImplementedException("You need to implement this function.")

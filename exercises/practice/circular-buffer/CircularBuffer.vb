@@ -1,5 +1,3 @@
-Imports System
-
 Public Class CircularBuffer(Of T)
     Public Sub New(ByVal capacity As Integer)
         Throw New NotImplementedException("You need to implement this function.")

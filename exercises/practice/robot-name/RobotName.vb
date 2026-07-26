@@ -1,5 +1,3 @@
-Imports System
-
 Public Class Robot
     Public ReadOnly Property Name As String
         Get

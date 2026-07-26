@@ -1,4 +1,3 @@
-Imports System
 Imports System.Linq
 
 Public Enum TriangleKind

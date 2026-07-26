@@ -1,5 +1,3 @@
-Imports System
-
 Public Enum YachtCategory
     Ones = 1
     Twos = 2

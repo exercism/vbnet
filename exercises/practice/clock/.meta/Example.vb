@@ -1,5 +1,3 @@
-Imports System
-
 Public Class Clock
     Private Property Minutes As Integer
     Private Const MINUTES_PER_DAY As Integer = 24 * 60

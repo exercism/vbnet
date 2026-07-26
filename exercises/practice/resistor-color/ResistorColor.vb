@@ -1,5 +1,3 @@
-Imports System
-
 Public Module ResistorColor
 
     Public Function ColorCode(ByVal color As String) As Integer
