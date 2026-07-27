@@ -13,7 +13,7 @@ Public Class GameOfLife
         End If
     End Sub
 
-    Public Function Tick()
+    Public Sub Tick()
         Dim newMatrix As New List(Of List(Of Integer))
         
         For row As Integer = 0 To _rows - 1
@@ -46,7 +46,7 @@ Public Class GameOfLife
         Next
         
         _matrix = newMatrix
-    End Function 
+    End Sub
 
     Public Function Matrix() As List(Of List(Of Integer))
         Return _matrix
