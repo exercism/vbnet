@@ -1,7 +1,7 @@
 Public Class QueenAttackTests
     <Fact>
     Public Sub Queen_with_a_valid_position()
-        Dim actual = Create(2, 2)
+        Assert.NotNull(Create(2, 2))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
