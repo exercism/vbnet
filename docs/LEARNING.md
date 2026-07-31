@@ -2,18 +2,14 @@
 
 ## Websites
 
-- The [official Visual Basic documentation](https://docs.microsoft.com/en-us/dotnet/articles/visual-basic/) has great content on a wide variety of subjects, including key [concepts](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/), [sample applications](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic) and [walkthroughs](https://docs.microsoft.com/en-us/dotnet/visual-basic/walkthroughs).
+Visual Basic has evolved significantly over the years, and many third-party tutorials refer to outdated tooling or features.
+The [official Visual Basic documentation](https://learn.microsoft.com/en-us/dotnet/visual-basic/) is the most current and reliable place to start your journey.
 
-## Videos
+## The .NET Ecosystem
 
-- [Visual Basic Fundamentals for Absolute Beginners](https://www.youtube.com/watch?v=6utWyl8agDY)
-- [Learn Visual Basic in 30 Minutes (2017)](https://www.youtube.com/watch?v=gcFHyVYdeFU)
-- There are [Visual Basic courses](https://www.pluralsight.com/search?q=Visual Basic&categories=all) on PluralSight. The downside: PluralSight is a paid service, but you can request a [free trial](https://www.pluralsight.com/pricing).
+Visual Basic runs on the .NET runtime, sharing a lot of core functionality with C# and F#.
+Therefore, understanding how .NET works will make you a stronger VB developer. 
 
-## Books
-
-- [Learn Visual Basic 2019 Edition: A Step-By-Step Programming Tutorial](https://www.abebooks.com/servlet/BookDetailsPL?bi=30946734112&searchurl=isbn%3D1951077105%26sortby%3D17&cm_sp=snippet-_-srp1-_-title2)
-- [Visual Basic 2019 Handbook: A Concise Guide to VB2019 Programming](https://www.abebooks.com/servlet/BookDetailsPL?bi=30903890407&cm_sp=Searchmod-_-NullResults-_-BDP)
-- [BEGINNING VISUAL BASIC](https://www.kidwaresoftware.com/Beginning-Visual-Basic-A-Computer-Programming-Tutorial-by-Philip-Conrod-and-Lou-Tylee/)
-- [Visual Basic and Databases](https://www.kidwaresoftware.com/visual-basic-and-databases-by-philip-conrod-and-lou-tylee/)
-- [Learn Visual Basic .Net Programming: A Practical Approach](https://www.abebooks.com/9781080576890/Learn-Visual-Basic-.Net-Programming-1080576894/plp)
+- [What is .NET?](https://learn.microsoft.com/en-us/dotnet/core/introduction)
+- [The .NET Glossary](https://learn.microsoft.com/en-us/dotnet/standard/glossary)
+- [The Common Type System (CTS)](https://learn.microsoft.com/en-us/dotnet/standard/base-types/common-type-system)
