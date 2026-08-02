@@ -1231,6 +1231,14 @@
         "difficulty": 5
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "366fef41-bf62-4314-a6f5-bba9eacd82a0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "ceb811d0-3aae-4517-9e37-1eca5ba07c39",
