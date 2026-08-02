@@ -16,6 +16,7 @@
     <Project Path="practice/book-store/BookStore.vbproj" />
     <Project Path="practice/bottle-song/BottleSong.vbproj" />
     <Project Path="practice/bowling/Bowling.vbproj" />
+    <Project Path="practice/camicia/Camicia.vbproj" />
     <Project Path="practice/change/Change.vbproj" />
     <Project Path="practice/circular-buffer/CircularBuffer.vbproj" />
     <Project Path="practice/clock/Clock.vbproj" />
