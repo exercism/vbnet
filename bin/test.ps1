@@ -30,9 +30,20 @@ function Clean($BuildDir) {
     Remove-Item -Recurse -Force $BuildDir -ErrorAction Ignore
 }
 
-function Copy-Exercise($SourceDir, $BuildDir) {
+function Copy-Exercises($SourceDir, $BuildDir) {
     Write-Output "Copying exercises"
     Copy-Item $SourceDir -Destination $BuildDir -Recurse
+}
+
+function Copy-SingleExercise($SourceDir, $PracticeExercisesDir, $Exercise) {
+    $exerciseDir = Join-Path $SourceDir "practice" $Exercise
+    if (-Not (Test-Path $exerciseDir)) {
+        throw "Could not find exercise '$Exercise'"
+    }
+
+    Write-Output "Copying $Exercise exercise"
+    New-Item -ItemType Directory -Force $PracticeExercisesDir | Out-Null
+    Copy-Item $exerciseDir -Destination $PracticeExercisesDir -Recurse
 }
 
 function Enable-All-UnitTests($BuildDir) {
@@ -61,7 +72,7 @@ function Use-ExampleImplementation {
     param($PracticeExercisesDir)
 
     if ($PSCmdlet.ShouldProcess("Exercises directory", "replace all solutions with corresponding examples")) {
-        Write-Output "Replacing practice exercise stubs with example"
+        Write-Output "Replacing practice exercise stub(s) with example"
         Set-ExampleImplementation $PracticeExercisesDir "Example.vb"
     }
 }
@@ -87,7 +98,11 @@ $practiceExercisesDir = Join-Path $buildDir "practice"
 $sourceDir = Join-Path $repoRoot "exercises"
 
 Clean $buildDir
-Copy-Exercise $sourceDir $buildDir
+if ($Exercise) {
+    Copy-SingleExercise $sourceDir $practiceExercisesDir $Exercise
+} else {
+    Copy-Exercises $sourceDir $buildDir
+}
 Enable-All-UnitTests $buildDir
 Use-ExampleImplementation $practiceExercisesDir
 Test-ExerciseImplementation -Exercise $Exercise -BuildDir $buildDir -PracticeExercisesDir $practiceExercisesDir
