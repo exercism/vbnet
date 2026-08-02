@@ -857,6 +857,14 @@
         "difficulty": 5
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "8a02fe66-fd54-49ab-ae25-1722a1dc1620",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "change",
         "name": "Change",
         "uuid": "4b4197d2-8123-4474-8c32-1191c1f9b5cd",
