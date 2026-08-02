@@ -46,11 +46,19 @@ Public Module OcrNumbers
     End Function
 
     Private Function Cols(ByVal lines As String()) As Integer
-        Return If(lines(0).Length Mod CharacterWidth = 0, lines(0).Length / CharacterWidth, CSharpImpl.__Throw(Of Integer)(New ArgumentException()))
+        If lines(0).Length Mod CharacterWidth <> 0 Then
+            Throw New ArgumentException()
+        End If
+
+        Return lines(0).Length / CharacterWidth
     End Function
 
     Private Function Rows(ByVal lines As String()) As Integer
-        Return If(lines.Length Mod CharacterHeight = 0, lines.Length / CharacterHeight, CSharpImpl.__Throw(Of Integer)(New ArgumentException()))
+        If lines.Length Mod CharacterHeight <> 0 Then
+            Throw New ArgumentException()
+        End If
+
+        Return lines.Length / CharacterHeight
     End Function
 
     Private Function IsEmptyLine(ByVal line As String) As Boolean
@@ -82,11 +90,4 @@ Public Module OcrNumbers
                                                                         {" _ " & "|_|" & " _|" & "   ", "9"c},
                                                                         {"   " & "   " & "  ," & "   ", ","c}
 }
-
-    Private Class CSharpImpl
-        <Obsolete("Please refactor calling code to use normal throw statements")>
-        Shared Function __Throw(Of T)(ByVal e As Exception) As T
-            Throw e
-        End Function
-    End Class
 End Module

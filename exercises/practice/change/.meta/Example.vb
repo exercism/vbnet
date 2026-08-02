@@ -12,7 +12,8 @@ Public Module Change
         fewestCoins(0) = Array.Empty(Of Integer)()
 
         For amount = 1 To target
-            Dim change As IEnumerable(Of Integer) = coins.Where(Function(coin) coin <= amount).[Select](Function(coin) fewestCoins(amount - coin).Append(coin)).OrderBy(Function(x) x.Count()).FirstOrDefault(Function(y) y.Sum() = amount)
+            Dim currentAmount = amount
+            Dim change As IEnumerable(Of Integer) = coins.Where(Function(coin) coin <= currentAmount).[Select](Function(coin) fewestCoins(currentAmount - coin).Append(coin)).OrderBy(Function(x) x.Count()).FirstOrDefault(Function(y) y.Sum() = currentAmount)
 
             If change Is Nothing Then
                 fewestCoins(amount) = New List(Of Integer)().ToArray()
