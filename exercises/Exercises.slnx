@@ -64,6 +64,7 @@
     <Project Path="practice/pig-latin/PigLatin.vbproj" />
     <Project Path="practice/poker/Poker.vbproj" />
     <Project Path="practice/prime-factors/PrimeFactors.vbproj" />
+    <Project Path="practice/prism/Prism.vbproj" />
     <Project Path="practice/protein-translation/ProteinTranslation.vbproj" />
     <Project Path="practice/proverb/Proverb.vbproj" />
     <Project Path="practice/pythagorean-triplet/PythagoreanTriplet.vbproj" />
