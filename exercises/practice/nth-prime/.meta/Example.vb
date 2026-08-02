@@ -1,5 +1,5 @@
 Public Module NthPrime
-    Public Function Prime(ByVal number As Integer)
+    Public Function Prime(ByVal number As Integer) As Integer
         If number < 1 Then
             Throw New ArgumentOutOfRangeException(nameof(number), "There are no negative nth primes")
         End If
@@ -16,9 +16,11 @@ Public Module NthPrime
             End If
             candidate += 1
         End While
+
+        Throw New InvalidOperationException("unreachable")
     End Function
 
-    Private Function IsPrime(ByVal num As Integer)
+    Private Function IsPrime(ByVal num As Integer) As Boolean
         If num <= 1 Then
             Return False
         End If

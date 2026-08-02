@@ -47,7 +47,8 @@ Public Module ListOps
         Dim sublist As List(Of T) = Nothing
 
         For Each list In input
-            If CSharpImpl.__Assign(sublist, TryCast(list, List(Of T))) IsNot Nothing Then concatenated = Append(concatenated, sublist)
+            sublist = TryCast(list, List(Of T))
+            If sublist IsNot Nothing Then concatenated = Append(concatenated, sublist)
         Next
 
 
@@ -67,12 +68,4 @@ Public Module ListOps
 
         Return appended.ToList()
     End Function
-
-    Private Class CSharpImpl
-        <Obsolete("Please refactor calling code to use normal Visual Basic assignment")>
-        Shared Function __Assign(Of T)(ByRef target As T, value As T) As T
-            target = value
-            Return value
-        End Function
-    End Class
 End Module
