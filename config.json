@@ -118,14 +118,6 @@
         "difficulty": 2
       },
       {
-        "slug": "binary-search-tree",
-        "name": "Binary Search Tree",
-        "uuid": "f3b38287-45f2-4e17-b9a8-70382521f15c",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "bottle-song",
         "name": "Bottle Song",
         "uuid": "7495b54e-0c0c-4e1f-af6a-f367402483b2",
@@ -816,6 +808,14 @@
           "properties",
           "exceptions"
         ],
+        "difficulty": 5
+      },
+      {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "f3b38287-45f2-4e17-b9a8-70382521f15c",
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 5
       },
       {
