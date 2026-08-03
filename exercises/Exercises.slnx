@@ -97,6 +97,7 @@
     <Project Path="practice/spiral-matrix/SpiralMatrix.vbproj" />
     <Project Path="practice/square-root/SquareRoot.vbproj" />
     <Project Path="practice/sublist/Sublist.vbproj" />
+    <Project Path="practice/strain/Strain.vbproj" />
     <Project Path="practice/sum-of-multiples/SumOfMultiples.vbproj" />
     <Project Path="practice/tournament/Tournament.vbproj" />
     <Project Path="practice/transpose/Transpose.vbproj" />

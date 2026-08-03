@@ -691,6 +691,14 @@
         "difficulty": 2
       },
       {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "cb9e7d32-db32-4de7-a588-940a3551d24f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "78113af6-b1a4-40ab-86c6-3b26afdec75f",
