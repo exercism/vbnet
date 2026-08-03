@@ -819,6 +819,14 @@
         "difficulty": 5
       },
       {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "f3b38287-45f2-4e17-b9a8-70382521f15c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "bob",
         "name": "Bob",
         "uuid": "c26876c4-060e-4870-b20c-a4a3ebbfcf7c",
