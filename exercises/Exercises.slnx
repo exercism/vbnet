@@ -11,6 +11,7 @@
     <Project Path="practice/bank-account/BankAccount.vbproj" />
     <Project Path="practice/beer-song/BeerSong.vbproj" />
     <Project Path="practice/binary-search/BinarySearch.vbproj" />
+    <Project Path="practice/binary-search-tree/BinarySearchTree.vbproj" />
     <Project Path="practice/binary/Binary.vbproj" />
     <Project Path="practice/bob/Bob.vbproj" />
     <Project Path="practice/book-store/BookStore.vbproj" />
