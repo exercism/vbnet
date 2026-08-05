@@ -45,6 +45,7 @@
     <Project Path="practice/house/House.vbproj" />
     <Project Path="practice/isbn-verifier/IsbnVerifier.vbproj" />
     <Project Path="practice/isogram/Isogram.vbproj" />
+    <Project Path="practice/kindergarten-garden/KindergartenGarden.vbproj" />
     <Project Path="practice/largest-series-product/LargestSeriesProduct.vbproj" />
     <Project Path="practice/leap/Leap.vbproj" />
     <Project Path="practice/ledger/Ledger.vbproj" />
