@@ -1,27 +1,31 @@
 # Installation
 
-## Installing .NET
+## Install .NET 10
 
-The Visual Basic track is built on top of the [.NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) platform, which runs on Windows, Linux and macOS.
-To build .NET projects, you can use the .NET Command Line Interface (CLI).
-This CLI is part of the .NET SDK, which you can install by following the [installation instructions](https://dotnet.microsoft.com/download/dotnet/5.0).
-Note: the Visual Basic track requires SDK version 5.0 or greater.
+The Visual Basic track uses .NET 10.
+To build and test the exercises locally, install [the .NET 10 SDK for your operating system][install-sdk]:
+Install the SDK, not just the runtime.
 
-After completing the installation, you can verify if the CLI was installed succesfully by running this command in a terminal:
+## Check your installation
+
+Open a new terminal and run:
 
 ```bash
 dotnet --version
 ```
 
-It the output is a version greater than or equal to `5.0.100`, the .NET SDK has been installed succesfully.
+The command should output `10.0.0` or later.
 
-## Using an IDE
+## Editor support
 
-If you want a more full-featured editing experience, you probably want to use an IDE. These are the most popular IDE's that support building .NET projects:
+The .NET SDK and a no-frills text editor are all you need to complete the exercises.
+For more advance features such as code completion and debugging, consider one of these editors:
 
-- [Visual Studio 2019](https://www.visualstudio.com/downloads/)
-- [Visual Studio Code](https://code.visualstudio.com/download) with a grammar and snippets [Visual Basic extension](https://marketplace.visualstudio.com/items?itemName=gordonwalkedby.vbnet)
-- [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
-- [Project Rider](https://www.jetbrains.com/rider/download/)
+- [Visual Studio 2026][visual-studio] on Windows
+- [Visual Studio Code][visual-studio-code] on Windows, Linux, or macOS
+- [JetBrains Rider][rider] on Windows, Linux, or macOS
 
-Note: as the .NET project format differs significantly from earlier versions, older IDE's (like Visual Studio 2015) are not supported.
+[install-sdk]: https://learn.microsoft.com/en-us/dotnet/core/install
+[rider]: https://www.jetbrains.com/rider/
+[visual-studio]: https://visualstudio.microsoft.com/downloads/
+[visual-studio-code]: https://code.visualstudio.com/download
