@@ -35,6 +35,16 @@ Public Class IsbnVerifierTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Only_one_check_digit_is_allowed()
+        Assert.False(IsValid("3-598-21508-96"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub X_is_not_substituted_by_the_value_10()
+        Assert.False(IsValid("3-598-2X507-5"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Valid_isbn_without_separating_dashes()
         Assert.True(IsValid("3598215088"))
     End Sub
