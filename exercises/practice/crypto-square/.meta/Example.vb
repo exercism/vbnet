@@ -2,10 +2,11 @@ Imports System.Runtime.CompilerServices
 
 Friend Module Crypto
 	Public Function Ciphertext(plaintext As String) As String
-		If plaintext.Length = 0
+		Dim normalized = plaintext.Normalized()
+		If normalized.Length = 0
 			Return ""
 		Else
-			Return String.Join(" ", plaintext.Normalized().Rows().Columns())
+			Return String.Join(" ", normalized.Rows().Columns())
 		End If
 	End Function
 	
