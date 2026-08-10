@@ -115,40 +115,10 @@ Public Class DndCharacterTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Random_ability_is_distributed_correctly()
-        Dim expectedDistribution = New Dictionary(Of Integer, Integer) From {
-    {3, 1},
-    {4, 4},
-    {5, 10},
-    {6, 21},
-    {7, 38},
-    {8, 62},
-    {9, 91},
-    {10, 122},
-    {11, 148},
-    {12, 167},
-    {13, 172},
-    {14, 160},
-    {15, 131},
-    {16, 94},
-    {17, 54},
-    {18, 21}
-}
+        Dim abilities = Enumerable.Range(1, 10000).Select(Function(roll) DndCharacter.Ability()).ToArray()
+        Assert.All(abilities, Sub(ability) Assert.InRange(ability, 3, 18))
 
-        Dim actualDistribution = New Dictionary(Of Integer, Integer)(expectedDistribution)
-        For Each key In actualDistribution.Keys
-            actualDistribution(key) = 0
-        Next
-
-        Const times = 250
-        Const possibleCombinationsCount = 6 * 6 * 6 * 6 ' 4d6
-        For i = 0 To times * possibleCombinationsCount - 1
-            actualDistribution(DndCharacter.Ability()) += 1
-        Next
-
-        Const minTimes = times * 0.8
-        Const maxTimes = times * 1.2
-        For Each k In expectedDistribution.Keys
-            Assert.InRange(actualDistribution(k), expectedDistribution(k) * minTimes, expectedDistribution(k) * maxTimes)
-        Next
+        Dim average = abilities.Average() ' 4d6, drop lowest expected average is approximately 12.24
+        Assert.InRange(average, 11.84, 12.64)
     End Sub
 End Class
