@@ -115,7 +115,7 @@ Public Class DndCharacterTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Random_ability_is_distributed_correctly()
-        Dim abilities = Enumerable.Range(1, 10000).Select(Function(_) Character.Ability()).ToArray()
+        Dim abilities = Enumerable.Range(1, 10000).Select(Function(roll) DndCharacter.Ability()).ToArray()
         Assert.All(abilities, Sub(ability) Assert.InRange(ability, 3, 18))
 
         Dim average = abilities.Average() ' 4d6, drop lowest expected average is approximately 12.24
