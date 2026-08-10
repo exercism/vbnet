@@ -14,5 +14,10 @@ jobs:
       - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
         with:
           dotnet-version: "10.0.100"
+      - name: Cache NuGet packages
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ hashFiles('**/*.vbproj', '**/packages.lock.json') }}
       - run: ./bin/test.ps1
         shell: pwsh
