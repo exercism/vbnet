@@ -16,6 +16,14 @@ Public Class VariableLengthQuantityTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Asymmetric_single_byte()
+        Dim integers = {&H53UI}
+        Dim expected = {&H53UI}
+        Dim result as IEnumerable(Of UInteger) = Encode(integers)
+        Assert.Equal(expected, result)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Largest_single_byte()
         Dim integers = {&H7FUI}
         Dim expected = {&H7FUI}
@@ -35,6 +43,14 @@ Public Class VariableLengthQuantityTests
     Public Sub Arbitrary_double_byte()
         Dim integers = {&H2000UI}
         Dim expected = {&HC0UI, &H0UI}
+        Dim result as IEnumerable(Of UInteger) = Encode(integers)
+        Assert.Equal(expected, result)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Asymmetric_double_byte()
+        Dim integers = {&HADUI}
+        Dim expected = {&H81UI, &H2DUI}
         Dim result as IEnumerable(Of UInteger) = Encode(integers)
         Assert.Equal(expected, result)
     End Sub
@@ -64,6 +80,14 @@ Public Class VariableLengthQuantityTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Asymmetric_triple_byte()
+        Dim integers = {&H1D59CUI}
+        Dim expected = {&H87UI, &HABUI, &H1CUI}
+        Dim result as IEnumerable(Of UInteger) = Encode(integers)
+        Assert.Equal(expected, result)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Largest_triple_byte()
         Dim integers = {&H1FFFFFUI}
         Dim expected = {&HFFUI, &HFFUI, &H7FUI}
@@ -88,6 +112,14 @@ Public Class VariableLengthQuantityTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Asymmetric_quadruple_byte()
+        Dim integers = {&H357704UI}
+        Dim expected = {&H81UI, &HD5UI, &HEEUI, &H4UI}
+        Dim result as IEnumerable(Of UInteger) = Encode(integers)
+        Assert.Equal(expected, result)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Largest_quadruple_byte()
         Dim integers = {&HFFFFFFFUI}
         Dim expected = {&HFFUI, &HFFUI, &HFFUI, &H7FUI}
@@ -107,6 +139,14 @@ Public Class VariableLengthQuantityTests
     Public Sub Arbitrary_quintuple_byte()
         Dim integers = {&HFF000000UI}
         Dim expected = {&H8FUI, &HF8UI, &H80UI, &H80UI, &H0UI}
+        Dim result as IEnumerable(Of UInteger) = Encode(integers)
+        Assert.Equal(expected, result)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Asymmetric_quintuple_byte()
+        Dim integers = {&H86656105UI}
+        Dim expected = {&H88UI, &HB3UI, &H95UI, &HC2UI, &H5UI}
         Dim result as IEnumerable(Of UInteger) = Encode(integers)
         Assert.Equal(expected, result)
     End Sub
