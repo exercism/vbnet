@@ -6,6 +6,12 @@ Public Class CryptoSquareTest
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub NormalizationResultsInEmptyPlaintext()
+        Dim plaintext = "... --- ..."
+        Assert.Equal("", Ciphertext(plaintext))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Lowercase()
         Dim plaintext = "A"
         Assert.Equal("a", Ciphertext(plaintext))
@@ -36,7 +42,7 @@ Public Class CryptoSquareTest
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub FiftyFourCharacterPlaintextResultsInSevenChunksTheTwoWithTrailingSpaces()
+    Public Sub FiftyFourCharacterPlaintextResultsInEightChunksTheTwoWithTrailingSpaces()
         Dim plaintext = "If man was meant to stay on the ground, god would have given us roots."
         Assert.Equal("imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau ", Ciphertext(plaintext))
     End Sub
