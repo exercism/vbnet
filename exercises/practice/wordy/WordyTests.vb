@@ -5,8 +5,28 @@ Public Class WordyTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Just_a_zero()
+        Assert.Equal(0, Answer("What is 0?"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Just_a_negative_number()
+        Assert.Equal(-123, Answer("What is -123?"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition()
         Assert.Equal(2, Answer("What is 1 plus 1?"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Addition_with_a_left_hand_zero()
+        Assert.Equal(2, Answer("What is 0 plus 2?"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Addition_with_a_right_hand_zero()
+        Assert.Equal(3, Answer("What is 3 plus 0?"))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
