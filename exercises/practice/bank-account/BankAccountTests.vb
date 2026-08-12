@@ -1,71 +1,191 @@
+Imports System.Threading.Tasks
+Imports Xunit
+
 Public Class BankAccountTests
+
     <Fact>
-    Public Sub Returns_empty_balance_after_opening()
-        Dim account = New BankAccount()
+    Public Sub Initial_balance_is_zero()
+        Dim account As New BankAccount()
+
         account.Open()
 
         Assert.Equal(0D, account.Balance)
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Check_basic_balance()
-        Dim account = New BankAccount()
+    <Fact>
+    Public Sub Can_deposit()
+        Dim account As New BankAccount()
+
         account.Open()
+        account.Deposit(100D)
 
-        Dim openingBalance = account.Balance
-
-        account.UpdateBalance(10D)
-        Dim updatedBalance = account.Balance
-
-        Assert.Equal(0D, openingBalance)
-        Assert.Equal(10D, updatedBalance)
+        Assert.Equal(100D, account.Balance)
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Balance_can_increment_and_decrement()
-        Dim account = New BankAccount()
+    <Fact>
+    Public Sub Can_deposit_multiple_times()
+        Dim account As New BankAccount()
+
         account.Open()
-        Dim openingBalance = account.Balance
+        account.Deposit(100D)
+        account.Deposit(50D)
 
-        account.UpdateBalance(10D)
-        Dim addedBalance = account.Balance
-
-        account.UpdateBalance(-15D)
-        Dim subtractedBalance = account.Balance
-
-        Assert.Equal(0D, openingBalance)
-        Assert.Equal(10D, addedBalance)
-        Assert.Equal(-5D, subtractedBalance)
+        Assert.Equal(150D, account.Balance)
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Closed_account_throws_exception_when_checking_balance()
-        Dim account = New BankAccount()
+    <Fact>
+    Public Sub Can_withdraw()
+        Dim account As New BankAccount()
+
+        account.Open()
+        account.Deposit(100D)
+        account.Withdraw(40D)
+
+        Assert.Equal(60D, account.Balance)
+    End Sub
+
+    <Fact>
+    Public Sub Can_withdraw_multiple_times()
+        Dim account As New BankAccount()
+
+        account.Open()
+        account.Deposit(100D)
+        account.Withdraw(30D)
+        account.Withdraw(20D)
+
+        Assert.Equal(50D, account.Balance)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_deposit_when_account_is_closed()
+        Dim account As New BankAccount()
         account.Open()
         account.Close()
-
-        Assert.Throws(Of InvalidOperationException)(Function() account.Balance)
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Deposit(50D)
+        )
+        Assert.Equal("account not open", exception.Message)
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Change_account_balance_from_multiple_threads()
-        Dim account = New BankAccount()
-        Dim tasks = New List(Of Task)()
+    <Fact>
+    Public Sub Cannot_deposit_into_unopened_account()
+        Dim account As New BankAccount()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Deposit(50D)
+        )
+        Assert.Equal("account not open", exception.Message)
+    End Sub
 
-        Dim threads = 500
-        Dim iterations = 100
-
+    <Fact>
+    Public Sub Cannot_withdraw_when_account_is_closed()
+        Dim account As New BankAccount()
         account.Open()
-        For i = 0 To threads - 1
-            tasks.Add(Task.Factory.StartNew(Sub()
-                                                For j = 0 To iterations - 1
-                                                    account.UpdateBalance(1D)
-                                                    account.UpdateBalance(-1D)
-                                                Next
-                                            End Sub))
-        Next
-        Call Task.WaitAll(tasks.ToArray())
+        account.Close()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Withdraw(50D)
+        )
+        Assert.Equal("account not open", exception.Message)
+    End Sub
 
+    <Fact>
+    Public Sub Cannot_check_balance_when_account_is_closed()
+        Dim account As New BankAccount()
+        account.Open()
+        account.Close()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub()
+                Dim unused = account.Balance
+            End Sub
+        )
+        Assert.Equal("account not open", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Can_perform_multiple_operations_sequentially()
+        Dim account As New BankAccount()
+        account.Open()
+        account.Deposit(100D)
+        account.Withdraw(25D)
+        account.Deposit(50D)
+        account.Withdraw(25D)
+        Assert.Equal(100D, account.Balance)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_close_account_that_was_not_opened()
+        Dim account As New BankAccount()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Close()
+        )
+        Assert.Equal("account not open", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_open_already_open_account()
+        Dim account As New BankAccount()
+        account.Open()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Open()
+        )
+        Assert.Equal("account already open", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Reopened_account_has_zero_balance()
+        Dim account As New BankAccount()
+        account.Open()
+        account.Deposit(100D)
+        account.Close()
+        account.Open()
+        Assert.Equal(0D, account.Balance)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_withdraw_more_than_deposited()
+        Dim account As New BankAccount()
+        account.Open()
+        account.Deposit(25D)
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Withdraw(50D)
+        )
+        Assert.Equal("amount must be less than balance", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_withdraw_negative()
+        Dim account As New BankAccount()
+        account.Open()
+        account.Deposit(100D)
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Withdraw(-50D)
+        )
+        Assert.Equal("amount must be greater than 0", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Cannot_deposit_negative()
+        Dim account As New BankAccount()
+        account.Open()
+        Dim exception = Assert.Throws(Of InvalidOperationException)(
+            Sub() account.Deposit(-50D)
+        )
+        Assert.Equal("amount must be greater than 0", exception.Message)
+    End Sub
+
+    <Fact>
+    Public Sub Concurrent_transactions_leave_balance_unchanged()
+        Dim account As New BankAccount()
+        account.Open()
+        Dim tasks As New List(Of Task)
+        For i = 1 To 1000
+            tasks.Add(Task.Run(
+                Sub()
+                    account.Deposit(1D)
+                    account.Withdraw(1D)
+                End Sub
+            ))
+        Next
+        Task.WaitAll(tasks.ToArray())
         Assert.Equal(0D, account.Balance)
     End Sub
 End Class
