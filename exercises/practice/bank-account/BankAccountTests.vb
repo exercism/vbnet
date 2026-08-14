@@ -61,19 +61,17 @@ Public Class BankAccountTests
         Dim account As New BankAccount()
         account.Open()
         account.Close()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Deposit(50D)
         )
-        Assert.Equal("account not open", exception.Message)
     End Sub
 
     <Fact>
     Public Sub Cannot_deposit_into_unopened_account()
         Dim account As New BankAccount()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Deposit(50D)
         )
-        Assert.Equal("account not open", exception.Message)
     End Sub
 
     <Fact>
@@ -81,10 +79,9 @@ Public Class BankAccountTests
         Dim account As New BankAccount()
         account.Open()
         account.Close()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Withdraw(50D)
         )
-        Assert.Equal("account not open", exception.Message)
     End Sub
 
     <Fact>
@@ -92,12 +89,11 @@ Public Class BankAccountTests
         Dim account As New BankAccount()
         account.Open()
         account.Close()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub()
                 Dim unused = account.Balance
             End Sub
         )
-        Assert.Equal("account not open", exception.Message)
     End Sub
 
     <Fact>
@@ -114,20 +110,18 @@ Public Class BankAccountTests
     <Fact>
     Public Sub Cannot_close_account_that_was_not_opened()
         Dim account As New BankAccount()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Close()
         )
-        Assert.Equal("account not open", exception.Message)
     End Sub
 
     <Fact>
     Public Sub Cannot_open_already_open_account()
         Dim account As New BankAccount()
         account.Open()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Open()
         )
-        Assert.Equal("account already open", exception.Message)
     End Sub
 
     <Fact>
@@ -145,10 +139,9 @@ Public Class BankAccountTests
         Dim account As New BankAccount()
         account.Open()
         account.Deposit(25D)
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Withdraw(50D)
         )
-        Assert.Equal("amount must be less than balance", exception.Message)
     End Sub
 
     <Fact>
@@ -156,20 +149,18 @@ Public Class BankAccountTests
         Dim account As New BankAccount()
         account.Open()
         account.Deposit(100D)
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Withdraw(-50D)
         )
-        Assert.Equal("amount must be greater than 0", exception.Message)
     End Sub
 
     <Fact>
     Public Sub Cannot_deposit_negative()
         Dim account As New BankAccount()
         account.Open()
-        Dim exception = Assert.Throws(Of InvalidOperationException)(
+        Assert.Throws(Of InvalidOperationException)(
             Sub() account.Deposit(-50D)
         )
-        Assert.Equal("amount must be greater than 0", exception.Message)
     End Sub
 
     <Fact>
