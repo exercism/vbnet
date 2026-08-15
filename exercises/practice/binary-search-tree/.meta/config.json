@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "BinarySearchTree.vbproj"
     ]
   },
   "blurb": "Insert and search for numbers in a binary tree.",

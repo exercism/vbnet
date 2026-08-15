@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Strain.vbproj"
     ]
   },
   "blurb": "Implement the `keep` and `discard` operation on collections.",

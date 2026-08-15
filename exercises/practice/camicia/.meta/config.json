@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "Camicia.vbproj"
     ]
   },
   "blurb": "Simulate the card game and determine whether the match ends or enters an infinite loop.",
