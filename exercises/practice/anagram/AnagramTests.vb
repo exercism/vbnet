@@ -17,11 +17,11 @@ Public Class AnagramTest
         Assert.Equal(expected, result)
     End Sub
 
-    <Fact(Skip:="Remove this Skip property to run this test")>
+    <Fact>
     Public Sub DetectMultipleAnagrams()
-        Dim detector = New Anagram("master")
-        Dim words = {"stream", "pigeon", "maters"}
-        Dim expected = {"maters", "stream"}
+        Dim detector = New Anagram("solemn")
+        Dim words = {"lemons", "cherry", "melons"}
+        Dim expected = {"lemons", "melons"}
         Dim result as IEnumerable(Of String) = detector.Match(words)
         Assert.Equal(expected, result)
     End Sub
