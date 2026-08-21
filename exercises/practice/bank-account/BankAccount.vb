@@ -1,19 +1,23 @@
 Public Class BankAccount
-    Public Sub OpenMethod()
-        Throw New NotImplementedException("You need to implement this function.")
+    Public Sub Open()
+        Throw New NotImplementedException("You need to implement this method.")
     End Sub
 
-    Public Sub CloseMethod()
-        Throw New NotImplementedException("You need to implement this function.")
+    Public Sub Close()
+        Throw New NotImplementedException("You need to implement this method.")
     End Sub
 
-    Public ReadOnly Property BalanceProp As Decimal
+    Public Sub Deposit(ByVal amount As Decimal)
+        Throw New NotImplementedException("You need to implement this method.")
+    End Sub
+
+    Public Sub Withdraw(ByVal amount As Decimal)
+        Throw New NotImplementedException("You need to implement this method.")
+    End Sub
+
+    Public ReadOnly Property Balance As Decimal
         Get
             Throw New NotImplementedException("You need to implement this property.")
         End Get
     End Property
-
-    Public Sub UpdateBalanceMethod(ByVal change As Decimal)
-        Throw New NotImplementedException("You need to implement this function.")
-    End Sub
 End Class
