@@ -126,11 +126,15 @@ Namespace Global.Exercism.VBNet.Generators
                 New With {
                     .testClass = $"{canonicalData.Exercise.Name}Tests".Pascalize(),
                     .testedClass = canonicalData.Exercise.Name.Pascalize(),
-                    .tests = canonicalData.TestCases.Select(AddressOf AddCalculatedFields).ToArray()
+                    .tests = canonicalData.TestCases.Select(Function(testCase, index) AddCalculatedFields(testCase, index)).ToArray()
                 })
         End Function
 
-        Private Function AddCalculatedFields(testCase As JsonNode) As JsonElement
+        Private Function AddCalculatedFields(testCase As JsonNode, index As Integer) As JsonElement
+            testCase("factAttribute") = If(
+                index = 0,
+                "<Fact>",
+                "<Fact(Skip:=""Remove this Skip property to run this test"")>")
             testCase("testMethod") = Naming.ToTestMethodName(
                 testCase("path").AsArray().Select(Function(item) item.GetValue(Of String)()).ToArray())
             testCase("shortTestMethod") = Naming.ToTestMethodName(testCase("description").GetValue(Of String)())

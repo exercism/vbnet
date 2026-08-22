@@ -1,71 +1,99 @@
 Public Class AtbashCipherTests
     <Fact>
-    Public Sub EncodeYes()
-        Assert.Equal("bvh", AtbashCipher.Encode("yes"))
+    Public Sub Encode_yes()
+        Dim actual = AtbashCipher.Encode("yes")
+        Dim expected = "bvh"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeNo()
-        Assert.Equal("ml", AtbashCipher.Encode("no"))
+    Public Sub Encode_no()
+        Dim actual = AtbashCipher.Encode("no")
+        Dim expected = "ml"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeOMG()
-        Assert.Equal("lnt", AtbashCipher.Encode("OMG"))
+    Public Sub Encode_omg()
+        Dim actual = AtbashCipher.Encode("OMG")
+        Dim expected = "lnt"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeSpaces()
-        Assert.Equal("lnt", AtbashCipher.Encode("O M G"))
+    Public Sub Encode_spaces()
+        Dim actual = AtbashCipher.Encode("O M G")
+        Dim expected = "lnt"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeMindblowingly()
-        Assert.Equal("nrmwy oldrm tob", AtbashCipher.Encode("mindblowingly"))
+    Public Sub Encode_mindblowingly()
+        Dim actual = AtbashCipher.Encode("mindblowingly")
+        Dim expected = "nrmwy oldrm tob"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeNumbers()
-        Assert.Equal("gvhgr mt123 gvhgr mt", AtbashCipher.Encode("Testing,1 2 3, testing."))
+    Public Sub Encode_numbers()
+        Dim actual = AtbashCipher.Encode("Testing,1 2 3, testing.")
+        Dim expected = "gvhgr mt123 gvhgr mt"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeDeepThought()
-        Assert.Equal("gifgs rhurx grlm", AtbashCipher.Encode("Truth is fiction."))
+    Public Sub Encode_deep_thought()
+        Dim actual = AtbashCipher.Encode("Truth is fiction.")
+        Dim expected = "gifgs rhurx grlm"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub EncodeAllTheLetters()
-        Assert.Equal("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt", AtbashCipher.Encode("The quick brown fox jumps over the lazy dog."))
+    Public Sub Encode_all_the_letters()
+        Dim actual = AtbashCipher.Encode("The quick brown fox jumps over the lazy dog.")
+        Dim expected = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeExercism()
-        Assert.Equal("exercism", AtbashCipher.Decode("vcvix rhn"))
+    Public Sub Decode_exercism()
+        Dim actual = AtbashCipher.Decode("vcvix rhn")
+        Dim expected = "exercism"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeASentence()
-        Assert.Equal("anobstacleisoftenasteppingstone", AtbashCipher.Decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v"))
+    Public Sub Decode_a_sentence()
+        Dim actual = AtbashCipher.Decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v")
+        Dim expected = "anobstacleisoftenasteppingstone"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeNumbers()
-        Assert.Equal("testing123testing", AtbashCipher.Decode("gvhgr mt123 gvhgr mt"))
+    Public Sub Decode_numbers()
+        Dim actual = AtbashCipher.Decode("gvhgr mt123 gvhgr mt")
+        Dim expected = "testing123testing"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeAllTheLetters()
-        Assert.Equal("thequickbrownfoxjumpsoverthelazydog", AtbashCipher.Decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"))
+    Public Sub Decode_all_the_letters()
+        Dim actual = AtbashCipher.Decode("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt")
+        Dim expected = "thequickbrownfoxjumpsoverthelazydog"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeWithTooManySpaces()
-        Assert.Equal("exercism", AtbashCipher.Decode("vc vix    r hn"))
+    Public Sub Decode_with_too_many_spaces()
+        Dim actual = AtbashCipher.Decode("vc vix    r hn")
+        Dim expected = "exercism"
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub DecodeWithNoSpaces()
-        Assert.Equal("anobstacleisoftenasteppingstone", AtbashCipher.Decode("zmlyhgzxovrhlugvmzhgvkkrmthglmv"))
+    Public Sub Decode_with_no_spaces()
+        Dim actual = AtbashCipher.Decode("zmlyhgzxovrhlugvmzhgvkkrmthglmv")
+        Dim expected = "anobstacleisoftenasteppingstone"
+        Assert.Equal(expected, actual)
     End Sub
 End Class

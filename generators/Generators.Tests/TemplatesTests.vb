@@ -31,6 +31,15 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Fact_attribute_enables_only_the_first_test()
+            Dim canonicalData = Canonical("a", "b")
+            Const template = "{{ for test in tests }}{{ test.factAttribute }}{{ end }}"
+            Const expected = "<Fact><Fact(Skip:=""Remove this Skip property to run this test"")>"
+
+            Assert.Equal(expected, Templates.RenderTestsCode(canonicalData, template))
+        End Sub
+
+        <Fact>
         Public Sub Literal_custom_test_is_rendered_unchanged()
             Dim canonicalData = Canonical("a")
             Const customTest = "<Fact(Skip:=""Remove this Skip property to run this test"")>" & vbLf &
