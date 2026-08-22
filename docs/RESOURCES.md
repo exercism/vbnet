@@ -2,25 +2,23 @@
 
 ## Blogs
 
-- Microsoft's official [Visual Basic blog](https://devblogs.microsoft.com/vbteam/) has some interesting Visual Basic articles, ranging from beginner to expert level.
+- Microsoft's official [Visual Basic blog](https://devblogs.microsoft.com/vbteam/)
 
 ## Forums
 
-- [Discord Visual Basic Community](https://discord.gg/dshBTEJB)
-- [VBForums](https://www.vbforums.com/forumdisplay.php?25-Visual-Basic-NET)
-- [CodeGuru](https://forums.codeguru.com/forumdisplay.php?12-Visual-Basic-NET&s=0e515468cde5bb0fd0d5466a2451d432)
-- [Visual Basic Forums](https://vbdotnetforums.com/)
-- [VB City](http://vbcity.com/forums/default.aspx)
-- [Dev Ppl](https://www.devppl.com/forum/visual-basic-forum/)
+- [Discord Visual Basic Community](https://discord.com/invite/vakZ89n)
+- [VBForums: Visual Basic .NET](https://www.vbforums.com/forumdisplay.php?25-Visual-Basic-NET)
 
 ## Social media
 
-- [StackOverflow](https://stackoverflow.com/questions/tagged/Visual Basic) can be used to search for your problem and see if it has been answered already. You can also ask and answer questions.
-- [/r/visual-basic](https://www.reddit.com/r/visualbasic/) is the Visual Basic subreddit.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)
+- [/r/visualbasic](https://www.reddit.com/r/visualbasic/)
 
 ## Tutorials
 
-- [Tutorialspoint](https://www.tutorialspoint.com/Visual Basic/index.htm)
-- [tutlane](https://www.tutlane.com/tutorial/visual-basic)
-- [vbtutor](https://www.vbtutor.net/)
-- Microsoft's own [Get started with Visual Basic in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/get-started/visual-basic/tutorial-console?view=vs-2019)
+- [Tutlane - Visual Basic Tutorial](https://www.tutlane.com/tutorial/visual-basic)
+- Microsoft's own [Get started with Visual Basic in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/get-started/visual-basic/tutorial-console)
+
+## Language development
+
+- [Visual Basic language design repo](https://github.com/dotnet/vblang)
