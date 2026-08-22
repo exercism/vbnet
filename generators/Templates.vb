@@ -1,0 +1,156 @@
+Imports System.Globalization
+
+Imports Scriban
+Imports Scriban.Runtime
+
+Namespace Global.Exercism.VBNet.Generators
+    Friend Module Templates
+        Friend Function RenderTestsCode(canonicalData As CanonicalData) As String
+            Dim templatePath = Paths.TemplateFile(canonicalData.Exercise)
+            Return RenderTestsCode(canonicalData, File.ReadAllText(templatePath), templatePath)
+        End Function
+
+        Friend Function RenderTestsCode(canonicalData As CanonicalData, templateText As String, Optional templatePath As String = Nothing) As String
+            Dim template = ParseTemplate(templateText, templatePath)
+            Dim scriptObject = New ScriptObject()
+            scriptObject.Import("pascalize", New Func(Of String, String)(Function(text) text.Pascalize()))
+            scriptObject.Import("enum", New Func(Of String, String, String)(
+                Function(text, enumType) $"{enumType.Pascalize()}.{text.Pascalize()}"))
+            scriptObject.Import("property", New Func(Of ScriptArray, String, ScriptArray)(AddressOf FilterByProperty))
+            scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
+            scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
+            scriptObject.Import(TemplateData(canonicalData))
+
+            Dim context = New TemplateContext()
+            context.PushGlobal(scriptObject)
+
+            Try
+                Return template.Render(context)
+            Catch exception As Exception
+                Dim source = If(templatePath, $"the template for '{canonicalData.Exercise.Slug}'")
+                Throw New InvalidDataException($"Could not render {source}: {exception.Message}", exception)
+            End Try
+        End Function
+
+        Friend Function VbStringLiteral(value As String) As String
+            If value Is Nothing Then
+                Return "Nothing"
+            End If
+
+            Dim parts = New List(Of String)()
+            Dim text = New StringBuilder()
+            Dim index = 0
+
+            While index < value.Length
+                Dim character = value(index)
+
+                If character = ControlChars.Cr AndAlso index + 1 < value.Length AndAlso value(index + 1) = ControlChars.Lf Then
+                    FlushText(parts, text)
+                    parts.Add("vbCrLf")
+                    index += 2
+                    Continue While
+                End If
+
+                Select Case character
+                    Case ControlChars.Cr
+                        FlushText(parts, text)
+                        parts.Add("vbCr")
+                    Case ControlChars.Lf
+                        FlushText(parts, text)
+                        parts.Add("vbLf")
+                    Case ControlChars.Tab
+                        FlushText(parts, text)
+                        parts.Add("vbTab")
+                    Case Else
+                        If Char.IsControl(character) Then
+                            FlushText(parts, text)
+                            parts.Add($"ChrW({AscW(character).ToString(CultureInfo.InvariantCulture)})")
+                        Else
+                            text.Append(character)
+                        End If
+                End Select
+
+                index += 1
+            End While
+
+            FlushText(parts, text)
+
+            If parts.Count = 0 Then
+                Return Quote(String.Empty)
+            End If
+
+            Return String.Join(" & ", parts)
+        End Function
+
+        Friend Function VbLiteral(value As Object) As String
+            If value Is Nothing Then
+                Return "Nothing"
+            End If
+
+            If TypeOf value Is String Then
+                Return VbStringLiteral(DirectCast(value, String))
+            End If
+
+            If TypeOf value Is Boolean Then
+                Return If(DirectCast(value, Boolean), "True", "False")
+            End If
+
+            Dim values = TryCast(value, ScriptArray)
+
+            If values IsNot Nothing Then
+                Return "{" & String.Join(", ", values.Select(AddressOf VbLiteral)) & "}"
+            End If
+
+            Return Convert.ToString(value, CultureInfo.InvariantCulture)
+        End Function
+
+        Private Function ParseTemplate(templateText As String, templatePath As String) As Template
+            Dim parsedTemplate As Template = Scriban.Template.Parse(templateText, templatePath)
+
+            If parsedTemplate.HasErrors Then
+                Dim source = If(templatePath, "the supplied template")
+                Throw New InvalidDataException($"Could not parse {source}:{Environment.NewLine}{String.Join(Environment.NewLine, parsedTemplate.Messages)}")
+            End If
+
+            Return parsedTemplate
+        End Function
+
+        Private Function FilterByProperty(testCases As ScriptArray, name As String) As ScriptArray
+            Return New ScriptArray(testCases.
+                Cast(Of ScriptObject)().
+                Where(Function(testCase) testCase("property")?.ToString() = name))
+        End Function
+
+        Private Function TemplateData(canonicalData As CanonicalData) As JsonElement
+            Return JsonSerializer.SerializeToElement(
+                New With {
+                    .testClass = $"{canonicalData.Exercise.Name}Tests".Pascalize(),
+                    .testedClass = canonicalData.Exercise.Name.Pascalize(),
+                    .tests = canonicalData.TestCases.Select(AddressOf AddCalculatedFields).ToArray()
+                })
+        End Function
+
+        Private Function AddCalculatedFields(testCase As JsonNode) As JsonElement
+            testCase("testMethod") = Naming.ToTestMethodName(
+                testCase("path").AsArray().Select(Function(item) item.GetValue(Of String)()).ToArray())
+            testCase("shortTestMethod") = Naming.ToTestMethodName(testCase("description").GetValue(Of String)())
+            testCase("testedMethod") = Naming.ToMethodName(testCase("property").GetValue(Of String)())
+
+            Return JsonSerializer.SerializeToElement(testCase)
+        End Function
+
+        Private Sub FlushText(parts As List(Of String), text As StringBuilder)
+            If text.Length = 0 Then
+                Return
+            End If
+
+            parts.Add(Quote(text.ToString()))
+            text.Clear()
+        End Sub
+
+        Private Function Quote(value As String) As String
+            Dim quotationMark = ChrW(34).ToString()
+            Return quotationMark & value.Replace(quotationMark, quotationMark & quotationMark) & quotationMark
+        End Function
+    End Module
+End Namespace

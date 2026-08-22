@@ -1,49 +1,54 @@
-Public Class AccumulateTest
+Public Class AccumulateTests
     <Fact>
-    Public Sub EmptyAccumulationProducesEmptyAccumulation()
-        Assert.Equal(New Integer() {}.Accumulate(Function(x) x * x), New Integer() {})
+    Public Sub Accumulate_empty()
+        Dim input As Integer() = {}
+        Dim expected As Integer() = {}
+        Assert.Equal(expected, input.Accumulate(Function(x) x * x))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AccumulateSquares()
-        Assert.Equal({1, 2, 3}.Accumulate(Function(x) x * x), {1, 4, 9})
+    Public Sub Accumulate_squares()
+        Dim input As Integer() = {1, 2, 3}
+        Dim expected As Integer() = {1, 4, 9}
+        Assert.Equal(expected, input.Accumulate(Function(x) x * x))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AccumulateUpcases()
-        Assert.Equal(New List(Of String)() From {
-            "hello",
-            "world"
-        }.Accumulate(Function(x) x.ToUpper()), New List(Of String) From {
-            "HELLO",
-            "WORLD"
-        })
+    Public Sub Accumulate_upcases()
+        Dim input As String() = {"Hello", "world"}
+        Dim expected As String() = {"HELLO", "WORLD"}
+        Assert.Equal(expected, input.Accumulate(Function(x) x.ToUpper()))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AccumulateReversedStrings()
-        Assert.Equal("the quick brown fox etc".Split(" "c).Accumulate(AddressOf Reverse), "eht kciuq nworb xof cte".Split(" "c))
-    End Sub
-
-    Private Shared Function Reverse(value As String) As String
-        Dim chars = value.ToCharArray()
-        Array.Reverse(chars)
-        Return New String(chars)
-    End Function
-
-    <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AccumulateWithinAccumulate()
-        Dim actual = New String() {"a", "b", "c"}.Accumulate(Function(c) String.Join(" ", New String() {"1", "2", "3"}.Accumulate(Function(d) c & d)))
-        Assert.Equal(actual, New String() {"a1 a2 a3", "b1 b2 b3", "c1 c2 c3"})
+    Public Sub Accumulate_reversed_strings()
+        Dim input As String() = {"the", "quick", "brown", "fox", "etc"}
+        Dim expected As String() = {"eht", "kciuq", "nworb", "xof", "cte"}
+        Assert.Equal(expected, input.Accumulate(Function(x) New String(x.Reverse().ToArray())))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AccumulateIsLazy()
+    Public Sub Accumulate_recursively()
+        Dim input As String() = {"a", "b", "c"}
+        Dim expected As String() = {
+            "a1 a2 a3",
+            "b1 b2 b3",
+            "c1 c2 c3"
+        }
+        Assert.Equal(expected, input.Accumulate(Function(x) String.Join(" ", New String() {"1", "2", "3"}.Accumulate(Function(y) x & y))))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Accumulate_is_lazy()
         Dim counter = 0
-        Dim accumulation = New Integer() {1, 2, 3}.Accumulate(Function(x) x * System.Math.Max(System.Threading.Interlocked.Increment(counter), counter - 1))
+        Dim accumulation = New Integer() {1, 2, 3}.Accumulate(
+            Function(x)
+                counter += 1
+                Return x
+            End Function)
 
-        Assert.Equal(counter, 0)
+        Assert.Equal(0, counter)
         accumulation.ToList()
-        Assert.Equal(counter, 3)
+        Assert.Equal(3, counter)
     End Sub
 End Class
