@@ -7,7 +7,7 @@ Public Class GradeSchool
         Throw New NotImplementedException("You need to implement this function.")
     End Function
 
-    Public Function Grade(ByVal grade As Integer) As IEnumerable(Of String)
+    Public Function Grade(ByVal pGrade As Integer) As IEnumerable(Of String)
         Throw New NotImplementedException("You need to implement this function.")
     End Function
 End Class
