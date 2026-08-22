@@ -14,9 +14,10 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_is_added_to_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Aimee"}
         sut.Add("Aimee", 2)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Aimee"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -30,11 +31,12 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiple_students_in_the_same_grade_are_added_to_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Blair", "James", "Paul"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Blair", "James", "Paul"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -49,12 +51,13 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_not_added_to_same_grade_in_the_roster_more_than_once()
         Dim sut = New GradeSchool()
-        Dim expected = {"Blair", "James", "Paul"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Blair", "James", "Paul"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -67,10 +70,11 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Students_in_multiple_grades_are_added_to_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Chelsea", "Logan"}
         sut.Add("Chelsea", 3)
         sut.Add("Logan", 7)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Chelsea", "Logan"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -85,38 +89,40 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_not_added_to_multiple_grades_in_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Blair", "James", "Paul"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Blair", "James", "Paul"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Students_are_sorted_by_grades_in_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Anna", "Peter", "Jim"}
         sut.Add("Jim", 3)
         sut.Add("Peter", 2)
         sut.Add("Anna", 1)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Anna", "Peter", "Jim"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Students_are_sorted_by_name_in_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Alex", "Peter", "Zoe"}
         sut.Add("Peter", 2)
         sut.Add("Zoe", 2)
         sut.Add("Alex", 2)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Alex", "Peter", "Zoe"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Students_are_sorted_by_grades_and_then_by_name_in_the_roster()
         Dim sut = New GradeSchool()
-        Dim expected = {"Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"}
         sut.Add("Peter", 2)
         sut.Add("Anna", 1)
         sut.Add("Barb", 1)
@@ -124,7 +130,9 @@ Public Class GradeSchoolTests
         sut.Add("Alex", 2)
         sut.Add("Jim", 3)
         sut.Add("Charlie", 1)
-        Assert.Equal(expected, sut.Roster())
+        Dim actual = sut.Roster()
+        Dim expected = {"Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -146,43 +154,47 @@ Public Class GradeSchoolTests
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_not_added_to_same_grade_more_than_once()
         Dim sut = New GradeSchool()
-        Dim expected = {"Blair", "James", "Paul"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Assert.Equal(expected, sut.Grade(2))
+        Dim actual = sut.Grade(2)
+        Dim expected = {"Blair", "James", "Paul"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_not_added_to_multiple_grades()
         Dim sut = New GradeSchool()
-        Dim expected = {"Blair", "James"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Assert.Equal(expected, sut.Grade(2))
+        Dim actual = sut.Grade(2)
+        Dim expected = {"Blair", "James"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Student_not_added_to_other_grade_for_multiple_grades()
         Dim sut = New GradeSchool()
-        Dim expected = {"Paul"}
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Assert.Equal(expected, sut.Grade(3))
+        Dim actual = sut.Grade(3)
+        Dim expected = {"Paul"}
+        Assert.Equal(expected, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Students_are_sorted_by_name_in_a_grade()
         Dim sut = New GradeSchool()
-        Dim expected = {"Bradley", "Franklin"}
         sut.Add("Franklin", 5)
         sut.Add("Bradley", 5)
         sut.Add("Jeff", 1)
-        Assert.Equal(expected, sut.Grade(5))
+        Dim actual = sut.Grade(5)
+        Dim expected = {"Bradley", "Franklin"}
+        Assert.Equal(expected, actual)
     End Sub
 End Class
