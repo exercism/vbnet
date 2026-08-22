@@ -1,8 +1,24 @@
 # Help
 
-To get help if you're having trouble, you can use one of the following resources:
+## Blogs
 
-- [Visual Basic community on Discord](https://discord.gg/c5XVTU9X); go here to ask questions related to Visual Basic.
-- [/r/visualbasic](https://www.reddit.com/r/visualbasic) is the Visual Basic subreddit.
-- [StackOverflow](http://stackoverflow.com/questions/tagged/Visual Basic) can be used to search for your problem and see if it has been answered already. You can also ask and answer questions.
-- [RosettaCode](http://rosettacode.org/wiki/Category:Visual_Basic_.NET) has many examples of programming tasks solved in Visual Basic
+- Microsoft's official [Visual Basic blog](https://devblogs.microsoft.com/vbteam/)
+
+## Forums
+
+- [Discord Visual Basic Community](https://discord.com/invite/vakZ89n)
+- [VBForums: Visual Basic .NET](https://www.vbforums.com/forumdisplay.php?25-Visual-Basic-NET)
+
+## Social media
+
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)
+- [/r/visualbasic](https://www.reddit.com/r/visualbasic/)
+
+## Tutorials
+
+- [Tutlane - Visual Basic Tutorial](https://www.tutlane.com/tutorial/visual-basic)
+- Microsoft's own [Get started with Visual Basic in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/get-started/visual-basic/tutorial-console)
+
+## Language development
+
+- [Visual Basic language design repo](https://github.com/dotnet/vblang)
