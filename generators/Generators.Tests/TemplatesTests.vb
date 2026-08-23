@@ -20,6 +20,32 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Indent_uses_four_spaces_per_level()
+            Dim canonicalData = Canonical("a")
+
+            Assert.Equal("        value", Templates.RenderTestsCode(canonicalData, "{{ indent 2 }}value"))
+        End Sub
+
+        <Fact>
+        Public Sub Integer_array_literal_converts_numeric_strings()
+            Dim values = New Scriban.Runtime.ScriptArray From {"4", "2", "6"}
+
+            Assert.Equal("{4, 2, 6}", Templates.VbIntegerArrayLiteral(values))
+        End Sub
+
+        <Fact>
+        Public Sub Multiline_call_indents_arguments_and_closing_parenthesis()
+            Dim arguments = New Scriban.Runtime.ScriptArray From {"4", "Node(2)", "Nothing"}
+            Const expected = "Node(" & vbLf &
+                "            4," & vbLf &
+                "            Node(2)," & vbLf &
+                "            Nothing" & vbLf &
+                "        )"
+
+            Assert.Equal(expected, Templates.VbMultilineCall("Node", arguments, 2))
+        End Sub
+
+        <Fact>
         Public Sub Filtering_before_rendering_enables_the_first_selected_test()
             Dim canonicalData = Canonical("a", "b")
             Dim filtered = TestCasesConfiguration.RemoveExcludedTestCases(
