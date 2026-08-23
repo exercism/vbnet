@@ -13,11 +13,15 @@ Namespace Global.Exercism.VBNet.Generators
         Friend Function RenderTestsCode(canonicalData As CanonicalData, templateText As String, Optional templatePath As String = Nothing) As String
             Dim template = ParseTemplate(templateText, templatePath)
             Dim scriptObject = New ScriptObject()
+            scriptObject.Import("indent", New Func(Of Integer, String)(AddressOf Indent))
             scriptObject.Import("pascalize", New Func(Of String, String)(Function(text) text.Pascalize()))
             scriptObject.Import("enum", New Func(Of String, String, String)(
                 Function(text, enumType) $"{enumType.Pascalize()}.{text.Pascalize()}"))
             scriptObject.Import("property", New Func(Of ScriptArray, String, ScriptArray)(AddressOf FilterByProperty))
+            scriptObject.Import("vb_integer_array_literal", New Func(Of ScriptArray, String)(AddressOf VbIntegerArrayLiteral))
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
+            scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
+            scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
             scriptObject.Import(TemplateData(canonicalData))
 
@@ -104,6 +108,31 @@ Namespace Global.Exercism.VBNet.Generators
             Return Convert.ToString(value, CultureInfo.InvariantCulture)
         End Function
 
+        Friend Function VbIntegerArrayLiteral(values As ScriptArray) As String
+            Return "{" & String.Join(", ", values.Select(
+                Function(value) Convert.ToInt32(value, CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture))) & "}"
+        End Function
+
+        Friend Function VbMultilineCall(name As String, arguments As ScriptArray, indentLevel As Integer) As String
+            Dim argumentIndent = Indent(indentLevel + 1)
+            Dim separator = "," & vbLf & argumentIndent
+            Return name & "(" & vbLf & argumentIndent &
+                String.Join(separator, arguments.Select(Function(argument) Convert.ToString(argument, CultureInfo.InvariantCulture))) &
+                vbLf & Indent(indentLevel) & ")"
+        End Function
+
+        Friend Function VbStringJoin(values As ScriptArray, separator As String, indentLevel As Integer) As String
+            If values.Count = 0 Then
+                Return $"String.Join({separator}, Array.Empty(Of String)())"
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Dim items = values.Select(Function(value) VbStringLiteral(Convert.ToString(value, CultureInfo.InvariantCulture)))
+            Return $"String.Join({separator}, {{" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, items) &
+                vbLf & Indent(indentLevel) & "})"
+        End Function
+
         Private Function ParseTemplate(templateText As String, templatePath As String) As Template
             Dim parsedTemplate As Template = Scriban.Template.Parse(templateText, templatePath)
 
@@ -113,6 +142,10 @@ Namespace Global.Exercism.VBNet.Generators
             End If
 
             Return parsedTemplate
+        End Function
+
+        Private Function Indent(level As Integer) As String
+            Return New String(" "c, level * 4)
         End Function
 
         Private Function FilterByProperty(testCases As ScriptArray, name As String) As ScriptArray
