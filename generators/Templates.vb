@@ -21,6 +21,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("vb_integer_array_literal", New Func(Of ScriptArray, String)(AddressOf VbIntegerArrayLiteral))
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
             scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
+            scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
             scriptObject.Import(TemplateData(canonicalData))
 
@@ -118,6 +119,18 @@ Namespace Global.Exercism.VBNet.Generators
             Return name & "(" & vbLf & argumentIndent &
                 String.Join(separator, arguments.Select(Function(argument) Convert.ToString(argument, CultureInfo.InvariantCulture))) &
                 vbLf & Indent(indentLevel) & ")"
+        End Function
+
+        Friend Function VbStringJoin(values As ScriptArray, separator As String, indentLevel As Integer) As String
+            If values.Count = 0 Then
+                Return $"String.Join({separator}, Array.Empty(Of String)())"
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Dim items = values.Select(Function(value) VbStringLiteral(Convert.ToString(value, CultureInfo.InvariantCulture)))
+            Return $"String.Join({separator}, {{" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, items) &
+                vbLf & Indent(indentLevel) & "})"
         End Function
 
         Private Function ParseTemplate(templateText As String, templatePath As String) As Template

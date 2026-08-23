@@ -46,6 +46,17 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub String_join_renders_an_indented_string_array()
+            Dim values = New Scriban.Runtime.ScriptArray From {"one", "two"}
+            Const expected = "String.Join(vbLf, {" & vbLf &
+                "            ""one""," & vbLf &
+                "            ""two""" & vbLf &
+                "        })"
+
+            Assert.Equal(expected, Templates.VbStringJoin(values, "vbLf", 2))
+        End Sub
+
+        <Fact>
         Public Sub Filtering_before_rendering_enables_the_first_selected_test()
             Dim canonicalData = Canonical("a", "b")
             Dim filtered = TestCasesConfiguration.RemoveExcludedTestCases(
