@@ -20,6 +20,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("property", New Func(Of ScriptArray, String, ScriptArray)(AddressOf FilterByProperty))
             scriptObject.Import("vb_integer_array_literal", New Func(Of ScriptArray, String)(AddressOf VbIntegerArrayLiteral))
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
+            scriptObject.Import("vb_multiline_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbMultilineArrayLiteral))
             scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
             scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
@@ -111,6 +112,23 @@ Namespace Global.Exercism.VBNet.Generators
         Friend Function VbIntegerArrayLiteral(values As ScriptArray) As String
             Return "{" & String.Join(", ", values.Select(
                 Function(value) Convert.ToInt32(value, CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture))) & "}"
+        End Function
+
+        Friend Function VbMultilineArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
+            Dim items = values.Select(AddressOf VbLiteral).ToArray()
+
+            If items.Length <= itemsPerLine Then
+                Return "{" & String.Join(", ", items) & "}"
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Dim lines = items.
+                Select(Function(item, index) New With {item, index}).
+                GroupBy(Function(entry) entry.index \ itemsPerLine).
+                Select(Function(group) String.Join(", ", group.Select(Function(entry) entry.item)))
+            Return "{" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, lines) &
+                vbLf & Indent(indentLevel) & "}"
         End Function
 
         Friend Function VbMultilineCall(name As String, arguments As ScriptArray, indentLevel As Integer) As String
