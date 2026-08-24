@@ -1,12 +1,10 @@
 Imports System.Numerics
 
-
 Public Class DiffieHellmanTests
     <Fact>
     Public Sub Private_key_is_greater_than_1_and_less_than_p()
         Dim p = New BigInteger(7919)
-
-        For i = 0 To 1000 - 1
+        For i = 0 To 999
             Dim privateKey = DiffieHellman.PrivateKey(p)
             Assert.InRange(privateKey, New BigInteger(1), p)
         Next
@@ -36,7 +34,7 @@ Public Class DiffieHellmanTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Can_calculate_secret_using_other_partys_public_key()
+    Public Sub Can_calculate_secret_using_other_party_s_public_key()
         Dim p = New BigInteger(23)
         Dim theirPublicKey = New BigInteger(19)
         Dim myPrivateKey = New BigInteger(6)
