@@ -22,7 +22,8 @@ Public Class {{ testClass }}
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Clocks_are_immutable()
         Dim sut = New {{ testedClass }}(0, 0)
-        Dim sutPlus1 = sut.Add(1)
-        Assert.NotEqual(sutPlus1, sut)
+        Dim before = sut.ToString()
+        sut.Add(1)
+        Assert.Equal(before, sut.ToString())
     End Sub
 End Class
