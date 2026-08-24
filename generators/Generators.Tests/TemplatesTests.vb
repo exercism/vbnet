@@ -34,6 +34,17 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Multiline_array_literal_wraps_and_indents_long_arrays()
+            Dim values = New Scriban.Runtime.ScriptArray From {"one", "two", "three"}
+            Const expected = "{" & vbLf &
+                "            ""one"", ""two""," & vbLf &
+                "            ""three""" & vbLf &
+                "        }"
+
+            Assert.Equal(expected, Templates.VbMultilineArrayLiteral(values, 2, 2))
+        End Sub
+
+        <Fact>
         Public Sub Multiline_call_indents_arguments_and_closing_parenthesis()
             Dim arguments = New Scriban.Runtime.ScriptArray From {"4", "Node(2)", "Nothing"}
             Const expected = "Node(" & vbLf &

@@ -30,7 +30,7 @@ Public Class CircularBufferTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Full_buffer_cant_be_written_to()
+    Public Sub Full_buffer_can_t_be_written_to()
         Dim buffer = New CircularBuffer(Of Integer)(capacity:=1)
         buffer.Write(1)
         Assert.Throws(Of InvalidOperationException)(Sub() buffer.Write(2))
@@ -57,10 +57,9 @@ Public Class CircularBufferTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Items_cleared_out_of_buffer_cant_be_read()
-        Dim buffer = New CircularBuffer(Of Integer)(capacity:=3)
+    Public Sub Items_cleared_out_of_buffer_can_t_be_read()
+        Dim buffer = New CircularBuffer(Of Integer)(capacity:=1)
         buffer.Write(1)
-        buffer.Write(2)
         buffer.Clear()
         Assert.Throws(Of InvalidOperationException)(Function() buffer.Read())
     End Sub
