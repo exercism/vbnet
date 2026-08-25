@@ -98,6 +98,7 @@
     <Project Path="practice/space-age/SpaceAge.vbproj" />
     <Project Path="practice/spiral-matrix/SpiralMatrix.vbproj" />
     <Project Path="practice/square-root/SquareRoot.vbproj" />
+    <Project Path="practice/state-of-tic-tac-toe/StateOfTicTacToe.vbproj" />
     <Project Path="practice/sublist/Sublist.vbproj" />
     <Project Path="practice/strain/Strain.vbproj" />
     <Project Path="practice/sum-of-multiples/SumOfMultiples.vbproj" />
