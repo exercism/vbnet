@@ -23,6 +23,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("vb_multiline_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbMultilineArrayLiteral))
             scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
             scriptObject.Import("vb_object_array_literal", New Func(Of ScriptArray, Integer, String)(AddressOf VbObjectArrayLiteral))
+            scriptObject.Import("vb_nested_list_literal", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbNestedListLiteral))
             scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
             scriptObject.Import(TemplateData(canonicalData))
@@ -162,6 +163,20 @@ Namespace Global.Exercism.VBNet.Generators
 
             Dim itemIndent = Indent(indentLevel + 1)
             Return "New Object() {" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, items) &
+                vbLf & Indent(indentLevel) & "}"
+        End Function
+
+        Friend Function VbNestedListLiteral(values As ScriptArray, elementType As String, indentLevel As Integer) As String
+            Dim listType = $"List(Of {elementType})"
+
+            If values.Count = 0 Then
+                Return $"New List(Of {listType})()"
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Dim items = values.Select(Function(value) $"New {listType} From {VbLiteral(value)}")
+            Return $"New List(Of {listType}) From {{" & vbLf & itemIndent &
                 String.Join("," & vbLf & itemIndent, items) &
                 vbLf & Indent(indentLevel) & "}"
         End Function
