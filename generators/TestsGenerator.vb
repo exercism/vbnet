@@ -3,8 +3,15 @@ Namespace Global.Exercism.VBNet.Generators
         Friend Sub Generate(exercise As Exercise)
             Console.WriteLine($"{exercise.Slug}: generating tests...")
 
-            Dim canonicalData = CanonicalDataParser.Parse(exercise)
-            Dim filteredCanonicalData = TestCasesConfiguration.RemoveExcludedTestCases(canonicalData)
+            Dim hasCanonicalData = File.Exists(Paths.CanonicalDataFile(exercise))
+            Dim canonicalData = If(
+                hasCanonicalData,
+                CanonicalDataParser.Parse(exercise),
+                New CanonicalData(exercise, Array.Empty(Of JsonNode)()))
+            Dim filteredCanonicalData = If(
+                hasCanonicalData,
+                TestCasesConfiguration.RemoveExcludedTestCases(canonicalData),
+                canonicalData)
             Dim templatePath = Paths.TemplateFile(exercise)
             GenerateTestsFile(
                 filteredCanonicalData,

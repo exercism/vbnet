@@ -21,8 +21,13 @@ Namespace Global.Exercism.VBNet.Generators
         Private Function Find(slug As String, desiredTemplateState As Boolean) As List(Of Exercise)
             Return Parse().
                 Where(Function(exercise) slug Is Nothing OrElse exercise.Slug = slug).
-                Where(AddressOf HasCanonicalData).
-                Where(Function(exercise) desiredTemplateState = HasTemplate(exercise)).
+                Where(Function(exercise)
+                          If desiredTemplateState Then
+                              Return HasTemplate(exercise)
+                          End If
+
+                          Return HasCanonicalData(exercise) AndAlso Not HasTemplate(exercise)
+                      End Function).
                 ToList()
         End Function
 

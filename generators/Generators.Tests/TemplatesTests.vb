@@ -57,6 +57,15 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Object_array_literal_renders_nested_arrays()
+            Dim nested = New Scriban.Runtime.ScriptArray From {2, 3, 4, 5, 6, 7}
+            Dim values = New Scriban.Runtime.ScriptArray From {1, nested, 8}
+            Const expected = "New Object() {1, New Object() {2, 3, 4, 5, 6, 7}, 8}"
+
+            Assert.Equal(expected, Templates.VbObjectArrayLiteral(values, 2))
+        End Sub
+
+        <Fact>
         Public Sub String_join_renders_an_indented_string_array()
             Dim values = New Scriban.Runtime.ScriptArray From {"one", "two"}
             Const expected = "String.Join(vbLf, {" & vbLf &
