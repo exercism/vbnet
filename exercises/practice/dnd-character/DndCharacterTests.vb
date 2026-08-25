@@ -1,36 +1,36 @@
 Public Class DndCharacterTests
     <Fact>
-    Public Sub Ability_modifier_for_score_3_is_minus_4()
+    Public Sub Ability_modifier_for_score_3_is_negative_4()
         Assert.Equal(-4, DndCharacter.Modifier(3))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_4_is_minus_3()
+    Public Sub Ability_modifier_for_score_4_is_negative_3()
         Assert.Equal(-3, DndCharacter.Modifier(4))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_5_is_minus_3()
+    Public Sub Ability_modifier_for_score_5_is_negative_3()
         Assert.Equal(-3, DndCharacter.Modifier(5))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_6_is_minus_2()
+    Public Sub Ability_modifier_for_score_6_is_negative_2()
         Assert.Equal(-2, DndCharacter.Modifier(6))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_7_is_minus_2()
+    Public Sub Ability_modifier_for_score_7_is_negative_2()
         Assert.Equal(-2, DndCharacter.Modifier(7))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_8_is_minus_1()
+    Public Sub Ability_modifier_for_score_8_is_negative_1()
         Assert.Equal(-1, DndCharacter.Modifier(8))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Ability_modifier_for_score_9_is_minus_1()
+    Public Sub Ability_modifier_for_score_9_is_negative_1()
         Assert.Equal(-1, DndCharacter.Modifier(9))
     End Sub
 
@@ -96,7 +96,7 @@ Public Class DndCharacterTests
             Assert.InRange(sut.Intelligence, 3, 18)
             Assert.InRange(sut.Wisdom, 3, 18)
             Assert.InRange(sut.Charisma, 3, 18)
-            Assert.Equal(sut.Hitpoints, 10 + DndCharacter.Modifier(sut.Constitution))
+            Assert.Equal(10 + DndCharacter.Modifier(sut.Constitution), sut.Hitpoints)
         Next
     End Sub
 
@@ -118,7 +118,7 @@ Public Class DndCharacterTests
         Dim abilities = Enumerable.Range(1, 10000).Select(Function(roll) DndCharacter.Ability()).ToArray()
         Assert.All(abilities, Sub(ability) Assert.InRange(ability, 3, 18))
 
-        Dim average = abilities.Average() ' 4d6, drop lowest expected average is approximately 12.24
+        Dim average = abilities.Average()
         Assert.InRange(average, 11.84, 12.64)
     End Sub
 End Class
