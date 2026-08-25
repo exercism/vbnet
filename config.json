@@ -367,6 +367,14 @@
         ]
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "c3052489-c0e3-4523-b988-b2f75da91519",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "57d134bd-f992-4452-b14c-fe2b533d72ee",
@@ -1105,14 +1113,6 @@
           "classes"
         ],
         "difficulty": 5
-      },
-      {
-        "slug": "line-up",
-        "name": "Line Up",
-        "uuid": "c3052489-c0e3-4523-b988-b2f75da91519",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
       },
       {
         "slug": "list-ops",
