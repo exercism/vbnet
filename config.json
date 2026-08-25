@@ -1107,6 +1107,14 @@
         "difficulty": 5
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "c3052489-c0e3-4523-b988-b2f75da91519",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "8376124d-92ea-4d73-9bca-ead57a25bc7b",
