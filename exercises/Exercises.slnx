@@ -61,6 +61,7 @@
     <Project Path="practice/ocr-numbers/OcrNumbers.vbproj" />
     <Project Path="practice/pangram/Pangram.vbproj" />
     <Project Path="practice/parallel-letter-frequency/ParallelLetterFrequency.vbproj" />
+    <Project Path="practice/pascals-triangle/PascalsTriangle.vbproj" />
     <Project Path="practice/perfect-numbers/PerfectNumbers.vbproj" />
     <Project Path="practice/phone-number/PhoneNumber.vbproj" />
     <Project Path="practice/pig-latin/PigLatin.vbproj" />
