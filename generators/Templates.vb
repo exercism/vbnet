@@ -22,6 +22,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
             scriptObject.Import("vb_multiline_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbMultilineArrayLiteral))
             scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
+            scriptObject.Import("vb_object_array_literal", New Func(Of ScriptArray, Integer, String)(AddressOf VbObjectArrayLiteral))
             scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
             scriptObject.Import(TemplateData(canonicalData))
@@ -137,6 +138,32 @@ Namespace Global.Exercism.VBNet.Generators
             Return name & "(" & vbLf & argumentIndent &
                 String.Join(separator, arguments.Select(Function(argument) Convert.ToString(argument, CultureInfo.InvariantCulture))) &
                 vbLf & Indent(indentLevel) & ")"
+        End Function
+
+        Friend Function VbObjectArrayLiteral(values As ScriptArray, indentLevel As Integer) As String
+            If values.Count = 0 Then
+                Return "System.Array.Empty(Of Object)()"
+            End If
+
+            Dim items = values.Select(
+                Function(value)
+                    Dim nestedValues = TryCast(value, ScriptArray)
+                    Return If(
+                        nestedValues Is Nothing,
+                        VbLiteral(value),
+                        VbObjectArrayLiteral(nestedValues, indentLevel + 1))
+                End Function).
+                ToArray()
+            Dim singleLine = "New Object() {" & String.Join(", ", items) & "}"
+
+            If Not singleLine.Contains(vbLf) AndAlso singleLine.Length <= 88 Then
+                Return singleLine
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Return "New Object() {" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, items) &
+                vbLf & Indent(indentLevel) & "}"
         End Function
 
         Friend Function VbStringJoin(values As ScriptArray, separator As String, indentLevel As Integer) As String
