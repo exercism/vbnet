@@ -1,4 +1,4 @@
-Public Class ErrorHandlingTests
+Public Class {{ testClass }}
     ' Read more about exception handling here:
     ' https://msdn.microsoft.com/en-us/library/ms173162.aspx?f=255&MSPPError=-2147217396
     <Fact>
