@@ -1,182 +1,111 @@
-Public Class HighScoresTest
+Public Class HighScoresTests
     <Fact>
-    Public Sub ListOfScores()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            30,
-            50,
-            20,
-            70
-        })
-        Assert.Equal(New List(Of Integer) From {
-            30,
-            50,
-            20,
-            70
-        }, sut.Scores())
+    Public Sub List_of_scores()
+        Dim scores = {30, 50, 20, 70}.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {30, 50, 20, 70}.ToList()
+        Assert.Equal(expected, sut.Scores())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub LatestScore()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            100,
-            0,
-            90,
-            30
-        })
+    Public Sub Latest_score()
+        Dim scores = {100, 0, 90, 30}.ToList()
+        Dim sut = New HighScores(scores)
         Assert.Equal(30, sut.Latest())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalBest()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            40,
-            100,
-            70
-        })
+    Public Sub Personal_best()
+        Dim scores = {40, 100, 70}.ToList()
+        Dim sut = New HighScores(scores)
         Assert.Equal(100, sut.PersonalBest())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalTopThreeFromAListOfScores()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            10,
-            30,
-            90,
-            30,
-            100,
-            20,
-            10,
-            0,
-            30,
-            40,
-            40,
-            70,
+    Public Sub Personal_top_three_from_a_list_of_scores()
+        Dim scores = {
+            10, 30, 90, 30,
+            100, 20, 10, 0,
+            30, 40, 40, 70,
             70
-        })
-        Assert.Equal(New List(Of Integer) From {
-            100,
-            90,
-            70
-        }, sut.PersonalTopThree())
+        }.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {100, 90, 70}.ToList()
+        Assert.Equal(expected, sut.PersonalTopThree())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalTopHighestToLowest()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            20,
-            10,
-            30
-        })
-        Assert.Equal(New List(Of Integer) From {
-            30,
-            20,
-            10
-        }, sut.PersonalTopThree())
+    Public Sub Personal_top_highest_to_lowest()
+        Dim scores = {20, 10, 30}.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {30, 20, 10}.ToList()
+        Assert.Equal(expected, sut.PersonalTopThree())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalTopWhenThereIsATie()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            40,
-            20,
-            40,
-            30
-        })
-        Assert.Equal(New List(Of Integer) From {
-            40,
-            40,
-            30
-        }, sut.PersonalTopThree())
+    Public Sub Personal_top_when_there_is_a_tie()
+        Dim scores = {40, 20, 40, 30}.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {40, 40, 30}.ToList()
+        Assert.Equal(expected, sut.PersonalTopThree())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalTopWhenThereAreLessThan3()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            30,
-            70
-        })
-        Assert.Equal(New List(Of Integer) From {
-            70,
-            30
-        }, sut.PersonalTopThree())
+    Public Sub Personal_top_when_there_are_less_than_3()
+        Dim scores = {30, 70}.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {70, 30}.ToList()
+        Assert.Equal(expected, sut.PersonalTopThree())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub PersonalTopWhenThereIsOnlyOne()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            40
-        })
-        Assert.Equal(New List(Of Integer) From {
-            40
-        }, sut.PersonalTopThree())
+    Public Sub Personal_top_when_there_is_only_one()
+        Dim scores = {40}.ToList()
+        Dim sut = New HighScores(scores)
+        Dim expected = {40}.ToList()
+        Assert.Equal(expected, sut.PersonalTopThree())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub LatestScoreAfterPersonalTopScores()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            70,
-            50,
-            20,
-            30
-        })
-        Assert.Equal(new List(Of Integer) From {
-            70,
-            50,
-            30
-        }, sut.PersonalTopThree())
+    Public Sub Latest_score_after_personal_top_scores()
+        Dim scores = {70, 50, 20, 30}.ToList()
+        Dim sut = New HighScores(scores)
+        sut.PersonalTopThree()
         Assert.Equal(30, sut.Latest())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub ScoresAfterPersonalTopScores()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            30,
-            50,
-            20,
-            70
-        })
-        Assert.Equal(New List(Of Integer) From {
-            70,
-            50,
-            30
-        }, sut.PersonalTopThree())
-        Assert.Equal(New List(Of Integer) From {
-            30,
-            50,
-            20,
-            70
-        }, sut.Scores())
+    Public Sub Scores_after_personal_top_scores()
+        Dim scores = {30, 50, 20, 70}.ToList()
+        Dim sut = New HighScores(scores)
+        sut.PersonalTopThree()
+        Dim expected = {30, 50, 20, 70}.ToList()
+        Assert.Equal(expected, sut.Scores())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub LatestScoreAfterPersonalBest()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            20,
-            70,
-            15,
-            25,
+    Public Sub Latest_score_after_personal_best()
+        Dim scores = {
+            20, 70, 15, 25,
             30
-        })
-        Assert.Equal(70, sut.PersonalBest())
+        }.ToList()
+        Dim sut = New HighScores(scores)
+        sut.PersonalBest()
         Assert.Equal(30, sut.Latest())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub ScoresAfterPersonalBest()
-        Dim sut = New HighScores(New List(Of Integer) From {
-            20,
-            70,
-            15,
-            25,
+    Public Sub Scores_after_personal_best()
+        Dim scores = {
+            20, 70, 15, 25,
             30
-        })
-        Assert.Equal(70, sut.PersonalBest())
-        Assert.Equal(New List(Of Integer) From {
-            20,
-            70,
-            15,
-            25,
+        }.ToList()
+        Dim sut = New HighScores(scores)
+        sut.PersonalBest()
+        Dim expected = {
+            20, 70, 15, 25,
             30
-        }, sut.Scores())
+        }.ToList()
+        Assert.Equal(expected, sut.Scores())
     End Sub
 End Class
