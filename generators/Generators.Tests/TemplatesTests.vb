@@ -66,6 +66,27 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Nested_list_literal_renders_and_indents_rows()
+            Dim values = New Scriban.Runtime.ScriptArray From {
+                New Scriban.Runtime.ScriptArray From {1, 2},
+                New Scriban.Runtime.ScriptArray From {3, 4}
+            }
+            Const expected = "New List(Of List(Of Integer)) From {" & vbLf &
+                "            New List(Of Integer) From {1, 2}," & vbLf &
+                "            New List(Of Integer) From {3, 4}" & vbLf &
+                "        }"
+
+            Assert.Equal(expected, Templates.VbNestedListLiteral(values, "Integer", 2))
+        End Sub
+
+        <Fact>
+        Public Sub Nested_list_literal_renders_an_empty_list()
+            Dim values = New Scriban.Runtime.ScriptArray()
+
+            Assert.Equal("New List(Of List(Of Integer))()", Templates.VbNestedListLiteral(values, "Integer", 2))
+        End Sub
+
+        <Fact>
         Public Sub String_join_renders_an_indented_string_array()
             Dim values = New Scriban.Runtime.ScriptArray From {"one", "two"}
             Const expected = "String.Join(vbLf, {" & vbLf &
