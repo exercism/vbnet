@@ -15,9 +15,8 @@ Public Class GradeSchoolTests
     Public Sub Student_is_added_to_the_roster()
         Dim sut = New GradeSchool()
         sut.Add("Aimee", 2)
-        Dim actual = sut.Roster()
         Dim expected = {"Aimee"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -34,9 +33,8 @@ Public Class GradeSchoolTests
         sut.Add("Blair", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Dim actual = sut.Roster()
         Dim expected = {"Blair", "James", "Paul"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -55,9 +53,8 @@ Public Class GradeSchoolTests
         sut.Add("James", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Dim actual = sut.Roster()
         Dim expected = {"Blair", "James", "Paul"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -72,9 +69,8 @@ Public Class GradeSchoolTests
         Dim sut = New GradeSchool()
         sut.Add("Chelsea", 3)
         sut.Add("Logan", 7)
-        Dim actual = sut.Roster()
         Dim expected = {"Chelsea", "Logan"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -93,9 +89,8 @@ Public Class GradeSchoolTests
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Dim actual = sut.Roster()
         Dim expected = {"Blair", "James", "Paul"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -104,9 +99,8 @@ Public Class GradeSchoolTests
         sut.Add("Jim", 3)
         sut.Add("Peter", 2)
         sut.Add("Anna", 1)
-        Dim actual = sut.Roster()
         Dim expected = {"Anna", "Peter", "Jim"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -115,9 +109,8 @@ Public Class GradeSchoolTests
         sut.Add("Peter", 2)
         sut.Add("Zoe", 2)
         sut.Add("Alex", 2)
-        Dim actual = sut.Roster()
         Dim expected = {"Alex", "Peter", "Zoe"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -130,9 +123,8 @@ Public Class GradeSchoolTests
         sut.Add("Alex", 2)
         sut.Add("Jim", 3)
         sut.Add("Charlie", 1)
-        Dim actual = sut.Roster()
         Dim expected = {"Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Roster())
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -158,9 +150,8 @@ Public Class GradeSchoolTests
         sut.Add("James", 2)
         sut.Add("James", 2)
         sut.Add("Paul", 2)
-        Dim actual = sut.Grade(2)
         Dim expected = {"Blair", "James", "Paul"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Grade(2))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -170,9 +161,8 @@ Public Class GradeSchoolTests
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Dim actual = sut.Grade(2)
         Dim expected = {"Blair", "James"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Grade(2))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -182,9 +172,8 @@ Public Class GradeSchoolTests
         sut.Add("James", 2)
         sut.Add("James", 3)
         sut.Add("Paul", 3)
-        Dim actual = sut.Grade(3)
         Dim expected = {"Paul"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Grade(3))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -193,8 +182,7 @@ Public Class GradeSchoolTests
         sut.Add("Franklin", 5)
         sut.Add("Bradley", 5)
         sut.Add("Jeff", 1)
-        Dim actual = sut.Grade(5)
         Dim expected = {"Bradley", "Franklin"}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.Grade(5))
     End Sub
 End Class

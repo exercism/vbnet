@@ -1,8 +1,8 @@
 Public Class {{ testClass }}
     {{- for test in tests }}
-    <Fact{{ if !for.first }}(Skip:="Remove this Skip property to run this test"){{ end }}>
-    Public Sub {{ test.testMethod }}()
-        Dim sut = New GradeSchool()
+    {{ test.factAttribute }}
+    Public Sub {{ test.shortTestMethod }}()
+        Dim sut = New {{ testedClass }}()
         {{- if test.property == "add" }}
         {{ for i in 0..((array.size test.input.students) - 1) -}}
         {{ student = test.input.students[i] -}}
@@ -16,9 +16,8 @@ Public Class {{ testClass }}
         {{ if (array.size test.expected) == 0 -}}
         Assert.Empty(sut.{{ test.testedMethod }}({{ test.input.desiredGrade }}))
         {{ else -}}
-        Dim actual = sut.{{ test.testedMethod }}({{ test.input.desiredGrade }})
         Dim expected = {{ test.expected | vb_literal }}
-        Assert.Equal(expected, actual)
+        Assert.Equal(expected, sut.{{ test.testedMethod }}({{ test.input.desiredGrade }}))
         {{ end -}}
         {{ end -}}
     End Sub
