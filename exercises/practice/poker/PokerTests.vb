@@ -32,6 +32,14 @@ Public Class PokerTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Winning_high_card_hand_also_has_the_lowest_card()
+        Dim hands = {"2S 5H 6S 8D 7H", "3S 4D 6D 8C 7S"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"2S 5H 6S 8D 7H"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub One_pair_beats_high_card()
         Dim hands = {"4S 5H 6C 8D KH", "2S 4H 6S 4D JH"}
         Dim actual = BestHands(hands)
@@ -44,6 +52,14 @@ Public Class PokerTests
         Dim hands = {"4S 2H 6S 2D JH", "2S 4H 6C 4D JD"}
         Dim actual = BestHands(hands)
         Dim expected = {"2S 4H 6C 4D JD"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Both_hands_have_the_same_pair_high_card_wins()
+        Dim hands = {"4H 4S AH JC 3D", "4C 4D AS 5D 6C"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"4H 4S AH JC 3D"}
         Assert.Equal(expected, actual)
     End Sub
 
@@ -144,6 +160,14 @@ Public Class PokerTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Aces_cannot_be_in_the_middle_of_a_straight_Q_K_A_2_3()
+        Dim hands = {"2C 3D 7H 5H 2S", "QS KH AC 2D 3S"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"2C 3D 7H 5H 2S"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Both_hands_with_a_straight_tie_goes_to_highest_ranked_card()
         Dim hands = {"4S 6C 7S 8D 5H", "5S 7H 8S 9D 6H"}
         Dim actual = BestHands(hands)
@@ -228,6 +252,38 @@ Public Class PokerTests
         Dim hands = {"4S 5H 5S 5D 5C", "7S 8S 9S 6S 10S"}
         Dim actual = BestHands(hands)
         Dim expected = {"7S 8S 9S 6S 10S"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Aces_can_end_a_straight_flush_10_J_Q_K_A()
+        Dim hands = {"KC AH AS AD AC", "10C JC QC KC AC"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"10C JC QC KC AC"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Aces_can_start_a_straight_flush_A_2_3_4_5()
+        Dim hands = {"KS AH AS AD AC", "4H AH 3H 2H 5H"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"4H AH 3H 2H 5H"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Aces_cannot_be_in_the_middle_of_a_straight_flush_Q_K_A_2_3()
+        Dim hands = {"2C AC QC 10C KC", "QH KH AH 2H 3H"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"2C AC QC 10C KC"}
+        Assert.Equal(expected, actual)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Even_though_an_ace_is_usually_high_a_5_high_straight_flush_is_the_lowest_scoring_straight_flush()
+        Dim hands = {"2H 3H 4H 5H 6H", "4D AD 3D 2D 5D"}
+        Dim actual = BestHands(hands)
+        Dim expected = {"2H 3H 4H 5H 6H"}
         Assert.Equal(expected, actual)
     End Sub
 
