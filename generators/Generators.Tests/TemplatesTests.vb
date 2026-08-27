@@ -49,6 +49,13 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Tuple_literal_renders_each_element()
+            Dim values = New Scriban.Runtime.ScriptArray From {1, "two", True}
+
+            Assert.Equal("(1, ""two"", True)", Templates.VbTupleLiteral(values))
+        End Sub
+
+        <Fact>
         Public Sub String_array_literal_renders_an_empty_array()
             Dim values = New Scriban.Runtime.ScriptArray()
 
@@ -75,6 +82,36 @@ Namespace Global.Exercism.VBNet.Generators
                 "        }"
 
             Assert.Equal(expected, Templates.VbMultilineArrayLiteral(values, 2, 2))
+        End Sub
+
+        <Fact>
+        Public Sub Tuple_array_literal_renders_an_empty_array()
+            Dim values = New Scriban.Runtime.ScriptArray()
+
+            Assert.Equal("Array.Empty(Of (Integer, Integer))()", Templates.VbTupleArrayLiteral(values, "(Integer, Integer)", 2))
+        End Sub
+
+        <Fact>
+        Public Sub Tuple_array_literal_renders_one_tuple_inline()
+            Dim values = New Scriban.Runtime.ScriptArray From {
+                New Scriban.Runtime.ScriptArray From {1, 2}
+            }
+
+            Assert.Equal("{(1, 2)}", Templates.VbTupleArrayLiteral(values, "(Integer, Integer)", 2))
+        End Sub
+
+        <Fact>
+        Public Sub Tuple_array_literal_renders_and_indents_multiple_tuples()
+            Dim values = New Scriban.Runtime.ScriptArray From {
+                New Scriban.Runtime.ScriptArray From {1, 2},
+                New Scriban.Runtime.ScriptArray From {3, 4}
+            }
+            Const expected = "{" & vbLf &
+                "            (1, 2)," & vbLf &
+                "            (3, 4)" & vbLf &
+                "        }"
+
+            Assert.Equal(expected, Templates.VbTupleArrayLiteral(values, "(Integer, Integer)", 2))
         End Sub
 
         <Fact>
