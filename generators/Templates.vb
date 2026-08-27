@@ -175,10 +175,14 @@ Namespace Global.Exercism.VBNet.Generators
             End If
 
             Dim itemIndent = Indent(indentLevel + 1)
-            Dim items = values.Select(Function(value) $"New {listType} From {VbLiteral(value)}")
-            Return $"New List(Of {listType}) From {{" & vbLf & itemIndent &
+            Dim items = values.Select(
+                Function(value)
+                    Dim row = DirectCast(value, ScriptArray)
+                    Return If(row.Count = 0, $"New {listType}()", $"{VbLiteral(row)}.ToList()")
+                End Function)
+            Return "{" & vbLf & itemIndent &
                 String.Join("," & vbLf & itemIndent, items) &
-                vbLf & Indent(indentLevel) & "}"
+                vbLf & Indent(indentLevel) & "}.ToList()"
         End Function
 
         Friend Function VbStringJoin(values As ScriptArray, separator As String, indentLevel As Integer) As String

@@ -71,10 +71,22 @@ Namespace Global.Exercism.VBNet.Generators
                 New Scriban.Runtime.ScriptArray From {1, 2},
                 New Scriban.Runtime.ScriptArray From {3, 4}
             }
-            Const expected = "New List(Of List(Of Integer)) From {" & vbLf &
-                "            New List(Of Integer) From {1, 2}," & vbLf &
-                "            New List(Of Integer) From {3, 4}" & vbLf &
-                "        }"
+            Const expected = "{" & vbLf &
+                "            {1, 2}.ToList()," & vbLf &
+                "            {3, 4}.ToList()" & vbLf &
+                "        }.ToList()"
+
+            Assert.Equal(expected, Templates.VbNestedListLiteral(values, "Integer", 2))
+        End Sub
+
+        <Fact>
+        Public Sub Nested_list_literal_renders_an_empty_row()
+            Dim values = New Scriban.Runtime.ScriptArray From {
+                New Scriban.Runtime.ScriptArray()
+            }
+            Const expected = "{" & vbLf &
+                "            New List(Of Integer)()" & vbLf &
+                "        }.ToList()"
 
             Assert.Equal(expected, Templates.VbNestedListLiteral(values, "Integer", 2))
         End Sub
