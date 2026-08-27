@@ -86,7 +86,17 @@ Public Module Ledger
     End Function
 
     Private Function Change(ByVal culture As IFormatProvider, ByVal cgh As Decimal) As String
-        Return If(cgh < 0.0D, cgh.ToString("C", culture), cgh.ToString("C", culture) & " ")
+        If cgh < 0.0D Then
+            Dim change = cgh.ToString("C", culture)
+
+            If change.Contains("-"c) Then
+                Return change & " "
+            End If
+
+            Return change
+        Else
+            Return cgh.ToString("C", culture) & " "
+        End If
     End Function
 
     Private Function PrintEntry(ByVal culture As IFormatProvider, ByVal entry As LedgerEntry) As String

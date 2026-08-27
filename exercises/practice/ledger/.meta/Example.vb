@@ -100,7 +100,9 @@ Public Module Ledger
     End Function
 
     Private Function FormatChange(ByVal culture As IFormatProvider, ByVal change As Decimal) As String
-        Return If(change < 0.0D, change.ToString("C", culture), change.ToString("C", culture) & " ")
+        Dim formatted = change.ToString("C", culture)
+        Dim suffix = If(change >= 0.0D OrElse formatted.Contains("-"c), " ", "")
+        Return formatted & suffix
     End Function
 
     Private Function FormatEntry(ByVal culture As IFormatProvider, ByVal entry As LedgerEntry) As String
