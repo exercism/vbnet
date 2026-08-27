@@ -7,7 +7,7 @@ Public Class LedgerEntry
         Me.Chg = chg
     End Sub
 
-    Public ReadOnly Property DateProp As Date
+    Public ReadOnly Property [Date] As Date
     Public ReadOnly Property Desc As String
     Public ReadOnly Property Chg As Decimal
 End Class
@@ -71,8 +71,8 @@ Public Module Ledger
         End If
     End Function
 
-    Private Function [Date](ByVal culture As IFormatProvider, ByVal [date] As Date) As String
-        Return [date].ToString("d", culture)
+    Private Function [Date](ByVal culture As IFormatProvider, ByVal entryDate As Date) As String
+        Return entryDate.ToString("d", culture)
     End Function
 
     Private Function Description(ByVal desc As String) As String
@@ -87,13 +87,13 @@ Public Module Ledger
 
     Private Function Change(ByVal culture As IFormatProvider, ByVal cgh As Decimal) As String
         If cgh < 0.0D Then
-            Dim change = cgh.ToString("C", culture)
+            Dim formattedChange = cgh.ToString("C", culture)
 
-            If change.Contains("-"c) Then
-                Return change & " "
+            If formattedChange.Contains("-"c) Then
+                Return formattedChange & " "
             End If
 
-            Return change
+            Return formattedChange
         Else
             Return cgh.ToString("C", culture) & " "
         End If
