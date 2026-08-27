@@ -1,123 +1,125 @@
 Public Class PrismTests
     <Fact>
-    Public Sub Zero_Prisms()
+    Public Sub Zero_prisms()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = Array.Empty(Of PrismInfo)()
-
-        Assert.Empty(FindSequence(laser, prisms))
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub One_Prism_One_Hit()
+    Public Sub One_prism_one_hit()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {New PrismInfo(1, 10.0, 0.0, 0.0)}
         Dim expected = {1}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub One_Prism_Zero_Hits()
+    Public Sub One_prism_zero_hits()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {New PrismInfo(1, -10.0, 0.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Going_Up_Zero_Hits()
+    Public Sub Going_up_zero_hits()
         Dim laser = New LaserInfo(0.0, 0.0, 90.0)
         Dim prisms = {
             New PrismInfo(3, 0.0, -10.0, 0.0),
             New PrismInfo(1, -10.0, 0.0, 0.0),
-            New PrismInfo(2, 10.0, 0.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+            New PrismInfo(2, 10.0, 0.0, 0.0)
+        }
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Going_Down_Zero_Hits()
+    Public Sub Going_down_zero_hits()
         Dim laser = New LaserInfo(0.0, 0.0, -90.0)
         Dim prisms = {
             New PrismInfo(1, 10.0, 0.0, 0.0),
             New PrismInfo(2, 0.0, 10.0, 0.0),
-            New PrismInfo(3, -10.0, 0.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+            New PrismInfo(3, -10.0, 0.0, 0.0)
+        }
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Going_Left_Zero_Hits()
+    Public Sub Going_left_zero_hits()
         Dim laser = New LaserInfo(0.0, 0.0, 180.0)
         Dim prisms = {
             New PrismInfo(2, 0.0, 10.0, 0.0),
             New PrismInfo(3, 10.0, 0.0, 0.0),
-            New PrismInfo(1, 0.0, -10.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+            New PrismInfo(1, 0.0, -10.0, 0.0)
+        }
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Negative_Angle()
+    Public Sub Negative_angle()
         Dim laser = New LaserInfo(0.0, 0.0, -180.0)
         Dim prisms = {
             New PrismInfo(1, 0.0, -10.0, 0.0),
             New PrismInfo(2, 0.0, 10.0, 0.0),
-            New PrismInfo(3, 10.0, 0.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+            New PrismInfo(3, 10.0, 0.0, 0.0)
+        }
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Large_Angle()
+    Public Sub Large_angle()
         Dim laser = New LaserInfo(0.0, 0.0, 2340.0)
         Dim prisms = {New PrismInfo(1, 10.0, 0.0, 0.0)}
-        Assert.Empty(FindSequence(laser, prisms))
+        Assert.Empty(Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Upward_Refraction_Two_Hits()
+    Public Sub Upward_refraction_two_hits()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {
             New PrismInfo(1, 10.0, 10.0, 0.0),
-            New PrismInfo(2, 10.0, 0.0, 90.0)}
+            New PrismInfo(2, 10.0, 0.0, 90.0)
+        }
         Dim expected = {2, 1}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Downward_Refraction_Two_Hits()
+    Public Sub Downward_refraction_two_hits()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {
             New PrismInfo(1, 10.0, 0.0, -90.0),
-            New PrismInfo(2, 10.0, -10.0, 0.0)}
+            New PrismInfo(2, 10.0, -10.0, 0.0)
+        }
         Dim expected = {1, 2}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Same_Prism_Twice()
+    Public Sub Same_prism_twice()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {
             New PrismInfo(2, 10.0, 0.0, 0.0),
-            New PrismInfo(1, 20.0, 0.0, -180.0)}
+            New PrismInfo(1, 20.0, 0.0, -180.0)
+        }
         Dim expected = {2, 1, 2}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Simple_Path()
+    Public Sub Simple_path()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {
             New PrismInfo(3, 30.0, 10.0, 45.0),
             New PrismInfo(1, 10.0, 10.0, -90.0),
             New PrismInfo(2, 10.0, 0.0, 90.0),
-            New PrismInfo(4, 20.0, 0.0, 0.0)}
+            New PrismInfo(4, 20.0, 0.0, 0.0)
+        }
         Dim expected = {2, 1, 3}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Multiple_Prisms_Floating_Point_Precision()
+    Public Sub Multiple_prisms_floating_point_precision()
         Dim laser = New LaserInfo(0.0, 0.0, -6.429)
         Dim prisms = {
             New PrismInfo(26, 5.8, 73.4, 6.555),
@@ -157,18 +159,19 @@ Public Class PrismTests
             New PrismInfo(27, -5.6, 32.8, -75.303),
             New PrismInfo(12, -1.0, 0.2, 0.0),
             New PrismInfo(3, -6.6, 3.2, 46.72),
-            New PrismInfo(19, -13.8, 24.2, -9.205)}
+            New PrismInfo(19, -13.8, 24.2, -9.205)
+        }
         Dim expected = {
             7, 30, 16, 28, 13, 22, 23, 10, 9, 24, 25, 38,
             29, 4, 35, 21, 5, 20, 11, 1, 33, 26, 32, 6,
             15, 17, 2, 14, 27, 34, 37, 31, 36, 18, 19, 8,
-            3, 12}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+            3, 12
+        }
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Complex_Path_With_Multiple_Prisms_Floating_Point_Precision()
+    Public Sub Complex_path_with_multiple_prisms_floating_point_precision()
         Dim laser = New LaserInfo(0.0, 0.0, 0.0)
         Dim prisms = {
             New PrismInfo(46, 37.4, 20.6, -88.332),
@@ -246,7 +249,8 @@ Public Class PrismTests
             New PrismInfo(27, -4.6, 0.2, 87.397),
             New PrismInfo(55, -61.4, 26.4, 94.086),
             New PrismInfo(73, -40.4, 13.4, -62.229),
-            New PrismInfo(19, 53.2, 20.6, -87.181)}
+            New PrismInfo(19, 53.2, 20.6, -87.181)
+        }
         Dim expected = {
             43, 44, 66, 45, 52, 35, 49, 13, 3, 69, 46, 28,
             20, 11, 24, 38, 19, 42, 15, 10, 63, 25, 59, 1,
@@ -254,8 +258,8 @@ Public Class PrismTests
             23, 75, 8, 26, 18, 9, 60, 17, 31, 7, 70, 40,
             5, 51, 61, 55, 57, 14, 58, 76, 56, 16, 21, 30,
             73, 62, 74, 41, 39, 36, 50, 37, 33, 71, 72, 34,
-            32, 27, 48, 53}
-
-        Assert.Equal(expected, FindSequence(laser, prisms))
+            32, 27, 48, 53
+        }
+        Assert.Equal(expected, Prism.FindSequence(laser, prisms))
     End Sub
 End Class
