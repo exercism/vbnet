@@ -28,6 +28,8 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("vb_string_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbStringArrayLiteral))
             scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
+            scriptObject.Import("vb_tuple_literal", New Func(Of ScriptArray, String)(AddressOf VbTupleLiteral))
+            scriptObject.Import("vb_tuple_array_literal", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbTupleArrayLiteral))
             scriptObject.Import(TemplateData(canonicalData))
 
             Dim context = New TemplateContext()
@@ -149,6 +151,28 @@ Namespace Global.Exercism.VBNet.Generators
                 Select(Function(group) String.Join(", ", group.Select(Function(entry) entry.item)))
             Return "{" & vbLf & itemIndent &
                 String.Join("," & vbLf & itemIndent, lines) &
+                vbLf & Indent(indentLevel) & "}"
+        End Function
+
+        Friend Function VbTupleLiteral(values As ScriptArray) As String
+            Return "(" & String.Join(", ", values.Select(AddressOf VbLiteral)) & ")"
+        End Function
+
+        Friend Function VbTupleArrayLiteral(values As ScriptArray, tupleType As String, indentLevel As Integer) As String
+            Dim tuples = values.Cast(Of Object)().
+                Select(Function(value) VbTupleLiteral(DirectCast(value, ScriptArray))).
+                ToArray()
+            If tuples.Length = 0 Then
+                Return $"Array.Empty(Of {tupleType})()"
+            End If
+
+            If tuples.Length = 1 Then
+                Return "{" & tuples(0) & "}"
+            End If
+
+            Dim itemIndent = Indent(indentLevel + 1)
+            Return "{" & vbLf & itemIndent &
+                String.Join("," & vbLf & itemIndent, tuples) &
                 vbLf & Indent(indentLevel) & "}"
         End Function
 
