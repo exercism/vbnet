@@ -34,6 +34,24 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub String_array_literal_renders_an_empty_array()
+            Dim values = New Scriban.Runtime.ScriptArray()
+
+            Assert.Equal("Array.Empty(Of String)()", Templates.VbStringArrayLiteral(values, 2, 1))
+        End Sub
+
+        <Fact>
+        Public Sub String_array_literal_renders_multiple_rows()
+            Dim values = New Scriban.Runtime.ScriptArray From {"one", "two"}
+            Const expected = "{" & vbLf &
+                "            ""one""," & vbLf &
+                "            ""two""" & vbLf &
+                "        }"
+
+            Assert.Equal(expected, Templates.VbStringArrayLiteral(values, 2, 1))
+        End Sub
+
+        <Fact>
         Public Sub Multiline_array_literal_wraps_and_indents_long_arrays()
             Dim values = New Scriban.Runtime.ScriptArray From {"one", "two", "three"}
             Const expected = "{" & vbLf &
