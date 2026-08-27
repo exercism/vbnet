@@ -18,6 +18,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("enum", New Func(Of String, String, String)(
                 Function(text, enumType) $"{enumType.Pascalize()}.{text.Pascalize()}"))
             scriptObject.Import("property", New Func(Of ScriptArray, String, ScriptArray)(AddressOf FilterByProperty))
+            scriptObject.Import("vb_double_literal", New Func(Of Object, String)(AddressOf VbDoubleLiteral))
             scriptObject.Import("vb_integer_array_literal", New Func(Of ScriptArray, String)(AddressOf VbIntegerArrayLiteral))
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
             scriptObject.Import("vb_multiline_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbMultilineArrayLiteral))
@@ -110,6 +111,15 @@ Namespace Global.Exercism.VBNet.Generators
             End If
 
             Return Convert.ToString(value, CultureInfo.InvariantCulture)
+        End Function
+
+        Friend Function VbDoubleLiteral(value As Object) As String
+            Dim literal = VbLiteral(value)
+            If literal.Contains("."c) OrElse literal.Contains("E"c) OrElse literal.Contains("e"c) Then
+                Return literal
+            End If
+
+            Return literal & ".0"
         End Function
 
         Friend Function VbIntegerArrayLiteral(values As ScriptArray) As String

@@ -20,6 +20,21 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Double_literal_adds_a_fractional_part_to_an_integer()
+            Assert.Equal("1.0", Templates.VbDoubleLiteral(1))
+        End Sub
+
+        <Fact>
+        Public Sub Double_literal_adds_a_fractional_part_to_a_negative_integer()
+            Assert.Equal("-1.0", Templates.VbDoubleLiteral(-1))
+        End Sub
+
+        <Fact>
+        Public Sub Double_literal_preserves_a_fractional_part()
+            Assert.Equal("1.5", Templates.VbDoubleLiteral(1.5))
+        End Sub
+
+        <Fact>
         Public Sub Indent_uses_four_spaces_per_level()
             Dim canonicalData = Canonical("a")
 
