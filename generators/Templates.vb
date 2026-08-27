@@ -24,6 +24,7 @@ Namespace Global.Exercism.VBNet.Generators
             scriptObject.Import("vb_multiline_call", New Func(Of String, ScriptArray, Integer, String)(AddressOf VbMultilineCall))
             scriptObject.Import("vb_object_array_literal", New Func(Of ScriptArray, Integer, String)(AddressOf VbObjectArrayLiteral))
             scriptObject.Import("vb_nested_list_literal", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbNestedListLiteral))
+            scriptObject.Import("vb_string_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbStringArrayLiteral))
             scriptObject.Import("vb_string_join", New Func(Of ScriptArray, String, Integer, String)(AddressOf VbStringJoin))
             scriptObject.Import("vb_string_literal", New Func(Of String, String)(AddressOf VbStringLiteral))
             scriptObject.Import(TemplateData(canonicalData))
@@ -114,6 +115,14 @@ Namespace Global.Exercism.VBNet.Generators
         Friend Function VbIntegerArrayLiteral(values As ScriptArray) As String
             Return "{" & String.Join(", ", values.Select(
                 Function(value) Convert.ToInt32(value, CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture))) & "}"
+        End Function
+
+        Friend Function VbStringArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
+            If values.Count = 0 Then
+                Return "Array.Empty(Of String)()"
+            End If
+
+            Return VbMultilineArrayLiteral(values, indentLevel, itemsPerLine)
         End Function
 
         Friend Function VbMultilineArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
