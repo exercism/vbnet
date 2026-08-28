@@ -23,6 +23,7 @@
     <Project Path="practice/clock/Clock.vbproj" />
     <Project Path="practice/collatz-conjecture/CollatzConjecture.vbproj" />
     <Project Path="practice/crypto-square/CryptoSquare.vbproj" />
+    <Project Path="practice/custom-set/CustomSet.vbproj" />
     <Project Path="practice/darts/Darts.vbproj" />
     <Project Path="practice/diamond/Diamond.vbproj" />
     <Project Path="practice/difference-of-squares/DifferenceOfSquares.vbproj" />

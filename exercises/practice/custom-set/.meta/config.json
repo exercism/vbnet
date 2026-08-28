@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "CustomSet.vb"
+    ],
+    "test": [
+      "CustomSetTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "CustomSet.vbproj"
+    ]
+  },
+  "blurb": "Create a custom set type."
+}

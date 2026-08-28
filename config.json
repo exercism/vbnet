@@ -972,6 +972,14 @@
         ]
       },
       {
+        "slug": "custom-set",
+        "name": "Custom Set",
+        "uuid": "2f338858-129c-428f-963a-ec27b756fdfc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "1c9d5334-855b-41af-868d-d674cb534b5d",
