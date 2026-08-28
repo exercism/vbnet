@@ -13,5 +13,12 @@ Namespace Global.Exercism.VBNet.Generators
 
             Assert.Equal("Non_exceptional_ordinal_numeral_4", Naming.ToTestMethodName(description))
         End Sub
+
+        <Fact>
+        Public Sub Test_method_name_prefixes_a_digit_prefixed_word_with_an_underscore()
+            Const description = "1x1 square is counted"
+
+            Assert.Equal("_1x1_square_is_counted", Naming.ToTestMethodName(description))
+        End Sub
     End Class
 End Namespace
