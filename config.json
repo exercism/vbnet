@@ -1738,6 +1738,11 @@
         ],
         "difficulty": 8
       }
+    ],
+    "foregone": [
+      "lens-person",
+      "paasio",
+      "micro-blog"
     ]
   },
   "key_features": [
