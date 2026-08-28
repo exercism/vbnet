@@ -26,6 +26,10 @@ Namespace Global.Exercism.VBNet.Generators
                 Return number.ToWords()
             End If
 
+            If index = 0 AndAlso Char.IsDigit(word(0)) Then
+                Return word
+            End If
+
             Return word.Dehumanize()
         End Function
     End Module
