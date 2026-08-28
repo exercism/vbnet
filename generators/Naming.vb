@@ -12,7 +12,12 @@ Namespace Global.Exercism.VBNet.Generators
                 Where(Function(word) Not String.IsNullOrWhiteSpace(word)).
                 Select(AddressOf Transform)
 
-            Return String.Join(" ", words).Underscore().Transform([To].SentenceCase)
+            Dim testMethodName = String.Join(" ", words).Underscore().Transform([To].SentenceCase)
+            If Char.IsDigit(testMethodName(0)) Then
+                Return $"_{testMethodName}"
+            End If
+
+            Return testMethodName
         End Function
 
         Private Function ExpandNegativeNumbers(value As String) As String

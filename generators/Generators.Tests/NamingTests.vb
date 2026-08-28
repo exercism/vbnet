@@ -15,10 +15,10 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
-        Public Sub Test_method_name_preserves_a_digit_prefixed_word()
+        Public Sub Test_method_name_prefixes_a_digit_prefixed_word_with_an_underscore()
             Const description = "1x1 square is counted"
 
-            Assert.Equal("1x1_square_is_counted", Naming.ToTestMethodName(description))
+            Assert.Equal("_1x1_square_is_counted", Naming.ToTestMethodName(description))
         End Sub
     End Class
 End Namespace
