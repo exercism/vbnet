@@ -1,4 +1,4 @@
-Public Class RobotNameTests
+Public Class {{ testClass }}
     Private ReadOnly robot = New Robot()
 
     <Fact>

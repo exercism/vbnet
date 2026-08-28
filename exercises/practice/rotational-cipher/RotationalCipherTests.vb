@@ -1,51 +1,71 @@
 Public Class RotationalCipherTests
     <Fact>
     Public Sub Rotate_a_by_0_same_output_as_input()
-        Assert.Equal("a", Rotate("a", 0))
+        Dim text = "a"
+        Dim expected = "a"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 0))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_a_by_1()
-        Assert.Equal("b", Rotate("a", 1))
+        Dim text = "a"
+        Dim expected = "b"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 1))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_a_by_26_same_output_as_input()
-        Assert.Equal("a", Rotate("a", 26))
+        Dim text = "a"
+        Dim expected = "a"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 26))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_m_by_13()
-        Assert.Equal("z", Rotate("m", 13))
+        Dim text = "m"
+        Dim expected = "z"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 13))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_n_by_13_with_wrap_around_alphabet()
-        Assert.Equal("a", Rotate("n", 13))
+        Dim text = "n"
+        Dim expected = "a"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 13))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_capital_letters()
-        Assert.Equal("TRL", Rotate("OMG", 5))
+        Dim text = "OMG"
+        Dim expected = "TRL"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 5))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_spaces()
-        Assert.Equal("T R L", Rotate("O M G", 5))
+        Dim text = "O M G"
+        Dim expected = "T R L"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 5))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_numbers()
-        Assert.Equal("Xiwxmrk 1 2 3 xiwxmrk", Rotate("Testing 1 2 3 testing", 4))
+        Dim text = "Testing 1 2 3 testing"
+        Dim expected = "Xiwxmrk 1 2 3 xiwxmrk"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 4))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_punctuation()
-        Assert.Equal("Gzo'n zvo, Bmviyhv!", Rotate("Let's eat, Grandma!", 21))
+        Dim text = "Let's eat, Grandma!"
+        Dim expected = "Gzo'n zvo, Bmviyhv!"
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 21))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Rotate_all_letters()
-        Assert.Equal("Gur dhvpx oebja sbk whzcf bire gur ynml qbt.", Rotate("The quick brown fox jumps over the lazy dog.", 13))
+        Dim text = "The quick brown fox jumps over the lazy dog."
+        Dim expected = "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
+        Assert.Equal(expected, RotationalCipher.Rotate(text, 13))
     End Sub
 End Class
