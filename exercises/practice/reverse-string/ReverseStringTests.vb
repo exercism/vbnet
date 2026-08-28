@@ -28,4 +28,19 @@ Public Class ReverseStringTests
     Public Sub An_even_sized_word()
         Assert.Equal("reward", ReverseString.Reverse("drawer"))
     End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Wide_characters()
+        Assert.Equal("猫子", ReverseString.Reverse("子猫"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Grapheme_cluster_with_pre_combined_form()
+        Assert.Equal("dnatsnehctsrüW", ReverseString.Reverse("Würstchenstand"))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Grapheme_clusters()
+        Assert.Equal("มรกแรปโนยขีเผู้", ReverseString.Reverse("ผู้เขียนโปรแกรม"))
+    End Sub
 End Class
