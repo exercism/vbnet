@@ -89,6 +89,7 @@
     <Project Path="practice/rotational-cipher/RotationalCipher.vbproj" />
     <Project Path="practice/run-length-encoding/RunLengthEncoding.vbproj" />
     <Project Path="practice/saddle-points/SaddlePoints.vbproj" />
+    <Project Path="practice/save-the-cow/SaveTheCow.vbproj" />
     <Project Path="practice/say/Say.vbproj" />
     <Project Path="practice/scale-generator/ScaleGenerator.vbproj" />
     <Project Path="practice/scrabble-score/ScrabbleScore.vbproj" />

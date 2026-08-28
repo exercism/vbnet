@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "contributors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "SaveTheCow.vb"
+    ],
+    "test": [
+      "SaveTheCowTests.vb"
+    ],
+    "example": [
+      ".meta/Example.vb"
+    ],
+    "invalidator": [
+      "SaveTheCow.vbproj"
+    ]
+  },
+  "blurb": "Implement a word-guessing game."
+}
