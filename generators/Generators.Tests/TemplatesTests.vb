@@ -85,6 +85,17 @@ Namespace Global.Exercism.VBNet.Generators
         End Sub
 
         <Fact>
+        Public Sub Hex_uinteger_array_literal_renders_and_wraps_values()
+            Dim values = New Scriban.Runtime.ScriptArray From {0UI, 255UI, UInteger.MaxValue}
+            Const expected = "{" & vbLf &
+                "            &H0UI, &HFFUI," & vbLf &
+                "            &HFFFFFFFFUI" & vbLf &
+                "        }"
+
+            Assert.Equal(expected, Templates.VbHexUIntegerArrayLiteral(values, 2, 2))
+        End Sub
+
+        <Fact>
         Public Sub Tuple_array_literal_renders_an_empty_array()
             Dim values = New Scriban.Runtime.ScriptArray()
 

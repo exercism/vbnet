@@ -19,6 +19,7 @@ Namespace Global.Exercism.VBNet.Generators
                 Function(text, enumType) $"{enumType.Pascalize()}.{text.Pascalize()}"))
             scriptObject.Import("property", New Func(Of ScriptArray, String, ScriptArray)(AddressOf FilterByProperty))
             scriptObject.Import("vb_double_literal", New Func(Of Object, String)(AddressOf VbDoubleLiteral))
+            scriptObject.Import("vb_hex_uinteger_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbHexUIntegerArrayLiteral))
             scriptObject.Import("vb_integer_array_literal", New Func(Of ScriptArray, String)(AddressOf VbIntegerArrayLiteral))
             scriptObject.Import("vb_literal", New Func(Of Object, String)(AddressOf VbLiteral))
             scriptObject.Import("vb_multiline_array_literal", New Func(Of ScriptArray, Integer, Integer, String)(AddressOf VbMultilineArrayLiteral))
@@ -129,6 +130,13 @@ Namespace Global.Exercism.VBNet.Generators
                 Function(value) Convert.ToInt32(value, CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture))) & "}"
         End Function
 
+        Friend Function VbHexUIntegerArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
+            Dim items = values.Select(
+                Function(value) "&H" & Convert.ToUInt32(value, CultureInfo.InvariantCulture).ToString("X", CultureInfo.InvariantCulture) & "UI").
+                ToArray()
+            Return VbArrayLiteral(items, indentLevel, itemsPerLine)
+        End Function
+
         Friend Function VbStringArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
             If values.Count = 0 Then
                 Return "Array.Empty(Of String)()"
@@ -140,6 +148,10 @@ Namespace Global.Exercism.VBNet.Generators
         Friend Function VbMultilineArrayLiteral(values As ScriptArray, indentLevel As Integer, itemsPerLine As Integer) As String
             Dim items = values.Select(AddressOf VbLiteral).ToArray()
 
+            Return VbArrayLiteral(items, indentLevel, itemsPerLine)
+        End Function
+
+        Private Function VbArrayLiteral(items As String(), indentLevel As Integer, itemsPerLine As Integer) As String
             If items.Length <= itemsPerLine Then
                 Return "{" & String.Join(", ", items) & "}"
             End If
