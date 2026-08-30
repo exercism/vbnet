@@ -54,6 +54,24 @@ Public Class TwoBucketTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Measure_using_bucket_one_much_bigger_than_bucket_two()
+        Dim sut = New TwoBucket(5, 1, Bucket.One)
+        Dim actual = sut.Measure(2)
+        Assert.Equal(6, actual.Moves)
+        Assert.Equal(1, actual.OtherBucket)
+        Assert.Equal(Bucket.One, actual.GoalBucket)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Measure_using_bucket_one_much_smaller_than_bucket_two()
+        Dim sut = New TwoBucket(3, 15, Bucket.One)
+        Dim actual = sut.Measure(9)
+        Assert.Equal(6, actual.Moves)
+        Assert.Equal(0, actual.OtherBucket)
+        Assert.Equal(Bucket.Two, actual.GoalBucket)
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Not_possible_to_reach_the_goal()
         Dim sut = New TwoBucket(6, 15, Bucket.One)
         Assert.Throws(Of ArgumentException)(Function() sut.Measure(5))
