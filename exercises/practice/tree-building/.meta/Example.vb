@@ -53,7 +53,9 @@ Public Module TreeBuilder
     End Function
 
     Private Sub ValidateRecord(ByVal record As TreeBuildingRecord, ByVal previousRecordId As Integer)
-        If record.IsRoot AndAlso record.ParentId <> RootRecordId Then
+        If record.RecordId <= previousRecordId Then
+            Throw New ArgumentException()
+        ElseIf record.IsRoot AndAlso record.ParentId <> RootRecordId Then
             Throw New ArgumentException()
         ElseIf Not record.IsRoot AndAlso record.ParentId >= record.RecordId Then
             Throw New ArgumentException()

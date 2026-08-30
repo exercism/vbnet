@@ -157,6 +157,18 @@ Public Class TreeBuildingTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub One_root_node_and_has_parent()
+        Dim records = {New TreeBuildingRecord With {
+.RecordId = 0,
+.ParentId = 1
+}}
+
+        Assert.Throws(Of ArgumentException)(
+            Sub() BuildTree(records)
+        )
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Root_node_has_parent()
         Dim records = {New TreeBuildingRecord With {
 .RecordId = 0,
@@ -177,6 +189,39 @@ Public Class TreeBuildingTests
 }}
 
         Assert.Throws(Of ArgumentException)(Function() BuildTree(records))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Duplicate_node()
+        Dim records = {New TreeBuildingRecord With {
+.RecordId = 0,
+.ParentId = 0
+}, New TreeBuildingRecord With {
+.RecordId = 1,
+.ParentId = 0
+}, New TreeBuildingRecord With {
+.RecordId = 1,
+.ParentId = 0
+}}
+
+        Assert.Throws(Of ArgumentException)(
+            Sub() BuildTree(records)
+        )
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Duplicate_root()
+        Dim records = {New TreeBuildingRecord With {
+.RecordId = 0,
+.ParentId = 0
+}, New TreeBuildingRecord With {
+.RecordId = 0,
+.ParentId = 0
+}}
+
+        Assert.Throws(Of ArgumentException)(
+            Sub() BuildTree(records)
+        )
     End Sub
 
 
