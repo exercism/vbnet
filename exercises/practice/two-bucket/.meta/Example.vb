@@ -74,9 +74,9 @@ Public Class TwoBucket
 
     Public Function Measure(goal As Integer) As TwoBucketResult
         If goal > Math.Max(start.Size, other.Size) Then Throw New ArgumentException(goal)
-    
+
         If other.Size = goal Then Return New TwoBucketResult(2, other.Name, start.Size)
-    
+
         Dim moves = 0
 
         While start.Level <> goal AndAlso other.Level <> goal
@@ -87,17 +87,17 @@ Public Class TwoBucket
             Else
                 start.PourInto(other)
             End If
-    
+
             If start.IsFull AndAlso other.IsFull Then Throw New ArgumentException(goal)
-    
+
             moves += 1
         End While
-    
+
         If start.Level = goal Then
             Return New TwoBucketResult(moves, start.Name, other.Level)
         Else
             Return New TwoBucketResult(moves, other.Name, start.Level)
         End If
-            
+
     End Function
 End Class
