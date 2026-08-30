@@ -1,136 +1,163 @@
 Public Class WordyTests
     <Fact>
     Public Sub Just_a_number()
-        Assert.Equal(5, Answer("What is 5?"))
+        Dim question = "What is 5?"
+        Assert.Equal(5, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Just_a_zero()
-        Assert.Equal(0, Answer("What is 0?"))
+        Dim question = "What is 0?"
+        Assert.Equal(0, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Just_a_negative_number()
-        Assert.Equal(-123, Answer("What is -123?"))
+        Dim question = "What is -123?"
+        Assert.Equal(-123, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition()
-        Assert.Equal(2, Answer("What is 1 plus 1?"))
+        Dim question = "What is 1 plus 1?"
+        Assert.Equal(2, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition_with_a_left_hand_zero()
-        Assert.Equal(2, Answer("What is 0 plus 2?"))
+        Dim question = "What is 0 plus 2?"
+        Assert.Equal(2, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition_with_a_right_hand_zero()
-        Assert.Equal(3, Answer("What is 3 plus 0?"))
+        Dim question = "What is 3 plus 0?"
+        Assert.Equal(3, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub More_addition()
-        Assert.Equal(55, Answer("What is 53 plus 2?"))
+        Dim question = "What is 53 plus 2?"
+        Assert.Equal(55, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition_with_negative_numbers()
-        Assert.Equal(-11, Answer("What is -1 plus -10?"))
+        Dim question = "What is -1 plus -10?"
+        Assert.Equal(-11, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Large_addition()
-        Assert.Equal(45801, Answer("What is 123 plus 45678?"))
+        Dim question = "What is 123 plus 45678?"
+        Assert.Equal(45801, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Subtraction()
-        Assert.Equal(16, Answer("What is 4 minus -12?"))
+        Dim question = "What is 4 minus -12?"
+        Assert.Equal(16, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiplication()
-        Assert.Equal(-75, Answer("What is -3 multiplied by 25?"))
+        Dim question = "What is -3 multiplied by 25?"
+        Assert.Equal(-75, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Division()
-        Assert.Equal(-11, Answer("What is 33 divided by -3?"))
+        Dim question = "What is 33 divided by -3?"
+        Assert.Equal(-11, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiple_additions()
-        Assert.Equal(3, Answer("What is 1 plus 1 plus 1?"))
+        Dim question = "What is 1 plus 1 plus 1?"
+        Assert.Equal(3, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition_and_subtraction()
-        Assert.Equal(8, Answer("What is 1 plus 5 minus -2?"))
+        Dim question = "What is 1 plus 5 minus -2?"
+        Assert.Equal(8, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiple_subtraction()
-        Assert.Equal(3, Answer("What is 20 minus 4 minus 13?"))
+        Dim question = "What is 20 minus 4 minus 13?"
+        Assert.Equal(3, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Subtraction_then_addition()
-        Assert.Equal(14, Answer("What is 17 minus 6 plus 3?"))
+        Dim question = "What is 17 minus 6 plus 3?"
+        Assert.Equal(14, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiple_multiplication()
-        Assert.Equal(-12, Answer("What is 2 multiplied by -2 multiplied by 3?"))
+        Dim question = "What is 2 multiplied by -2 multiplied by 3?"
+        Assert.Equal(-12, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Addition_and_multiplication()
-        Assert.Equal(-8, Answer("What is -3 plus 7 multiplied by -2?"))
+        Dim question = "What is -3 plus 7 multiplied by -2?"
+        Assert.Equal(-8, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Multiple_division()
-        Assert.Equal(2, Answer("What is -12 divided by 2 divided by -3?"))
+        Dim question = "What is -12 divided by 2 divided by -3?"
+        Assert.Equal(2, Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Unknown_operation()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is 52 cubed?"))
+        Dim question = "What is 52 cubed?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Non_math_question()
-        Assert.Throws(Of ArgumentException)(Function() Answer("Who is the President of the United States?"))
+        Dim question = "Who is the President of the United States?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_problem_missing_an_operand()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is 1 plus?"))
+        Dim question = "What is 1 plus?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_problem_with_no_operands_or_operators()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is?"))
+        Dim question = "What is?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_two_operations_in_a_row()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is 1 plus plus 2?"))
+        Dim question = "What is 1 plus plus 2?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_two_numbers_in_a_row()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is 1 plus 2 1?"))
+        Dim question = "What is 1 plus 2 1?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_postfix_notation()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is 1 2 plus?"))
+        Dim question = "What is 1 2 plus?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub Reject_prefix_notation()
-        Assert.Throws(Of ArgumentException)(Function() Answer("What is plus 1 2?"))
+        Dim question = "What is plus 1 2?"
+        Assert.Throws(Of ArgumentException)(Function() Wordy.Answer(question))
     End Sub
 End Class

@@ -5,6 +5,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.ToTree()
         Dim expected = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -13,8 +14,8 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Right().Value()
-        Dim expected = 3
-        Assert.Equal(expected, actual)
+
+        Assert.Equal(3, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -22,6 +23,7 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Left()
+
         Assert.Null(actual)
     End Sub
 
@@ -31,6 +33,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Right().ToTree()
         Dim expected = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -39,6 +42,7 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Up()
+
         Assert.Null(actual)
     End Sub
 
@@ -47,8 +51,8 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Up().Right().Up().Left().Right().Value()
-        Dim expected = 3
-        Assert.Equal(expected, actual)
+
+        Assert.Equal(3, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -56,8 +60,8 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Right().Up().Up().Value()
-        Dim expected = 1
-        Assert.Equal(expected, actual)
+
+        Assert.Equal(1, actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
@@ -66,6 +70,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().SetValue(5).ToTree()
         Dim expected = New BinTree(1, New BinTree(5, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -75,6 +80,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Right().Up().SetValue(5).ToTree()
         Dim expected = New BinTree(1, New BinTree(5, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -82,8 +88,9 @@ Public Class ZipperTests
     Public Sub Set_left_with_leaf()
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
-        Dim actual = sut.Left().SetLeft(CType(New BinTree(5, Nothing, Nothing), BinTree)).ToTree()
+        Dim actual = sut.Left().SetLeft(New BinTree(5, Nothing, Nothing)).ToTree()
         Dim expected = New BinTree(1, New BinTree(2, New BinTree(5, Nothing, Nothing), New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -93,6 +100,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().SetRight(Nothing).ToTree()
         Dim expected = New BinTree(1, New BinTree(2, Nothing, Nothing), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -100,8 +108,9 @@ Public Class ZipperTests
     Public Sub Set_right_with_subtree()
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
-        Dim actual = sut.SetRight(CType(New BinTree(6, New BinTree(7, Nothing, Nothing), New BinTree(8, Nothing, Nothing)), BinTree)).ToTree()
+        Dim actual = sut.SetRight(New BinTree(6, New BinTree(7, Nothing, Nothing), New BinTree(8, Nothing, Nothing))).ToTree()
         Dim expected = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(6, New BinTree(7, Nothing, Nothing), New BinTree(8, Nothing, Nothing)))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -111,6 +120,7 @@ Public Class ZipperTests
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Right().SetValue(5).ToTree()
         Dim expected = New BinTree(1, New BinTree(2, Nothing, New BinTree(5, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+
         Assert.Equal(expected, actual)
     End Sub
 
@@ -119,7 +129,10 @@ Public Class ZipperTests
         Dim tree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
         Dim sut = Zipper.FromTree(tree)
         Dim actual = sut.Left().Up().Right()
-        Dim expected = Zipper.FromTree(CType(New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing)), BinTree)).Right()
+        Dim expectedTree = New BinTree(1, New BinTree(2, Nothing, New BinTree(3, Nothing, Nothing)), New BinTree(4, Nothing, Nothing))
+        Dim expectedSut = Zipper.FromTree(expectedTree)
+        Dim expected = expectedSut.Right()
+
         Assert.Equal(expected, actual)
     End Sub
 End Class

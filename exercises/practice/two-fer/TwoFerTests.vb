@@ -1,22 +1,22 @@
 Public Class TwoFerTests
     <Fact>
-    Public Sub NoNameGiven()
-        Dim expected = "One for you, one for me."
-        Dim result as String = TwoFer.Speak()
-        Assert.Equal(expected, result)
+    Public Sub No_name_given()
+        Dim actual As String = TwoFer.Speak()
+
+        Assert.Equal("One for you, one for me.", actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub ANameGiven()
-        Dim expected = "One for Alice, one for me."
-        Dim result as String = TwoFer.Speak("Alice")
-        Assert.Equal(expected, result)
+    Public Sub A_name_given()
+        Dim actual As String = TwoFer.Speak("Alice")
+
+        Assert.Equal("One for Alice, one for me.", actual)
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub AnotherNameGiven()
-        Dim expected = "One for Bob, one for me."
-        Dim result as String = TwoFer.Speak("Bob")
-        Assert.Equal(expected, result)
+    Public Sub Another_name_given()
+        Dim actual As String = TwoFer.Speak("Bob")
+
+        Assert.Equal("One for Bob, one for me.", actual)
     End Sub
 End Class
