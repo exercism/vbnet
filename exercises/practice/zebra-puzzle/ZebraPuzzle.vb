@@ -30,12 +30,12 @@ Public Enum Drink
     Water
 End Enum
 
-Public Enum Smoke
-    OldGold
-    Kools
-    Chesterfields
-    LuckyStrike
-    Parliaments
+Public Enum Hobby
+    Dancing
+    Painting
+    Reading
+    Football
+    Chess
 End Enum
 
 Public Module ZebraPuzzle
