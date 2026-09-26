@@ -152,9 +152,16 @@ Public Class ListOpsTests
     End Sub
 
     <Fact(Skip:="Remove this Skip property to run this test")>
-    Public Sub Reverse_the_elements_of_the_list_non_empty_list()
+    Public Sub Reverse_the_elements_of_the_list_non_empty_even_length_list()
         Dim list = {1, 3, 5, 7}.ToList()
         Dim expected = {7, 5, 3, 1}.ToList()
+        Assert.Equal(expected, ListOps.Reverse(list))
+    End Sub
+
+    <Fact(Skip:="Remove this Skip property to run this test")>
+    Public Sub Reverse_the_elements_of_the_list_non_empty_odd_length_list()
+        Dim list = {1, 3, 5, 7, 9, 11, 13}.ToList()
+        Dim expected = {13, 11, 9, 7, 5, 3, 1}.ToList()
         Assert.Equal(expected, ListOps.Reverse(list))
     End Sub
 
