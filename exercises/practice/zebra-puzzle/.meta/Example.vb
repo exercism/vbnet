@@ -32,12 +32,12 @@ Public Enum Drink
     Water
 End Enum
 
-Public Enum Smoke
-    OldGold
-    Kools
-    Chesterfields
-    LuckyStrike
-    Parliaments
+Public Enum Hobby
+    Dancing
+    Painting
+    Reading
+    Football
+    Chess
 End Enum
 
 Module ZebraPuzzle
@@ -45,7 +45,7 @@ Module ZebraPuzzle
     Private ReadOnly Nationalities As Nationality() = CType([Enum].GetValues(GetType(Nationality)), Nationality())
     Private ReadOnly Pets As Pet() = CType([Enum].GetValues(GetType(Pet)), Pet())
     Private ReadOnly Drinks As Drink() = CType([Enum].GetValues(GetType(Drink)), Drink())
-    Private ReadOnly Smokes As Smoke() = CType([Enum].GetValues(GetType(Smoke)), Smoke())
+    Private ReadOnly Hobbies As Hobby() = CType([Enum].GetValues(GetType(Hobby)), Hobby())
 
     <Extension()>
     Private Function Permutations(Of T)(ByVal input As T()) As IEnumerable(Of T())
@@ -66,7 +66,7 @@ Module ZebraPuzzle
         Public Nationalities As Nationality()
         Public Pets As Pet()
         Public Drinks As Drink()
-        Public Smokes As Smoke()
+        Public Hobbies As Hobby()
     End Structure
 
     Private Function MatchesColorRules(ByVal colors As Color()) As Boolean
@@ -93,23 +93,23 @@ Module ZebraPuzzle
         Return coffeeDrunkInGreenHouse AndAlso ukrainianDrinksTee AndAlso milkDrunkInMiddleHouse
     End Function
 
-    Private Function MatchesSmokeRules(ByVal colors As Color(), ByVal nationalities As Nationality(), ByVal drinks As Drink(), ByVal pets As Pet(), ByVal smokes As Smoke()) As Boolean
-        Dim oldGoldSmokesOwnsSnails = IsIndexMatch(smokes, Smoke.OldGold, pets, Pet.Snails)
-        Dim koolsSmokedInYellowHouse = IsIndexMatch(colors, Color.Yellow, smokes, Smoke.Kools)
-        Dim chesterfieldsSmokedNextToHouseWithFox = IsAdjacentMatch(smokes, Smoke.Chesterfields, pets, Pet.Fox)
-        Dim koolsSmokedNextToHouseWithHorse = IsAdjacentMatch(smokes, Smoke.Kools, pets, Pet.Horse)
-        Dim luckyStrikeSmokerDrinksOrangeJuice = IsIndexMatch(smokes, Smoke.LuckyStrike, drinks, Drink.OrangeJuice)
-        Dim japaneseSmokesParliaments = IsIndexMatch(nationalities, Nationality.Japanese, smokes, Smoke.Parliaments)
-        Return oldGoldSmokesOwnsSnails AndAlso koolsSmokedInYellowHouse AndAlso chesterfieldsSmokedNextToHouseWithFox AndAlso koolsSmokedNextToHouseWithHorse AndAlso luckyStrikeSmokerDrinksOrangeJuice AndAlso japaneseSmokesParliaments
+    Private Function MatchesHobbyRules(ByVal colors As Color(), ByVal nationalities As Nationality(), ByVal drinks As Drink(), ByVal pets As Pet(), ByVal hobbies As Hobby()) As Boolean
+        Dim dancerOwnsSnails = IsIndexMatch(hobbies, Hobby.Dancing, pets, Pet.Snails)
+        Dim painterInYellowHouse = IsIndexMatch(colors, Color.Yellow, hobbies, Hobby.Painting)
+        Dim readerLivesNextToFox = IsAdjacentMatch(hobbies, Hobby.Reading, pets, Pet.Fox)
+        Dim painterLivesNextToHorse = IsAdjacentMatch(hobbies, Hobby.Painting, pets, Pet.Horse)
+        Dim footballPlayerDrinksOrangeJuice = IsIndexMatch(hobbies, Hobby.Football, drinks, Drink.OrangeJuice)
+        Dim japanesePlaysChess = IsIndexMatch(nationalities, Nationality.Japanese, hobbies, Hobby.Chess)
+        Return dancerOwnsSnails AndAlso painterInYellowHouse AndAlso readerLivesNextToFox AndAlso painterLivesNextToHorse AndAlso footballPlayerDrinksOrangeJuice AndAlso japanesePlaysChess
     End Function
 
     Private Function Solutions() As IEnumerable(Of Solution)
-        Return From validColors In Colors.Permutations().Where(AddressOf MatchesColorRules) From validNationalities In Nationalities.Permutations().Where(Function(nationalities) MatchesNationalityRules(validColors, nationalities)) From validPets In Pets.Permutations().Where(Function(pets) MatchesPetRules(validNationalities, pets)) From validDrinks In Drinks.Permutations().Where(Function(drinks) MatchesDrinkRules(validColors, validNationalities, drinks)) From validSmokes In Smokes.Permutations().Where(Function(smokes) MatchesSmokeRules(validColors, validNationalities, validDrinks, validPets, smokes)) Select New Solution With {
+        Return From validColors In Colors.Permutations().Where(AddressOf MatchesColorRules) From validNationalities In Nationalities.Permutations().Where(Function(nationalities) MatchesNationalityRules(validColors, nationalities)) From validPets In Pets.Permutations().Where(Function(pets) MatchesPetRules(validNationalities, pets)) From validDrinks In Drinks.Permutations().Where(Function(drinks) MatchesDrinkRules(validColors, validNationalities, drinks)) From validHobbies In Hobbies.Permutations().Where(Function(hobbies) MatchesHobbyRules(validColors, validNationalities, validDrinks, validPets, hobbies)) Select New Solution With {
             .Colors = validColors,
             .Nationalities = validNationalities,
             .Pets = validPets,
             .Drinks = validDrinks,
-            .Smokes = validSmokes
+            .Hobbies = validHobbies
         }
     End Function
 
