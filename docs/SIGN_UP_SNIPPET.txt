@@ -1,0 +1,11 @@
+Function MostCommonWord(text As String) As String
+    Dim counts As New Dictionary(Of String, Integer)
+    Dim best = ""
+    For Each word In text.ToLower().Split(" "c)
+        counts(word) = counts.GetValueOrDefault(word) + 1
+        If counts(word) > counts.GetValueOrDefault(best) Then
+            best = word
+        End If
+    Next
+    Return $"""{best}"" appears {counts(best)} times"
+End Function
