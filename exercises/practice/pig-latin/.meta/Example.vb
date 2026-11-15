@@ -1,28 +1,25 @@
 Imports System.Text.RegularExpressions
 
 Public Class PigLatin
+    Private Shared ReadOnly Regexes As Regex() = {
+        New Regex("^([^aeiou]*qu)(.+)"),
+        New Regex("^([^aeiouy]+)(y.+)"),
+        New Regex("^()(xr|yt|[aeiou].+)"),
+        New Regex("^([^aeiou]+)(.+)")
+    }
+
     Public Shared Function Translate(ByVal word As String) As String
         Return String.Join(" ", word.Split(" "c).Select(Function(x) PigLatin.TranslateWord(x)))
     End Function
 
     Private Shared Function TranslateWord(ByVal word As String) As String
-        If PigLatin.WordStartsWithVowelLike(word) Then Return word & "ay"
-        If PigLatin.WordStartsWithPrefixes(word, "thr", "sch") Then Return word.Substring(3) & word.Substring(0, 3) & "ay"
-        If PigLatin.WordStartsWithPrefixes(word, "ch", "qu", "th", "rh") Then Return word.Substring(2) & word.Substring(0, 2) & "ay"
-        If PigLatin.WordStartsWithConsonantAndQu(word) Then Return word.Substring(3) & word(0).ToString() & "quay"
+        For Each regex As Regex In Regexes
+            Dim match As Match = regex.Match(word)
+            If Not match.Success Then Continue For
+            If match.Groups(1).Value = "" Then Exit For
+            Return match.Groups(2).Value & match.Groups(1).Value & "ay"
+        Next
 
-        Return word.Substring(1) & word(0).ToString() & "ay"
-    End Function
-
-    Private Shared Function WordStartsWithVowelLike(ByVal word As String) As Boolean
-        Return Regex.IsMatch("[aeiou]", word(0).ToString()) OrElse word.StartsWith("yt") OrElse word.StartsWith("xr")
-    End Function
-
-    Private Shared Function WordStartsWithPrefixes(ByVal word As String, ParamArray prefixes As String()) As Boolean
-        Return prefixes.Any(New Func(Of String, Boolean)(AddressOf word.StartsWith))
-    End Function
-
-    Private Shared Function WordStartsWithConsonantAndQu(ByVal word As String) As Boolean
-        Return word.Substring(1).StartsWith("qu")
+        Return word & "ay"
     End Function
 End Class
