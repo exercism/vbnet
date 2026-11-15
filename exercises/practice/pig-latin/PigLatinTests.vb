@@ -111,6 +111,6 @@ Public Class PigLatinTests
 
     <Fact(Skip:="Remove this Skip property to run this test")>
     Public Sub A_whole_phrase()
-        Assert.Equal("ickquay astfay unray", PigLatin.Translate("quick fast run"))
+        Assert.Equal("ywhay oday idssquay enjoyay xraysay", PigLatin.Translate("why do squids enjoy xrays"))
     End Sub
 End Class

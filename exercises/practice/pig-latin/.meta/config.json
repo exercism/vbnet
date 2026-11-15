@@ -2,6 +2,9 @@
   "authors": [
     "ErikSchierboom"
   ],
+  "contributors": [
+    "BNAndras"
+  ],
   "files": {
     "solution": [
       "PigLatin.vb"
