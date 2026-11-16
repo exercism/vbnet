@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Generators.Tests/Generators.Tests.vbproj" />
+  <Project Path="Generators.vbproj" />
+</Solution>
